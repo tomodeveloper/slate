@@ -201,7 +201,7 @@
       <script src="javascripts/all.js"></script>
   </head>
 
-  <body class="index" data-languages="[&quot;shell&quot;,&quot;ruby&quot;,&quot;python&quot;,&quot;javascript&quot;]">
+  <body class="index" data-languages="[&quot;shell&quot;]">
     <a href="#" id="nav-button">
       <span>
         NAV
@@ -212,9 +212,6 @@
       <img src="images/logo.png" class="logo" alt="Logo" />
         <div class="lang-selector">
               <a href="#" data-language-name="shell">shell</a>
-              <a href="#" data-language-name="ruby">ruby</a>
-              <a href="#" data-language-name="python">python</a>
-              <a href="#" data-language-name="javascript">javascript</a>
         </div>
         <div class="search">
           <input type="text" class="search" id="input-search" placeholder="Search">
@@ -225,19 +222,66 @@
             <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
           </li>
           <li>
-            <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
+            <a href="#signon" class="toc-h1 toc-link" data-title="SignOn">SignOn</a>
           </li>
           <li>
-            <a href="#kittens" class="toc-h1 toc-link" data-title="Kittens">Kittens</a>
+            <a href="#kategori" class="toc-h1 toc-link" data-title="Kategori">Kategori</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#get-all-kittens" class="toc-h2 toc-link" data-title="Get All Kittens">Get All Kittens</a>
+                    <a href="#http-request" class="toc-h2 toc-link" data-title="HTTP Request">HTTP Request</a>
                   </li>
                   <li>
-                    <a href="#get-a-specific-kitten" class="toc-h2 toc-link" data-title="Get a Specific Kitten">Get a Specific Kitten</a>
+                    <a href="#parameters" class="toc-h2 toc-link" data-title="Parameters">Parameters</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#produk" class="toc-h1 toc-link" data-title="Produk">Produk</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-list-data-produk" class="toc-h2 toc-link" data-title="Get List Data Produk">Get List Data Produk</a>
                   </li>
                   <li>
-                    <a href="#delete-a-specific-kitten" class="toc-h2 toc-link" data-title="Delete a Specific Kitten">Delete a Specific Kitten</a>
+                    <a href="#get-produk-detail" class="toc-h2 toc-link" data-title="Get Produk Detail">Get Produk Detail</a>
+                  </li>
+                  <li>
+                    <a href="#get-shipping-fee-product" class="toc-h2 toc-link" data-title="Get Shipping Fee Product">Get Shipping Fee Product</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#voucher" class="toc-h1 toc-link" data-title="Voucher">Voucher</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#voucher-non-fmcg" class="toc-h2 toc-link" data-title="voucher non fmcg">voucher non fmcg</a>
+                  </li>
+                  <li>
+                    <a href="#voucher-fmcg" class="toc-h2 toc-link" data-title="voucher fmcg">voucher fmcg</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#get-nearest-loket" class="toc-h1 toc-link" data-title="Get nearest loket">Get nearest loket</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#http-request-7" class="toc-h2 toc-link" data-title="HTTP Request">HTTP Request</a>
+                  </li>
+                  <li>
+                    <a href="#parameters-4" class="toc-h2 toc-link" data-title="Parameters">Parameters</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#payment-process" class="toc-h1 toc-link" data-title="Payment Process">Payment Process</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#booking" class="toc-h2 toc-link" data-title="Booking">Booking</a>
+                  </li>
+                  <li>
+                    <a href="#inquiry" class="toc-h2 toc-link" data-title="Inquiry">Inquiry</a>
+                  </li>
+                  <li>
+                    <a href="#payment" class="toc-h2 toc-link" data-title="Payment">Payment</a>
                   </li>
               </ul>
           </li>
@@ -247,189 +291,947 @@
       </ul>
         <ul class="toc-footer">
             <li><a href='#'>Sign Up for a Developer Key</a></li>
-            <li><a href='https://github.com/lord/slate'>Documentation Powered by Slate</a></li>
+            <li><a href='https://github.com/tripit/slate'>Documentation Powered by Slate</a></li>
         </ul>
     </div>
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
         <h1 id='introduction'>Introduction</h1>
-<p>Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.</p>
+<p>Selamat datang di API Toko Modern Fastpay. Anda bisa mendapatkan informasi produk yang ada di Toko Modern fastpay.</p>
+<h1 id='signon'>SignOn</h1>
+<p>API Tomo menggunakan Basic Auth dan key untuk akses. Berikut contoh format key:</p>
 
-<p>We have language bindings in Shell, Ruby, Python, and JavaScript! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
-
-<p>This example API documentation page was created with <a href="https://github.com/lord/slate">Slate</a>. Feel free to edit it and use it as a base for your own API&#39;s documentation.</p>
-<h1 id='authentication'>Authentication</h1>
-<blockquote>
-<p>To authorize, use this code:</p>
-</blockquote>
-<pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
-curl <span class="s2">"api_endpoint_here"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-</code></pre>
-<blockquote>
-<p>Make sure to replace <code>meowmeowmeow</code> with your API key.</p>
-</blockquote>
-
-<p>Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our <a href="http://example.com/developers">developer portal</a>.</p>
-
-<p>Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:</p>
-
-<p><code>Authorization: meowmeowmeow</code></p>
+<p><code>curl -H TOMO-API-KEY:key</code></p>
 
 <aside class="notice">
-You must replace <code>meowmeowmeow</code> with your personal API key.
+Anda harus mengganti `key` dengan key personal anda. Basic Auth menggunakan `username` dan `pin` yang anda dapatkan.
 </aside>
-<h1 id='kittens'>Kittens</h1><h2 id='get-all-kittens'>Get All Kittens</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
+<h1 id='kategori'>Kategori</h1>
+<blockquote>
+<p>Sample Request:</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>
+curl -X GET -H
+<span class="s2">"TOMO-API-KEY: 8s4ww0gg8o"</span>
+http://apiproduk.fastpay.co.id/v2/category
 
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">kittens</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="nx">get</span><span class="p">();</span>
 </code></pre>
 <blockquote>
-<p>The above command returns JSON structured like this:</p>
+<p>Sample Response:</p>
 </blockquote>
-<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fluffums"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"calico"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
-</span></code></pre>
-<p>This endpoint retrieves all kittens.</p>
+<pre class="highlight shell tab-shell"><code>
+<span class="o">[</span>
+  <span class="o">{</span>
+  <span class="s2">"id_kategori"</span>: <span class="s2">"2"</span>,
+  <span class="s2">"name"</span>: <span class="s2">"HANDPHONE &amp; TABLET"</span>,
+  <span class="s2">"parent"</span>: <span class="o">[{</span>
+    <span class="s2">"id_kategori"</span>: <span class="s2">"6224"</span>,
+    <span class="s2">"name"</span>: <span class="s2">"Handphone"</span>,
+    <span class="s2">"parent"</span>: <span class="o">[{</span>
+      <span class="s2">"id_kategori"</span>: <span class="s2">"6369"</span>,
+      <span class="s2">"name"</span>: <span class="s2">"Smartphone,BB, dan Iphone"</span>
+    <span class="o">}</span>, <span class="o">{</span>
+      <span class="s2">"id_kategori"</span>: <span class="s2">"6370"</span>,
+      <span class="s2">"name"</span>: <span class="s2">"Handphone Biasa"</span>
+    <span class="o">}</span>, <span class="o">{</span>
+      <span class="s2">"id_kategori"</span>: <span class="s2">"8063"</span>,
+      <span class="s2">"name"</span>: <span class="s2">"Lainnya"</span>
+    <span class="o">}]</span>
+  <span class="o">}</span>, <span class="o">{</span>
+    <span class="s2">"id_kategori"</span>: <span class="s2">"6225"</span>,
+    <span class="s2">"name"</span>: <span class="s2">"Tablet"</span>,
+    <span class="s2">"parent"</span>: <span class="o">[]</span>
+  <span class="o">}</span>, <span class="o">{</span>
+    <span class="s2">"id_kategori"</span>: <span class="s2">"6226"</span>,
+    <span class="s2">"name"</span>: <span class="s2">"Powerbank"</span>,
+    <span class="s2">"parent"</span>: <span class="o">[]</span>
+  <span class="o">}</span>, <span class="o">{</span>
+    <span class="s2">"id_kategori"</span>: <span class="s2">"6227"</span>,
+    <span class="s2">"name"</span>: <span class="s2">"Accessories"</span>,
+    <span class="s2">"parent"</span>: <span class="o">[{</span>
+      <span class="s2">"id_kategori"</span>: <span class="s2">"6371"</span>,
+      <span class="s2">"name"</span>: <span class="s2">"Pelindung layar"</span>
+    <span class="o">}</span>, <span class="o">{</span>
+      <span class="s2">"id_kategori"</span>: <span class="s2">"6372"</span>,
+      <span class="s2">"name"</span>: <span class="s2">"Cassing"</span>
+    <span class="o">}</span>, <span class="o">{</span>
+      <span class="s2">"id_kategori"</span>: <span class="s2">"6373"</span>,
+      <span class="s2">"name"</span>: <span class="s2">"Kabel data"</span>
+    <span class="o">}</span>, <span class="o">{</span>
+      <span class="s2">"id_kategori"</span>: <span class="s2">"6374"</span>,
+      <span class="s2">"name"</span>: <span class="s2">"Charger"</span>
+    <span class="o">}</span>, <span class="o">{</span>
+      <span class="s2">"id_kategori"</span>: <span class="s2">"6375"</span>,
+      <span class="s2">"name"</span>: <span class="s2">"Selengkapnya"</span>
+    <span class="o">}</span>, <span class="o">{</span>
+      <span class="s2">"id_kategori"</span>: <span class="s2">"8084"</span>,
+      <span class="s2">"name"</span>: <span class="s2">"Lainnya"</span>
+    <span class="o">}]</span>
+  <span class="o">}]</span>
+<span class="o">}</span>
+<span class="o">]</span>
+</code></pre>
+<p>Berikut adalah endpoint untuk mengambil list kategori Tomo</p>
 <h3 id='http-request'>HTTP Request</h3>
-<p><code>GET http://example.com/api/kittens</code></p>
-<h3 id='query-parameters'>Query Parameters</h3>
+<p><code>GET http://apiproduk.fastpay.co.id/v2/category</code></p>
+<h3 id='parameters'>Parameters</h3>
+<p>None</p>
+<h1 id='produk'>Produk</h1><h2 id='get-list-data-produk'>Get List Data Produk</h2>
+<blockquote>
+<p>Sample Request:</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl -X GET -H
+<span class="s2">"TOMO-API-KEY: 8s4ww0gg8o"</span>
+http://apiproduk.fastpay.co.id/v2/product_list?keyword<span class="o">=</span>tinta
+
+</code></pre>
+<p>Berikut adalah penjelasan dari value respon yang didapatkan ketika request</p>
+
+<table><thead>
+<tr>
+<th>Properti</th>
+<th>Deskripsi</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Product_owner</td>
+<td>Biller produk yang diserap oleh TOMO. Value yang tersedia <code>BUKALAPAK</code> dan <code>SBF</code></td>
+</tr>
+</tbody></table>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>GET http://apiproduk.fastpay.co.id/v2/product_list</code></p>
+<h3 id='parameters-2'>Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
-<th>Default</th>
+<th></th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>include_cats</td>
-<td>false</td>
-<td>If set to true, the result will also include cats.</td>
+<td>keywords</td>
+<td>optional</td>
+<td>Keyword yang digunakan untuk pencarian.</td>
 </tr>
 <tr>
-<td>available</td>
-<td>true</td>
-<td>If set to false, the result will include kittens that have already been adopted.</td>
+<td>category_id</td>
+<td>optional</td>
+<td>Pencarian berdasarkan kategori tertentu.</td>
+</tr>
+<tr>
+<td>sort_type</td>
+<td>optional</td>
+<td>Nilai yang diperbolehkan <code>nama</code> dan <code>harga</code>.</td>
+</tr>
+<tr>
+<td>sorting_order</td>
+<td>optional</td>
+<td>Nilai yang diperbolehkan <code>desc</code> dan <code>asc</code></td>
+</tr>
+<tr>
+<td>index_page</td>
+<td>optional</td>
+<td>halaman pagination. default=<code>0</code></td>
+</tr>
+<tr>
+<td>per_page</td>
+<td>optional</td>
+<td>Jumlah produk yang tampil. default value <code>10</code>. value yang diperbolehkan <code>5</code>, <code>10</code>, <code>20</code>, <code>50</code>, <code>100</code></td>
 </tr>
 </tbody></table>
-
-<aside class="success">
-Remember — a happy kitten is an authenticated kitten!
-</aside>
-<h2 id='get-a-specific-kitten'>Get a Specific Kitten</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span>
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<h2 id='get-produk-detail'>Get Produk Detail</h2>
+<blockquote>
+<p>Sample Request:</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl -X GET -H
+<span class="s2">"TOMO-API-KEY: 8s4ww0gg8o"</span>
+http://apiproduk.fastpay.co.id/v2/detail_product/9a117t
 </code></pre>
 <blockquote>
-<p>The above command returns JSON structured like this:</p>
+<p>Sample Response</p>
 </blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This endpoint retrieves a specific kitten.</p>
+<pre class="highlight shell tab-shell"><code>
+<span class="o">{</span>
+  <span class="s2">"status"</span>: <span class="s2">"ok"</span>,
+  <span class="s2">"product_list"</span>: <span class="o">[</span>
+    <span class="o">{</span>
+      <span class="s2">"id_produk"</span>: <span class="s2">"9a117t"</span>,
+      <span class="s2">"id_kategori_produk"</span>: <span class="s2">"7749"</span>,
+      <span class="s2">"category"</span>: <span class="s2">"Jaket Motor &amp; ATV </span><span class="se">\/</span><span class="s2"> Aksesoris Motor </span><span class="se">\/</span><span class="s2"> OTOMOTIF | BUKU, GAMES &amp; MUSIK"</span>,
+      <span class="s2">"produk"</span>: <span class="s2">"Sarung Tangan Batok Rockstar Merah Full Finger"</span>,
+      <span class="s2">"product_owner"</span>: <span class="s2">"BUKALAPAK"</span>,
+      <span class="s2">"bobot"</span>: <span class="s2">"100"</span>,
+      <span class="s2">"harga"</span>: <span class="s2">"29900.00"</span>,
+      <span class="s2">"deskripsi"</span>: <span class="o">{</span>
 
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
-<h3 id='http-request-2'>HTTP Request</h3>
-<p><code>GET http://example.com/kittens/&lt;ID&gt;</code></p>
+      <span class="o">}</span>,
+      <span class="s2">"is_barang_baru"</span>: <span class="s2">"1"</span>,
+      <span class="s2">"deskripsi_bisnis"</span>: <span class="s2">"Sarung Tangan Batok&lt;br</span><span class="se">\/</span><span class="s2">&gt;&lt;br</span><span class="se">\/</span><span class="s2">&gt;- All size&lt;br</span><span class="se">\/</span><span class="s2">&gt;- Warna hitam&lt;br</span><span class="se">\/</span><span class="s2">&gt;- Melindungi tangan pada saat berkendara&lt;br</span><span class="se">\/</span><span class="s2">&gt;- Membuat tangan tetap halus (tidak kapalan)&lt;br</span><span class="se">\/</span><span class="s2">&gt;- Melindungi dari sinar matahari langsung&lt;br</span><span class="se">\/</span><span class="s2">&gt;- Barang ready stok."</span>,
+      <span class="s2">"created"</span>: <span class="s2">"2017-07-23 14:56:12"</span>,
+      <span class="s2">"qty"</span>: <span class="s2">"12"</span>,
+      <span class="s2">"updated"</span>: <span class="s2">"2017-10-09 05:12:09.853208"</span>,
+      <span class="s2">"diskon_prosentase"</span>: <span class="s2">"0"</span>,
+      <span class="s2">"diskon_flat_nominal"</span>: <span class="s2">"0"</span>,
+      <span class="s2">"jumlah_dilihat"</span>: <span class="s2">"0"</span>,
+      <span class="s2">"jumlah_diminati"</span>: <span class="s2">"0"</span>,
+      <span class="s2">"jumlah_terjual"</span>: <span class="s2">"0"</span>,
+      <span class="s2">"city_origin_supplier"</span>: null,
+      <span class="s2">"id_member"</span>: <span class="s2">"SB999"</span>,
+      <span class="s2">"is_deleted"</span>: <span class="s2">"0"</span>,
+      <span class="s2">"harga_coret"</span>: 35200,
+      <span class="s2">"harga_non_coret"</span>: 32442,
+      <span class="s2">"hpp_core"</span>: 27359,
+      <span class="s2">"service_fee"</span>: 2542,
+      <span class="s2">"diskon"</span>: 0,
+      <span class="s2">"harga_up"</span>: 2758,
+      <span class="s2">"service_fee_persen"</span>: <span class="s2">"8.50"</span>,
+      <span class="s2">"service_fee_fix"</span>: <span class="s2">"0.00"</span>,
+      <span class="s2">"up_harga_fix"</span>: <span class="s2">"0.00"</span>,
+      <span class="s2">"up_harga_persen"</span>: <span class="s2">"0.00"</span>,
+      <span class="s2">"foto"</span>: <span class="o">[</span>
+        <span class="s2">"https:</span><span class="se">\/\/</span><span class="s2">s2.bukalapak.com</span><span class="se">\/</span><span class="s2">img</span><span class="se">\/</span><span class="s2">7569750931</span><span class="se">\/</span><span class="s2">large</span><span class="se">\/</span><span class="s2">Sarung_Tangan_Batok_Rockstar_Merah_Full_Finger.jpg"</span>,
+        <span class="s2">"https:</span><span class="se">\/\/</span><span class="s2">s2.bukalapak.com</span><span class="se">\/</span><span class="s2">img</span><span class="se">\/</span><span class="s2">2569750931</span><span class="se">\/</span><span class="s2">large</span><span class="se">\/</span><span class="s2">Sarung_Tangan_Batok_Rockstar_Merah_Full_Finger.jpg"</span>,
+        <span class="s2">"https:</span><span class="se">\/\/</span><span class="s2">s2.bukalapak.com</span><span class="se">\/</span><span class="s2">img</span><span class="se">\/</span><span class="s2">2469750931</span><span class="se">\/</span><span class="s2">large</span><span class="se">\/</span><span class="s2">Sarung_Tangan_Batok_Rockstar_Merah_Full_Finger.jpg"</span>,
+        <span class="s2">"https:</span><span class="se">\/\/</span><span class="s2">s2.bukalapak.com</span><span class="se">\/</span><span class="s2">img</span><span class="se">\/</span><span class="s2">7369750931</span><span class="se">\/</span><span class="s2">large</span><span class="se">\/</span><span class="s2">Sarung_Tangan_Batok_Rockstar_Merah_Full_Finger.jpg"</span>,
+        <span class="s2">"https:</span><span class="se">\/\/</span><span class="s2">s2.bukalapak.com</span><span class="se">\/</span><span class="s2">img</span><span class="se">\/</span><span class="s2">2769750931</span><span class="se">\/</span><span class="s2">large</span><span class="se">\/</span><span class="s2">Sarung_Tangan_Batok_Rockstar_Merah_Full_Finger.jpg"</span>
+      <span class="o">]</span>,
+      <span class="s2">"courier"</span>: <span class="o">[</span>
+        <span class="s2">"Pos"</span>,
+        <span class="s2">"JNE"</span>,
+        <span class="s2">"J&amp;T"</span>,
+        <span class="s2">"TIKI"</span>
+      <span class="o">]</span>
+    <span class="o">}</span>
+  <span class="o">]</span>
+<span class="o">}</span>
+</code></pre>
+<p>Berikut adalah cara untuk mengambil detail dari produk. </p>
+<h3 id='http-request-3'>HTTP Request</h3>
+<p><code>GET http://apiproduk.fastpay.co.id/v2/detail_product/:id</code></p>
 <h3 id='url-parameters'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
+<th></th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
 <td>ID</td>
-<td>The ID of the kitten to retrieve</td>
+<td><strong>required</strong></td>
+<td>id produk yang akan dibaca</td>
 </tr>
 </tbody></table>
-<h2 id='delete-a-specific-kitten'>Delete a Specific Kitten</h2><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="o">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="o">.</span><span class="n">kittens</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span>
-  -X DELETE
-  -H <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre><pre class="highlight javascript tab-javascript"><code><span class="kr">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'kittn'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<h2 id='get-shipping-fee-product'>Get Shipping Fee Product</h2>
+<blockquote>
+<p>Sample Request per courier:</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl -X GET -H
+<span class="s2">"TOMO-API-KEY: 8s4ww0gg8o"</span>
+http://apiproduk.fastpay.co.id/index.php/v2/cek_ongkir_product?
+<span class="nv">id_produk</span><span class="o">=</span>7j0ezz&amp;city_destination<span class="o">=</span>250
+&amp;to_area<span class="o">=</span>10150&amp;kode_pos<span class="o">=</span>61256&amp;courier<span class="o">=</span>JNE&amp;quantity<span class="o">=</span>1
 </code></pre>
 <blockquote>
-<p>The above command returns JSON structured like this:</p>
+<p>Sample Response</p>
 </blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"deleted"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">":("</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>This endpoint deletes a specific kitten.</p>
-<h3 id='http-request-3'>HTTP Request</h3>
-<p><code>DELETE http://example.com/kittens/&lt;ID&gt;</code></p>
+<pre class="highlight shell tab-shell"><code>
+<span class="o">{</span>
+  <span class="s2">"status"</span>: <span class="s2">"ok"</span>,
+  <span class="s2">"result"</span>: <span class="o">[{</span>
+    <span class="s2">"service"</span>: <span class="s2">"JNE REG"</span>,
+    <span class="s2">"harga"</span>: 180000,
+    <span class="s2">"eta"</span>: <span class="s2">"6"</span>,
+    <span class="s2">"insurance_cost"</span>: 5523
+  <span class="o">}]</span>
+<span class="o">}</span>
+</code></pre>
+<blockquote>
+<p>Sample Request all courier:</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl -X GET -H
+<span class="s2">"TOMO-API-KEY: 8s4ww0gg8o"</span>
+http://apiproduk.fastpay.co.id/index.php/v2/cek_ongkir_product?
+<span class="nv">id_produk</span><span class="o">=</span>7j0ezz&amp;city_destination<span class="o">=</span>250
+&amp;to_area<span class="o">=</span>10150&amp;kode_pos<span class="o">=</span>61256&amp;courier<span class="o">=</span>all&amp;quantity<span class="o">=</span>1
+</code></pre>
+<blockquote>
+<p>Sample Response</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>
+<span class="o">{</span>
+  <span class="s2">"status"</span>: <span class="s2">"ok"</span>,
+  <span class="s2">"result"</span>: <span class="o">[{</span>
+      <span class="s2">"courier_name"</span>: <span class="s2">"jnt"</span>,
+      <span class="s2">"couriers"</span>: <span class="o">[{</span>
+        <span class="s2">"service"</span>: <span class="s2">"J&amp;T REG"</span>,
+        <span class="s2">"price"</span>: 26000,
+        <span class="s2">"eta"</span>: <span class="s2">"2-3"</span>,
+        <span class="s2">"insurance_cost"</span>: 0
+      <span class="o">}]</span>
+    <span class="o">}</span>,
+    <span class="o">{</span>
+      <span class="s2">"courier_name"</span>: <span class="s2">"poskilat"</span>,
+      <span class="s2">"couriers"</span>: <span class="o">[{</span>
+        <span class="s2">"service"</span>: <span class="s2">"Pos Kilat Khusus"</span>,
+        <span class="s2">"price"</span>: 16665,
+        <span class="s2">"eta"</span>: <span class="s2">"2"</span>,
+        <span class="s2">"insurance_cost"</span>: 0
+      <span class="o">}]</span>
+    <span class="o">}</span>,
+    <span class="o">{</span>
+      <span class="s2">"courier_name"</span>: <span class="s2">"jne"</span>,
+      <span class="s2">"couriers"</span>: <span class="o">[{</span>
+        <span class="s2">"service"</span>: <span class="s2">"JNE REG"</span>,
+        <span class="s2">"price"</span>: 36000,
+        <span class="s2">"eta"</span>: <span class="s2">"3-6"</span>,
+        <span class="s2">"insurance_cost"</span>: 0
+      <span class="o">}]</span>
+    <span class="o">}</span>,
+    <span class="o">{</span>
+      <span class="s2">"courier_name"</span>: <span class="s2">"tiki"</span>,
+      <span class="s2">"couriers"</span>: <span class="o">[{</span>
+          <span class="s2">"service"</span>: <span class="s2">"TIKI Reg"</span>,
+          <span class="s2">"price"</span>: 36500,
+          <span class="s2">"eta"</span>: 3,
+          <span class="s2">"insurance_cost"</span>: 0
+        <span class="o">}</span>,
+        <span class="o">{</span>
+          <span class="s2">"service"</span>: <span class="s2">"TIKI ONS"</span>,
+          <span class="s2">"price"</span>: 29000,
+          <span class="s2">"eta"</span>: 1,
+          <span class="s2">"insurance_cost"</span>: 0
+        <span class="o">}</span>
+      <span class="o">]</span>
+    <span class="o">}</span>
+  <span class="o">]</span>
+<span class="o">}</span>
+
+</code></pre>
+<p>Berikut adalah cara untuk mengambil data ongkos kirim dari produk. </p>
+<h3 id='http-request-4'>HTTP Request</h3>
+<p><code>GET http://apiproduk.fastpay.co.id/v2/cek_ongkir_product</code></p>
 <h3 id='url-parameters-2'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
+<th></th>
 <th>Description</th>
 </tr>
 </thead><tbody>
 <tr>
-<td>ID</td>
-<td>The ID of the kitten to delete</td>
+<td>id_produk</td>
+<td><strong>required</strong></td>
+<td>id produk</td>
+</tr>
+<tr>
+<td>city_destination</td>
+<td><strong>required</strong></td>
+<td>Id kota tujuan pengiriman</td>
+</tr>
+<tr>
+<td>to_area</td>
+<td><strong>required</strong></td>
+<td>Id Kecamatan Pengiriman</td>
+</tr>
+<tr>
+<td>kode_pos</td>
+<td><strong>required</strong></td>
+<td>Kode Pos Pengiriman</td>
+</tr>
+<tr>
+<td>courier</td>
+<td><strong>required</strong></td>
+<td>nama ekspedisi</td>
+</tr>
+<tr>
+<td>quantity</td>
+<td><strong>required</strong></td>
+<td>Jumlah Pembelian</td>
+</tr>
+</tbody></table>
+
+<table><thead>
+<tr>
+<th>Courier List</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>pos</td>
+</tr>
+<tr>
+<td>jne</td>
+</tr>
+<tr>
+<td>tiki</td>
+</tr>
+<tr>
+<td>wahana</td>
+</tr>
+<tr>
+<td>rpx</td>
+</tr>
+<tr>
+<td>sicepat</td>
+</tr>
+<tr>
+<td>ninja</td>
+</tr>
+<tr>
+<td>jnt</td>
+</tr>
+<tr>
+<td>all</td>
+</tr>
+</tbody></table>
+<h1 id='voucher'>Voucher</h1><h2 id='voucher-non-fmcg'>voucher non fmcg</h2>
+<blockquote>
+<p>Sample Request:</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl -X GET -H
+<span class="s2">"TOMO-API-KEY: 8s4ww0gg8o"</span>
+http://apiproduk.fastpay.co.id/v2/cek_voucher?kode_voucher<span class="o">=</span>GR64645&amp;no_hp_pembeli<span class="o">=</span>082244409356&amp;id_produk<span class="o">=</span>afg07j&amp;id_outlet<span class="o">=</span>FA92804&amp;qty<span class="o">=</span>1&amp;paket_ekspedisi<span class="o">=</span>JNE%20REG&amp;ongkir<span class="o">=</span>120000
+
+</code></pre>
+<blockquote>
+<p>Sample Response</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>
+<span class="o">{</span>
+  <span class="s2">"status"</span>: <span class="s2">"ok"</span>,
+  <span class="s2">"result"</span>: <span class="o">{</span>
+    <span class="s2">"nominal_voucher"</span>: <span class="s2">"1000"</span>,
+    <span class="s2">"rule_unique_nomor_hp"</span>: <span class="s2">"t"</span>,
+    <span class="s2">"rule_potong_ongkir"</span>: <span class="s2">"t"</span>,
+    <span class="s2">"resp_type"</span>: <span class="s2">"0"</span>,
+    <span class="s2">"key_voucher"</span>: <span class="s2">"ZM94yq8IfC20171013142444"</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+
+</code></pre>
+<p>Berikut adalah penjelasan dari value respon yang didapatkan ketika request</p>
+
+<table><thead>
+<tr>
+<th>Properti</th>
+<th>Deskripsi</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>nominal_voucher</td>
+<td>Nominal voucher yang didapatkan</td>
+</tr>
+<tr>
+<td>rule_unique_nomor_hp</td>
+<td>Voucher yang hanya bisa digunakan satu kali dalam satu no hp. value <code>t</code> dan <code>f</code></td>
+</tr>
+<tr>
+<td>rule_potong_ongkir</td>
+<td>Voucher untuk free ongkir. value <code>t</code> dan <code>f</code></td>
+</tr>
+<tr>
+<td>key_voucher</td>
+<td>key voucher untuk inputan booking</td>
+</tr>
+</tbody></table>
+<h3 id='http-request-5'>HTTP Request</h3>
+<p><code>GET http://apiproduk.fastpay.co.id/v2/cek_voucher</code></p>
+<h3 id='parameters-3'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th></th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>kode_voucher</td>
+<td><strong>required</strong></td>
+<td>Kode Voucher tomo.</td>
+</tr>
+<tr>
+<td>id_produk</td>
+<td><strong>required</strong></td>
+<td>id produk .</td>
+</tr>
+<tr>
+<td>id_outlet</td>
+<td><strong>required</strong></td>
+<td>Id outlet login tomo</td>
+</tr>
+<tr>
+<td>qty</td>
+<td><strong>required</strong></td>
+<td>jumlah beli</td>
+</tr>
+<tr>
+<td>paket_ekspedisi</td>
+<td><strong>required</strong></td>
+<td>jenis paket ekspedisi</td>
+</tr>
+<tr>
+<td>ongkir</td>
+<td><strong>required</strong></td>
+<td>harga ongkos kirim jenis paket ekspedisi</td>
+</tr>
+</tbody></table>
+<h2 id='voucher-fmcg'>voucher fmcg</h2><pre class="highlight shell tab-shell"><code><span class="o">{</span>
+  <span class="s2">"kode_voucher"</span>: <span class="s2">"FA544"</span>,
+  <span class="s2">"no_hp_pembeli"</span>: <span class="s2">"082244409356"</span>,
+  <span class="s2">"id_outlet"</span>: <span class="s2">"FA56239"</span>,
+  <span class="s2">"list_produk"</span>: <span class="o">[</span>
+    <span class="o">{</span>
+      <span class="s2">"id_produk"</span>: <span class="s2">"31407"</span>,
+      <span class="s2">"qty"</span>: <span class="s2">"1"</span>
+    <span class="o">}</span>,
+    <span class="o">{</span>
+      <span class="s2">"id_produk"</span>: <span class="s2">"31408"</span>,
+      <span class="s2">"qty"</span>: <span class="s2">"1"</span>
+    <span class="o">}</span>
+  <span class="o">]</span>
+<span class="o">}</span>
+</code></pre>
+<blockquote>
+<p>Sample Response</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>
+<span class="o">{</span>
+    <span class="s2">"status"</span>: <span class="s2">"ok"</span>,
+    <span class="s2">"result"</span>: <span class="o">{</span>
+        <span class="s2">"nominal_voucher_didapat"</span>: 10000,
+        <span class="s2">"list_key_voucher"</span>: <span class="o">[</span>
+            <span class="o">{</span>
+                <span class="s2">"id_produk"</span>: <span class="s2">"31407"</span>,
+                <span class="s2">"total_harga"</span>: 40000,
+                <span class="s2">"voucher_didapat"</span>: <span class="s2">"10000"</span>,
+                <span class="s2">"key_voucher"</span>: <span class="s2">"LR51xIq8f120180802105557"</span>
+            <span class="o">}</span>
+        <span class="o">]</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre><h3 id='http-request-6'>HTTP Request</h3>
+<p><code>POST http://apiproduk.fastpay.co.id/index.php/v2/cek_voucher_fmcg</code></p>
+<h3 id='url-parameters-3'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th></th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>kode_voucher</td>
+<td><strong>required</strong></td>
+<td>Kode Voucher</td>
+</tr>
+</tbody></table>
+<h1 id='get-nearest-loket'>Get nearest loket</h1>
+<blockquote>
+<p>Sample Request:</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl -X GET -H
+<span class="s2">"TOMO-API-KEY: 8s4ww0gg8o"</span>
+http://apiproduk.fastpay.co.id/v2/nearest_loket?latitude<span class="o">=</span>-7.3601523&amp;longitude<span class="o">=</span>112.7432411&amp;%20total_belanja<span class="o">=</span>1000
+
+</code></pre>
+<blockquote>
+<p>Sample Response</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>
+<span class="o">{</span>
+  <span class="s2">"status"</span>: <span class="s2">"ok"</span>,
+  <span class="s2">"result"</span>: <span class="o">[{</span>
+    <span class="s2">"id_outlet"</span>: <span class="s2">"BS0004"</span>,
+    <span class="s2">"latitude"</span>: <span class="s2">"-7.3601492"</span>,
+    <span class="s2">"longitude"</span>: <span class="s2">"112.7432416"</span>,
+    <span class="s2">"jarak_meter"</span>: <span class="s2">"0"</span>,
+    <span class="s2">"nama_pemilik"</span>: <span class="s2">"Internal Tester"</span>,
+    <span class="s2">"alamat_pemilik"</span>: <span class="s2">"SIDOARJO"</span>,
+    <span class="s2">"notelp_pemilik"</span>: <span class="s2">"08563396898"</span>,
+    <span class="s2">"notelp_outlet"</span>: <span class="s2">"081310095830"</span>,
+    <span class="s2">"nomor_whatsapp_outlet"</span>: <span class="s2">"08224"</span>
+  <span class="o">}</span>, <span class="o">{</span>
+    <span class="s2">"id_outlet"</span>: <span class="s2">"FA32481"</span>,
+    <span class="s2">"latitude"</span>: <span class="s2">"-7.360148"</span>,
+    <span class="s2">"longitude"</span>: <span class="s2">"112.7432596"</span>,
+    <span class="s2">"jarak_meter"</span>: <span class="s2">"2"</span>,
+    <span class="s2">"nama_pemilik"</span>: <span class="s2">"OPERATIONAL MARKETING SBF"</span>,
+    <span class="s2">"alamat_pemilik"</span>: <span class="s2">"Jl DELTA RAYA UTARA KAV 49 50 DELTASARI BARU WARU  SDA  081234228787"</span>,
+    <span class="s2">"notelp_pemilik"</span>: <span class="s2">"082139972979"</span>,
+    <span class="s2">"notelp_outlet"</span>: <span class="s2">"03131034354"</span>,
+    <span class="s2">"nomor_whatsapp_outlet"</span>: <span class="s2">"083849262697"</span>
+  <span class="o">}</span>, <span class="o">{</span>
+    <span class="s2">"id_outlet"</span>: <span class="s2">"FA47880"</span>,
+    <span class="s2">"latitude"</span>: <span class="s2">"-7.3601676"</span>,
+    <span class="s2">"longitude"</span>: <span class="s2">"112.7432598"</span>,
+    <span class="s2">"jarak_meter"</span>: <span class="s2">"3"</span>,
+    <span class="s2">"nama_pemilik"</span>: <span class="s2">"DANTE"</span>,
+    <span class="s2">"alamat_pemilik"</span>: <span class="s2">"BOULEVARD OF BROKEN DREAM"</span>,
+    <span class="s2">"notelp_pemilik"</span>: <span class="s2">"081235449898"</span>,
+    <span class="s2">"notelp_outlet"</span>: <span class="s2">"085720416911"</span>,
+    <span class="s2">"nomor_whatsapp_outlet"</span>: <span class="s2">"085731921365"</span>
+  <span class="o">}</span>, <span class="o">{</span>
+    <span class="s2">"id_outlet"</span>: <span class="s2">"FA9919"</span>,
+    <span class="s2">"latitude"</span>: <span class="s2">"-7.3601545"</span>,
+    <span class="s2">"longitude"</span>: <span class="s2">"112.7432887"</span>,
+    <span class="s2">"jarak_meter"</span>: <span class="s2">"5"</span>,
+    <span class="s2">"nama_pemilik"</span>: <span class="s2">"Fitra Alfiananto"</span>,
+    <span class="s2">"alamat_pemilik"</span>: <span class="s2">"Jalan Made Karyo 31"</span>,
+    <span class="s2">"notelp_pemilik"</span>: <span class="s2">"085648889293"</span>,
+    <span class="s2">"notelp_outlet"</span>: <span class="s2">"085648889293"</span>,
+    <span class="s2">"nomor_whatsapp_outlet"</span>: <span class="s2">"085648889293"</span>
+  <span class="o">}</span>, <span class="o">{</span>
+    <span class="s2">"id_outlet"</span>: <span class="s2">"FA73863"</span>,
+    <span class="s2">"latitude"</span>: <span class="s2">"-7.3601062"</span>,
+    <span class="s2">"longitude"</span>: <span class="s2">"112.7432261"</span>,
+    <span class="s2">"jarak_meter"</span>: <span class="s2">"5"</span>,
+    <span class="s2">"nama_pemilik"</span>: <span class="s2">"Zunita Rachmanniar"</span>,
+    <span class="s2">"alamat_pemilik"</span>: <span class="s2">"Sidokare Asri SS - 11 Sidoarjo"</span>,
+    <span class="s2">"notelp_pemilik"</span>: <span class="s2">"082218706946"</span>,
+    <span class="s2">"notelp_outlet"</span>: <span class="s2">"0318532580"</span>,
+    <span class="s2">"nomor_whatsapp_outlet"</span>: <span class="s2">"082218706946"</span>
+  <span class="o">}]</span>
+<span class="o">}</span>
+
+</code></pre>
+<p>Berikut adalah penjelasan dari value respon yang didapatkan ketika request</p>
+
+<table><thead>
+<tr>
+<th>Properti</th>
+<th>Deskripsi</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id_outlet</td>
+<td>Id Outlet terdekat</td>
+</tr>
+<tr>
+<td>latitude</td>
+<td>Nilai latitude lokasi outlet</td>
+</tr>
+<tr>
+<td>longitude</td>
+<td>Nilai longitude lokasi outlet</td>
+</tr>
+<tr>
+<td>jarak_meter</td>
+<td>jarak loket dari lokasi request dalam meter</td>
+</tr>
+<tr>
+<td>nama_pemilik</td>
+<td>Nama pemilik loket</td>
+</tr>
+<tr>
+<td>alamat_pemilik</td>
+<td>Alamat loket</td>
+</tr>
+<tr>
+<td>notelp_pemilik</td>
+<td>No telp pemilik</td>
+</tr>
+<tr>
+<td>notelp_outlet</td>
+<td>No telp loket</td>
+</tr>
+<tr>
+<td>nomor_whatsapp_outlet</td>
+<td>No whatsapp loket</td>
+</tr>
+</tbody></table>
+<h3 id='http-request-7'>HTTP Request</h3>
+<p><code>GET http://apiproduk.fastpay.co.id/v2/nearest_loket</code></p>
+<h3 id='parameters-4'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th></th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>latitude</td>
+<td><strong>required</strong></td>
+<td>Nilai latitude pembeli.</td>
+</tr>
+<tr>
+<td>longitude</td>
+<td><strong>required</strong></td>
+<td>Nilai longitude pembeli.</td>
+</tr>
+<tr>
+<td>total_belanja</td>
+<td><strong>required</strong></td>
+<td>Total belanja</td>
+</tr>
+</tbody></table>
+<h1 id='payment-process'>Payment Process</h1><h2 id='booking'>Booking</h2>
+<blockquote>
+<p>Sample Request:</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="o">{</span>
+  <span class="s2">"type"</span>: <span class="s2">"DATA"</span>,
+  <span class="s2">"data"</span>: <span class="o">{</span>
+    <span class="s2">"product_id"</span>: <span class="s2">"hgwr5"</span>,
+    <span class="s2">"product_qty"</span>: <span class="s2">"3"</span>,
+    <span class="s2">"product_variant_id"</span>: <span class="s2">""</span>,
+    <span class="s2">"customer_name"</span>: <span class="s2">"AGUNG"</span>,
+    <span class="s2">"customer_address"</span>: <span class="s2">""</span>,
+    <span class="s2">"customer_area_code"</span>: <span class="s2">"232"</span>,
+    <span class="s2">"customer_to_area"</span>: <span class="s2">"6204"</span>,
+    <span class="s2">"customer_phone"</span>: <span class="s2">"082244409356"</span>,
+    <span class="s2">"customer_email"</span>: <span class="s2">""</span>,
+    <span class="s2">"customer_postcode"</span>: <span class="s2">"61177"</span>,
+    <span class="s2">"ekspedition_id"</span>: <span class="s2">"0"</span>,
+    <span class="s2">"ekspedition_paket_code"</span>: <span class="s2">"J&amp;T"</span>,
+    <span class="s2">"ekspedition_paket_name"</span>: <span class="s2">"J&amp;T REG"</span>,
+    <span class="s2">"ekspedition_estimate_day"</span>: <span class="s2">"2-3"</span>,
+    <span class="s2">"ekspedition_price"</span>: 72000,
+    <span class="s2">"insurance_cost"</span>: 6375,
+    <span class="s2">"catatan"</span>: <span class="s2">""</span>,
+    <span class="s2">"key_voucher"</span>: <span class="s2">""</span>
+  <span class="o">}</span>,
+  <span class="s2">"version"</span>: <span class="s2">"1.0"</span>,
+  <span class="s2">"mode"</span>: <span class="s2">"development"</span>
+<span class="o">}</span>
+</code></pre>
+<blockquote>
+<p>Sample Response</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>
+<span class="o">{</span>
+  <span class="s2">"status"</span>: <span class="s2">"00"</span>,
+  <span class="s2">"description"</span>: <span class="s2">"SUCCESSFUL"</span>,
+  <span class="s2">"type"</span>: <span class="s2">"DATA"</span>,
+  <span class="s2">"transaction_datetime"</span>: <span class="s2">"20170814115221"</span>,
+  <span class="s2">"outlet_id"</span>: <span class="s2">"FA92804"</span>,
+  <span class="s2">"pin"</span>: <span class="s2">"----"</span>,
+  <span class="s2">"version"</span>: <span class="s2">"1.0"</span>,
+  <span class="s2">"mode"</span>: <span class="s2">"development"</span>,
+  <span class="s2">"data"</span>: <span class="o">{</span>
+    <span class="s2">"product_id"</span>: <span class="s2">"hgwr5"</span>,
+    <span class="s2">"product_qty"</span>: <span class="s2">"3"</span>,
+    <span class="s2">"product_variant_id"</span>: <span class="s2">""</span>,
+    <span class="s2">"customer_name"</span>: <span class="s2">"AGUNG"</span>,
+    <span class="s2">"customer_address"</span>: <span class="s2">""</span>,
+    <span class="s2">"customer_area_code"</span>: <span class="s2">"232"</span>,
+    <span class="s2">"customer_to_area"</span>: <span class="s2">"6204"</span>,
+    <span class="s2">"customer_phone"</span>: <span class="s2">"082244409356"</span>,
+    <span class="s2">"customer_email"</span>: <span class="s2">""</span>,
+    <span class="s2">"customer_postcode"</span>: <span class="s2">"61177"</span>,
+    <span class="s2">"ekspedition_id"</span>: <span class="s2">"0"</span>,
+    <span class="s2">"ekspedition_paket_code"</span>: <span class="s2">"J&amp;T"</span>,
+    <span class="s2">"ekspedition_paket_name"</span>: <span class="s2">"J&amp;T REG"</span>,
+    <span class="s2">"ekspedition_estimate_day"</span>: <span class="s2">"2-3"</span>,
+    <span class="s2">"ekspedition_price"</span>: 72000,
+    <span class="s2">"insurance_cost"</span>: 6375,
+    <span class="s2">"catatan"</span>: <span class="s2">""</span>,
+    <span class="s2">"key_voucher"</span>: <span class="s2">""</span>
+  <span class="o">}</span>,
+  <span class="s2">"result"</span>: <span class="o">{</span>
+    <span class="s2">"booking_date"</span>: <span class="s2">"20170814115221"</span>,
+    <span class="s2">"booking_payment_code"</span>: <span class="s2">"3567"</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre><h3 id='http-request-8'>HTTP Request</h3>
+<p><code>POST http://apiproduk.fastpay.co.id/index.php/transaksi</code></p>
+<h3 id='url-parameters-4'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th></th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>product_id</td>
+<td><strong>required</strong></td>
+<td>Id Produk</td>
+</tr>
+<tr>
+<td>product_qty</td>
+<td><strong>required</strong></td>
+<td>Jumlah Produk yang dibeli</td>
+</tr>
+<tr>
+<td>product_variant_id</td>
+<td>optional</td>
+<td>id varian produk</td>
+</tr>
+<tr>
+<td>customer_name</td>
+<td><strong>required</strong></td>
+<td>Nama pembeli</td>
+</tr>
+<tr>
+<td>customer_address</td>
+<td>optional</td>
+<td>alamat Pembeli</td>
+</tr>
+<tr>
+<td>customer_area_code</td>
+<td><strong>required</strong></td>
+<td>kode kota pembeli</td>
+</tr>
+<tr>
+<td>customer_to_area</td>
+<td><strong>required</strong></td>
+<td>kode kecamatan pembeli</td>
+</tr>
+<tr>
+<td>customer_phone</td>
+<td><strong>required</strong></td>
+<td>no hp pembeli</td>
+</tr>
+<tr>
+<td>customer_email</td>
+<td><strong>required</strong></td>
+<td>email pembeli</td>
+</tr>
+<tr>
+<td>customer_postcode</td>
+<td><strong>required</strong></td>
+<td>kode pos</td>
+</tr>
+<tr>
+<td>ekspedition_paket_code</td>
+<td><strong>required</strong></td>
+<td>nama ekspedisi</td>
+</tr>
+<tr>
+<td>ekspedition_paket_name</td>
+<td><strong>required</strong></td>
+<td>nama service ekspedisi</td>
+</tr>
+<tr>
+<td>ekspedition_price</td>
+<td><strong>required</strong></td>
+<td>harga pengiriman</td>
+</tr>
+<tr>
+<td>insurance_cost</td>
+<td><strong>required</strong></td>
+<td>Harga asuransi pengiriman (Bukalapak)</td>
+</tr>
+<tr>
+<td>catatan</td>
+<td>optional</td>
+<td>Catatan pengiriman</td>
+</tr>
+<tr>
+<td>key_voucher</td>
+<td>optional</td>
+<td>Key voucher yang didapatkan saat cek voucher</td>
+</tr>
+</tbody></table>
+<h2 id='inquiry'>Inquiry</h2>
+<blockquote>
+<p>Sample Request:</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="o">{</span>
+    <span class="s2">"type"</span>:<span class="s2">"INQ"</span>,
+    <span class="s2">"data"</span>:<span class="o">{</span>
+        <span class="s2">"booking_payment_code"</span>:<span class="s2">"2082"</span>
+  <span class="o">}</span>,
+    <span class="s2">"version"</span>:<span class="s2">"1.0"</span>,
+    <span class="s2">"mode"</span>:<span class="s2">"development"</span>
+<span class="o">}</span>
+</code></pre>
+<blockquote>
+<p>Sample Response</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>
+<span class="o">{</span>
+   <span class="s2">"status"</span>:<span class="s2">"00"</span>,
+    <span class="s2">"description"</span>:<span class="s2">"SUCCESSFUL"</span>,
+    <span class="s2">"type"</span>:<span class="s2">"INQ"</span>,
+    <span class="s2">"transaction_datetime"</span>:<span class="s2">"20170707145836"</span>,
+    <span class="s2">"outlet_id"</span>:<span class="s2">"BS0004"</span>,
+    <span class="s2">"pin"</span>:<span class="s2">"----"</span>,
+    <span class="s2">"version"</span>:<span class="s2">"1.0"</span>,
+    <span class="s2">"mode"</span>:<span class="s2">"development"</span>,
+    <span class="s2">"data"</span>:<span class="o">{</span>
+        <span class="s2">"booking_payment_code"</span>:<span class="s2">"2082"</span>
+    <span class="o">}</span>,
+    <span class="s2">"result"</span>:<span class="o">{</span>
+        <span class="s2">"booking_payment_code"</span>:<span class="s2">"2082"</span>,
+        <span class="s2">"product_id"</span>:<span class="s2">"433452"</span>,
+        <span class="s2">"reff_id"</span>:<span class="s2">"760148636"</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre><h3 id='http-request-9'>HTTP Request</h3>
+<p><code>POST http://apiproduk.fastpay.co.id/index.php/transaksi</code></p>
+<h3 id='url-parameters-5'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th></th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>booking_payment_code</td>
+<td><strong>required</strong></td>
+<td>kode booking</td>
+</tr>
+</tbody></table>
+<h2 id='payment'>Payment</h2>
+<blockquote>
+<p>Sample Request:</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code><span class="o">{</span>
+    <span class="s2">"type"</span>:<span class="s2">"PAY"</span>,
+    <span class="s2">"data"</span>:<span class="o">{</span>
+        <span class="s2">"booking_payment_code"</span>:<span class="s2">"2082"</span>,
+        <span class="s2">"reff_id"</span>:<span class="s2">"760148636"</span>
+  <span class="o">}</span>,
+    <span class="s2">"version"</span>:<span class="s2">"1.0"</span>,
+    <span class="s2">"mode"</span>:<span class="s2">"development"</span>
+<span class="o">}</span>
+</code></pre>
+<blockquote>
+<p>Sample Response</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>
+<span class="o">{</span>
+    <span class="s2">"status"</span>:<span class="s2">"00"</span>,
+    <span class="s2">"description"</span>:<span class="s2">"SUCCESSFUL"</span>,
+    <span class="s2">"type"</span>:<span class="s2">"PAY"</span>,
+    <span class="s2">"transaction_datetime"</span>:<span class="s2">"20170710101603"</span>,
+    <span class="s2">"outlet_id"</span>:<span class="s2">"BS0004"</span>,
+    <span class="s2">"pin"</span>:<span class="s2">"----"</span>,
+    <span class="s2">"version"</span>:<span class="s2">"1.0"</span>,
+    <span class="s2">"mode"</span>:<span class="s2">"development"</span>,
+    <span class="s2">"data"</span>:<span class="o">{</span>
+        <span class="s2">"booking_payment_code"</span>:<span class="s2">"2082"</span>,
+        <span class="s2">"reff_id"</span>:<span class="s2">"760148636"</span>
+    <span class="o">}</span>,
+    <span class="s2">"result"</span>:<span class="o">{</span>
+        <span class="s2">"booking_payment_code"</span>:<span class="s2">"2082"</span>,
+        <span class="s2">"product_id"</span>:<span class="s2">"433452"</span>,
+        <span class="s2">"reff_id"</span>:<span class="s2">"760149784"</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</code></pre><h3 id='http-request-10'>HTTP Request</h3>
+<p><code>POST http://apiproduk.fastpay.co.id/index.php/transaksi</code></p>
+<h3 id='url-parameters-6'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th></th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>booking_payment_code</td>
+<td><strong>required</strong></td>
+<td>kode booking</td>
+</tr>
+<tr>
+<td>reff_id</td>
+<td><strong>required</strong></td>
+<td>reff_id yang didapat ketika inquiry</td>
 </tr>
 </tbody></table>
 <h1 id='errors'>Errors</h1>
@@ -495,9 +1297,6 @@ This error section is stored in a separate file in <code>includes/_errors.md</co
       <div class="dark-box">
           <div class="lang-selector">
                 <a href="#" data-language-name="shell">shell</a>
-                <a href="#" data-language-name="ruby">ruby</a>
-                <a href="#" data-language-name="python">python</a>
-                <a href="#" data-language-name="javascript">javascript</a>
           </div>
       </div>
     </div>
