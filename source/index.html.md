@@ -1,15 +1,14 @@
 ---
 title: API Reference
 
-language_tabs: # must be one of https://git.io/vQNgJ
+language_tabs:
   - shell
-  - ruby
-  - python
-  - javascript
+
+  
 
 toc_footers:
   - <a href='#'>Sign Up for a Developer Key</a>
-  - <a href='https://github.com/lord/slate'>Documentation Powered by Slate</a>
+  - <a href='https://github.com/tripit/slate'>Documentation Powered by Slate</a>
 
 includes:
   - errors
@@ -19,221 +18,1066 @@ search: true
 
 # Introduction
 
-Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.
+Selamat datang di API Toko Modern Fastpay. Anda bisa mendapatkan informasi produk yang ada di Toko Modern fastpay.
 
-We have language bindings in Shell, Ruby, Python, and JavaScript! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
+# SignOn
 
-This example API documentation page was created with [Slate](https://github.com/lord/slate). Feel free to edit it and use it as a base for your own API's documentation.
+API Tomo menggunakan Basic Auth dan key untuk akses. Berikut contoh format key:
 
-# Authentication
-
-> To authorize, use this code:
-
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-```
-
-```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-```
-
-```shell
-# With shell, you can just pass the correct header with each request
-curl "api_endpoint_here"
-  -H "Authorization: meowmeowmeow"
-```
-
-```javascript
-const kittn = require('kittn');
-
-let api = kittn.authorize('meowmeowmeow');
-```
-
-> Make sure to replace `meowmeowmeow` with your API key.
-
-Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our [developer portal](http://example.com/developers).
-
-Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:
-
-`Authorization: meowmeowmeow`
+`curl -H TOMO-API-KEY:key`
 
 <aside class="notice">
-You must replace <code>meowmeowmeow</code> with your personal API key.
+Anda harus mengganti `key` dengan key personal anda. Basic Auth menggunakan `username` dan `pin` yang anda dapatkan.
 </aside>
 
-# Kittens
-
-## Get All Kittens
-
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.get
-```
-
-```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-api.kittens.get()
-```
+# Kategori
+## get kategori
+> Sample Request:
 
 ```shell
-curl "http://example.com/api/kittens"
-  -H "Authorization: meowmeowmeow"
+
+curl -X GET -H
+"TOMO-API-KEY: 8s4ww0gg8o"
+http://apiproduk.fastpay.co.id/v2/category
+
 ```
-
-```javascript
-const kittn = require('kittn');
-
-let api = kittn.authorize('meowmeowmeow');
-let kittens = api.kittens.get();
-```
-
-> The above command returns JSON structured like this:
+> Sample Response:
 
 ```json
+
 [
   {
-    "id": 1,
-    "name": "Fluffums",
-    "breed": "calico",
-    "fluffiness": 6,
-    "cuteness": 7
-  },
-  {
-    "id": 2,
-    "name": "Max",
-    "breed": "unknown",
-    "fluffiness": 5,
-    "cuteness": 10
-  }
+  "id_kategori": "2",
+  "name": "HANDPHONE & TABLET",
+  "parent": [{
+    "id_kategori": "6224",
+    "name": "Handphone",
+    "parent": [{
+      "id_kategori": "6369",
+      "name": "Smartphone,BB, dan Iphone"
+    }, {
+      "id_kategori": "6370",
+      "name": "Handphone Biasa"
+    }, {
+      "id_kategori": "8063",
+      "name": "Lainnya"
+    }]
+  }, {
+    "id_kategori": "6225",
+    "name": "Tablet",
+    "parent": []
+  }, {
+    "id_kategori": "6226",
+    "name": "Powerbank",
+    "parent": []
+  }, {
+    "id_kategori": "6227",
+    "name": "Accessories",
+    "parent": [{
+      "id_kategori": "6371",
+      "name": "Pelindung layar"
+    }, {
+      "id_kategori": "6372",
+      "name": "Cassing"
+    }, {
+      "id_kategori": "6373",
+      "name": "Kabel data"
+    }, {
+      "id_kategori": "6374",
+      "name": "Charger"
+    }, {
+      "id_kategori": "6375",
+      "name": "Selengkapnya"
+    }, {
+      "id_kategori": "8084",
+      "name": "Lainnya"
+    }]
+  }]
+}
 ]
 ```
 
-This endpoint retrieves all kittens.
+
+Berikut adalah endpoint untuk mengambil list kategori Tomo
 
 ### HTTP Request
 
-`GET http://example.com/api/kittens`
+`GET http://apiproduk.fastpay.co.id/v2/category`
 
-### Query Parameters
+### Parameters
+None
 
-Parameter | Default | Description
+
+
+# Produk NON FMCG
+## Search Engine Produk
+
+> Sample Request:
+
+```shell
+curl -X GET  
+http://35.187.249.107/api_produk_elastic/search_elastic.php?query=kopi
+
+```
+
+
+Berikut adalah cara untuk search produk. 
+
+
+### HTTP Request
+
+`GET http://35.187.249.107/api_produk_elastic/search_elastic.php?query=:query`
+
+### URL Parameters
+
+Parameter | |Description
+--------- | ----------- |-----------
+query | **required** | Kata Kunci Produk
+
+
+## Get List Data Produk
+
+
+> Sample Request:
+
+```json
+{
+    "query":"",
+    "category":"",
+    "id_category":"",
+    "price_gte":"",
+    "price_lte":"",
+    "province":"",
+    "area":"",
+    "index_page":1,
+    "per_page":30,
+    "date_sort":"desc",
+    "price_sort":"desc",
+    
+
+}
+
+```
+
+
+
+Berikut adalah penjelasan dari value respon yang didapatkan ketika request
+
+Properti | Deskripsi
+-------------- | -------------- 
+Product_owner | Biller produk yang diserap oleh TOMO. Value yang tersedia `BUKALAPAK` dan `SBF`
+
+
+### HTTP Request
+
+`POST 35.187.249.107/api_produk_elastic/search_list_product.php`
+
+### Parameters
+
+Parameter |  | Description
 --------- | ------- | -----------
-include_cats | false | If set to true, the result will also include cats.
-available | true | If set to false, the result will include kittens that have already been adopted.
+query | optional | Keyword yang digunakan untuk pencarian.
+kategori | optional | Pencarian berdasarkan kategori menggunakan string.
+id_category | optional | Pencarian berdasarkan kategori menggunakan id_kategori.
+price_gte | optional | Minimal Harga Produk
+price_lte | optional | Maksimal Harga Produk
+province | optional | List berdasar `Provinsi` tertentu. menggunakan string
+area | optional | List berdasar `Kota` tertentu. menggunakan string
+index_page | optional | Paging
+per_page | optional | Maksimal produk tampil per-page
+date_sort | optional | Listing terbaru atau terlama `asc` atau `desc`
 
-<aside class="success">
-Remember — a happy kitten is an authenticated kitten!
-</aside>
 
-## Get a Specific Kitten
 
-```ruby
-require 'kittn'
+## Get Produk Detail
 
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.get(2)
-```
-
-```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-api.kittens.get(2)
-```
+> Sample Request:
 
 ```shell
-curl "http://example.com/api/kittens/2"
-  -H "Authorization: meowmeowmeow"
+curl -X GET -H
+"TOMO-API-KEY: 8s4ww0gg8o"
+http://apiproduk.fastpay.co.id/v2/detail_product/9a117t
 ```
 
-```javascript
-const kittn = require('kittn');
-
-let api = kittn.authorize('meowmeowmeow');
-let max = api.kittens.get(2);
-```
-
-> The above command returns JSON structured like this:
+> Sample Response
 
 ```json
+
 {
-  "id": 2,
-  "name": "Max",
-  "breed": "unknown",
-  "fluffiness": 5,
-  "cuteness": 10
+  "status": "ok",
+  "product_list": [
+    {
+      "id_produk": "9a117t",
+      "id_kategori_produk": "7749",
+      "category": "Jaket Motor & ATV \/ Aksesoris Motor \/ OTOMOTIF | BUKU, GAMES & MUSIK",
+      "produk": "Sarung Tangan Batok Rockstar Merah Full Finger",
+      "product_owner": "BUKALAPAK",
+      "bobot": "100",
+      "harga": "29900.00",
+      "deskripsi": {
+        
+      },
+      "is_barang_baru": "1",
+      "deskripsi_bisnis": "Sarung Tangan Batok<br\/><br\/>- All size<br\/>- Warna hitam<br\/>- Melindungi tangan pada saat berkendara<br\/>- Membuat tangan tetap halus (tidak kapalan)<br\/>- Melindungi dari sinar matahari langsung<br\/>- Barang ready stok.",
+      "created": "2017-07-23 14:56:12",
+      "qty": "12",
+      "updated": "2017-10-09 05:12:09.853208",
+      "diskon_prosentase": "0",
+      "diskon_flat_nominal": "0",
+      "jumlah_dilihat": "0",
+      "jumlah_diminati": "0",
+      "jumlah_terjual": "0",
+      "city_origin_supplier": null,
+      "id_member": "SB999",
+      "is_deleted": "0",
+      "harga_coret": 35200,
+      "harga_non_coret": 32442,
+      "hpp_core": 27359,
+      "service_fee": 2542,
+      "diskon": 0,
+      "harga_up": 2758,
+      "service_fee_persen": "8.50",
+      "service_fee_fix": "0.00",
+      "up_harga_fix": "0.00",
+      "up_harga_persen": "0.00",
+      "foto": [
+        "https:\/\/s2.bukalapak.com\/img\/7569750931\/large\/Sarung_Tangan_Batok_Rockstar_Merah_Full_Finger.jpg",
+        "https:\/\/s2.bukalapak.com\/img\/2569750931\/large\/Sarung_Tangan_Batok_Rockstar_Merah_Full_Finger.jpg",
+        "https:\/\/s2.bukalapak.com\/img\/2469750931\/large\/Sarung_Tangan_Batok_Rockstar_Merah_Full_Finger.jpg",
+        "https:\/\/s2.bukalapak.com\/img\/7369750931\/large\/Sarung_Tangan_Batok_Rockstar_Merah_Full_Finger.jpg",
+        "https:\/\/s2.bukalapak.com\/img\/2769750931\/large\/Sarung_Tangan_Batok_Rockstar_Merah_Full_Finger.jpg"
+      ],
+      "courier": [
+        "Pos",
+        "JNE",
+        "J&T",
+        "TIKI"
+      ]
+    }
+  ]
 }
 ```
 
-This endpoint retrieves a specific kitten.
+Berikut adalah cara untuk mengambil detail dari produk. 
 
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
 
 ### HTTP Request
 
-`GET http://example.com/kittens/<ID>`
+`GET http://apiproduk.fastpay.co.id/v2/detail_product/:id/:id_outlet`
 
 ### URL Parameters
 
-Parameter | Description
---------- | -----------
-ID | The ID of the kitten to retrieve
+Parameter | |Description
+--------- | ----------- |-----------
+ID | **required** | id produk yang akan dibaca
+ID | optional | isi dengan id outlet jika ingin memunculkan komisi
 
-## Delete a Specific Kitten
 
-```ruby
-require 'kittn'
+## Get Shipping Fee Product
 
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.delete(2)
-```
-
-```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-api.kittens.delete(2)
-```
+> Sample Request per courier:
 
 ```shell
-curl "http://example.com/api/kittens/2"
-  -X DELETE
-  -H "Authorization: meowmeowmeow"
+curl -X GET -H
+"TOMO-API-KEY: 8s4ww0gg8o"
+http://apiproduk.fastpay.co.id/index.php/v2/cek_ongkir_product?
+id_produk=7j0ezz&city_destination=250
+&to_area=10150&kode_pos=61256&courier=JNE&quantity=1
 ```
 
-```javascript
-const kittn = require('kittn');
+> Sample Response
 
-let api = kittn.authorize('meowmeowmeow');
-let max = api.kittens.delete(2);
-```
+```shell
 
-> The above command returns JSON structured like this:
-
-```json
 {
-  "id": 2,
-  "deleted" : ":("
+  "status": "ok",
+  "result": [{
+    "service": "JNE REG",
+    "harga": 180000,
+    "eta": "6",
+    "insurance_cost": 5523
+  }]
 }
 ```
 
-This endpoint deletes a specific kitten.
+> Sample Request all courier:
+
+```shell
+curl -X GET -H
+"TOMO-API-KEY: 8s4ww0gg8o"
+http://apiproduk.fastpay.co.id/index.php/v2/cek_ongkir_product?
+id_produk=7j0ezz&city_destination=250
+&to_area=10150&kode_pos=61256&courier=all&quantity=1
+```
+
+> Sample Response
+
+```json
+
+{
+  "status": "ok",
+  "result": [{
+      "courier_name": "jnt",
+      "couriers": [{
+        "service": "J&T REG",
+        "price": 26000,
+        "eta": "2-3",
+        "insurance_cost": 0
+      }]
+    },
+    {
+      "courier_name": "poskilat",
+      "couriers": [{
+        "service": "Pos Kilat Khusus",
+        "price": 16665,
+        "eta": "2",
+        "insurance_cost": 0
+      }]
+    },
+    {
+      "courier_name": "jne",
+      "couriers": [{
+        "service": "JNE REG",
+        "price": 36000,
+        "eta": "3-6",
+        "insurance_cost": 0
+      }]
+    },
+    {
+      "courier_name": "tiki",
+      "couriers": [{
+          "service": "TIKI Reg",
+          "price": 36500,
+          "eta": 3,
+          "insurance_cost": 0
+        },
+        {
+          "service": "TIKI ONS",
+          "price": 29000,
+          "eta": 1,
+          "insurance_cost": 0
+        }
+      ]
+    }
+  ]
+}
+
+```
+
+Berikut adalah cara untuk mengambil data ongkos kirim dari produk. 
+
 
 ### HTTP Request
 
-`DELETE http://example.com/kittens/<ID>`
+`GET http://apiproduk.fastpay.co.id/v2/cek_ongkir_product`
 
 ### URL Parameters
 
-Parameter | Description
---------- | -----------
-ID | The ID of the kitten to delete
+Parameter | |Description
+--------- | ----------- |-----------
+id_produk | **required** | id produk
+city_destination | **required** | Id kota tujuan pengiriman
+to_area  | **required** | Id Kecamatan Pengiriman
+kode_pos | **required** | Kode Pos Pengiriman
+courier | **required** | nama ekspedisi
+quantity | **required** | Jumlah Pembelian
 
+ 
+
+Courier List| 
+--------- | -----------
+pos| 
+jne|
+tiki|
+wahana|
+rpx|
+sicepat|
+ninja|
+jnt|
+all|
+
+
+# Produk FMCG
+
+FMCG di Tomo adalah layanan penjualan produk sehari hari yang pengirimannya dilakukan oleh Supplier FMCG. Saat ini Supplier FMCG Tomo ada di tabel bawah ini
+
+ID Supplier | Keterangan 
+-------------- | -------------- 
+SB114759 | Vifa Grosir
+
+
+## Search Engine Produk
+
+> Sample Request:
+
+```shell
+curl -X GET  
+http://35.187.249.107/api_produk_elastic/search_elastic.php?query=kopi
+&is_direct_expedition=true&id_member=SB114759
+
+```
+
+
+Berikut adalah cara untuk search produk. 
+
+
+### HTTP Request
+
+`GET http://35.187.249.107/api_produk_elastic/search_elastic.php?query=:query&is_direct_expedition=:is_direct_expedition&id_member=:id_member`
+
+### URL Parameters
+
+Parameter | |Description
+--------- | ----------- |-----------
+query | **required** | Kata Kunci Produk
+is_direct_expedition | optional | Isi dengan `'true'` jika barang FMCG dan `'false'` jika barang `non fmcg`. Default barang non fmcg
+id_member | **required** | Produk oleh supplier tertentu
+
+## Get List Data Produk
+
+
+> Sample Request:
+
+```json
+{
+    "query":"",
+    "category":"",
+    "id_category":"",
+    "price_gte":"",
+    "price_lte":"",
+    "province":"",
+    "area":"",
+    "index_page":1,
+    "per_page":30,
+    "date_sort":"desc",
+    "price_sort":"desc",
+    "is_direct_expedition":"true",
+    "id_member":"SB114759"
+
+}
+
+```
+
+
+
+Berikut adalah penjelasan dari value respon yang didapatkan ketika request
+
+Properti | Deskripsi
+-------------- | -------------- 
+Product_owner | Biller produk yang diserap oleh TOMO. Value yang tersedia `BUKALAPAK` dan `SBF`
+
+
+### HTTP Request
+
+`POST 35.187.249.107/api_produk_elastic/search_list_product.php`
+
+### Parameters
+
+Parameter |  | Description
+--------- | ------- | -----------
+query | optional | Keyword yang digunakan untuk pencarian.
+kategori | optional | Pencarian berdasarkan kategori menggunakan string.
+id_category | optional | Pencarian berdasarkan kategori menggunakan id_kategori.
+price_gte | optional | Minimal Harga Produk
+price_lte | optional | Maksimal Harga Produk
+province | optional | List berdasar `Provinsi` tertentu. menggunakan string
+area | optional | List berdasar `Kota` tertentu. menggunakan string
+index_page | optional | Paging
+per_page | optional | Maksimal produk tampil per-page
+date_sort | optional | Listing terbaru atau terlama `asc` atau `desc`
+is_direct_expedition | **required** | `'true'` untuk filter barang fmcg
+id_member | **required** | id supplier fmcg
+
+## Insert cart
+```json
+[{
+	"id_produk": 31407,
+	"qty": 1
+}, {
+	"id_produk": 31408,
+	"qty": 1
+}]
+```
+
+> Sample Response
+
+```json
+{
+    "status": "ok",
+    "id_cart": "23"
+}
+```
+### HTTP Request
+
+`POST http://apiproduk.fastpay.co.id/index.php/v2/insert_cart`
+
+### URL Parameters
+
+Parameter | |Description
+--------- | ----------- |-----------
+id_produk | **required** | id produk fmcg
+qty | **required** | jumlah beli produk
+
+## Cart list
+> Sample Request:
+
+```shell
+curl -X GET 
+http://apiproduk.fastpay.co.id/v2/cart_list?id_cart=23
+
+```
+
+> Sample Response
+
+```json
+
+{
+    "status": "ok",
+    "supplier_info": {
+        "nama_pemilik": "Internal Tester",
+        "jumlah_barang": "2",
+        "id_supplier": "BS0004",
+        "logo_supplier": "https://static.scash.bz/supplier_sbf/image_supplier/BS0004_07052018_81484c89213141c8bc269498c02af177.jpeg",
+        "catatan_pengiriman": "<p>dfdsfsdf</p>",
+        "minimum_belanja": "100000"
+    },
+    "result": {
+        "id_cart": "23",
+        "list_produk": [
+            {
+                "id_produk": "31407",
+                "id_member": "BS0004",
+                "produk": "Abon sapi",
+                "qty": "1",
+                "harga": 40000,
+                "diskon": 0,
+                "url_image": "https://static.scash.bz/tomo/image_produk/image_produk/BS0004_02082018_caddfb48f5fb0f8bcf8e428805296396.compressed.jpeg"
+            },
+            {
+                "id_produk": "31408",
+                "id_member": "BS0004",
+                "produk": "kornet sapi",
+                "qty": "1",
+                "harga": 25000,
+                "diskon": 0,
+                "url_image": "https://static.scash.bz/tomo/image_produk/image_produk/BS0004_02082018_6a738e2c09acbe02d6a2202af12f01be.compressed.jpeg"
+            }
+        ]
+    }
+}
+
+```
+
+API untuk mengambil cart list yang dimasukkan dari API [insert cart](#insert-cart)
+
+### HTTP Request
+
+`GET http://apiproduk.fastpay.co.id/v2/cart_list?id_cart=:id_cart`
+
+### Parameters
+
+Parameter |  | Description
+--------- | ------- | -----------
+id_cart |  **required** | ID yang didapatkan dari API [insert cart](#insert-cart).
+
+## Get Propinsi Pengiriman
+> Sample Request:
+
+```shell
+curl -X GET 
+http://apiproduk.fastpay.co.id/v2/list_propinsi_fmcg?id_supplier=SB114759
+
+```
+
+> Sample Response
+
+```json
+{
+	"status": "ok",
+	"result": [{
+		"id_propinsi": "28",
+		"nama_propinsi": "Jawa Timur"
+	}]
+}
+```
+
+Api ini untuk mengambil propinsi mana yang disupport pengiriman oleh supplier FMCG
+
+### HTTP Request
+
+`GET http://apiproduk.fastpay.co.id/v2/list_propinsi_fmcg?id_supplier=:id_supplier`
+
+### Parameters
+
+Parameter |  | Description
+--------- | ------- | -----------
+id_supplier |  **required** | Id supplier FMCG.
+
+
+
+## Get Kota Pengiriman
+> Sample Request:
+
+```shell
+curl -X GET 
+http://apiproduk.fastpay.co.id/v2/list_kota_fmcg?id_supplier=SB114759&id_propinsi=28
+
+```
+
+> Sample Response
+
+```json
+{
+	"status": "ok",
+	"result": [{
+		"id_kota": "264",
+		"nama_kota": "Kota Surabaya"
+	}]
+}
+```
+
+Api ini untuk mengambil propinsi mana yang disupport pengiriman oleh supplier FMCG
+
+### HTTP Request
+
+`GET http://apiproduk.fastpay.co.id/v2/list_kota_fmcg?id_supplier=:id_supplier&id_propinsi=:id_propinsi`
+
+### Parameters
+
+Parameter |  | Description
+--------- | ------- | -----------
+id_supplier |  **required** | Id supplier FMCG.
+id_propinsi |  **required** | id_propinsi didapatkan dari [list propinsi](#get-propinsi-pengiriman)
+
+## Get Kota Pengiriman
+> Sample Request:
+
+```shell
+curl -X GET 
+http://apiproduk.fastpay.co.id/v2/list_kecamatan_fmcg?id_supplier=SB114759&id_kota=264
+
+```
+
+> Sample Response
+
+```json
+{
+	"status": "ok",
+	"result": [{
+		"id_kecamatan": "3893",
+		"nama_kecamatan": "GAYUNGAN"
+	}]
+}
+```
+
+Api ini untuk mengambil propinsi mana yang disupport pengiriman oleh supplier FMCG
+
+### HTTP Request
+
+`GET http://apiproduk.fastpay.co.id/v2/list_kecamatan_fmcg?id_supplier=:id_supplier&id_kota=:id_kota`
+
+### Parameters
+
+Parameter |  | Description
+--------- | ------- | -----------
+id_supplier |  **required** | Id supplier FMCG.
+id_kota |  **required** | id_propinsi didapatkan dari [list kota](#get-kota-pengiriman)
+
+# Voucher
+## voucher non fmcg
+> Sample Request:
+
+```shell
+curl -X GET 
+http://apiproduk.fastpay.co.id/v2/cek_voucher?kode_voucher=GR64645&no_hp_pembeli=082244409356&id_produk=afg07j&id_outlet=FA92804&qty=1&paket_ekspedisi=JNE%20REG&ongkir=120000
+
+```
+
+> Sample Response
+
+```json
+
+{
+  "status": "ok",
+  "result": {
+    "nominal_voucher": "1000",
+    "rule_unique_nomor_hp": "t",
+    "rule_potong_ongkir": "t",
+    "resp_type": "0",
+    "key_voucher": "ZM94yq8IfC20171013142444"
+  }
+}
+
+```
+
+
+Berikut adalah penjelasan dari value respon yang didapatkan ketika request
+
+Properti | Deskripsi
+-------------- | -------------- 
+nominal_voucher | Nominal voucher yang didapatkan
+rule_unique_nomor_hp | Voucher yang hanya bisa digunakan satu kali dalam satu no hp. value `t` dan `f`
+rule_potong_ongkir | Voucher untuk free ongkir. value `t` dan `f`
+key_voucher | key voucher untuk inputan booking
+
+### HTTP Request
+
+`GET http://apiproduk.fastpay.co.id/v2/cek_voucher`
+
+### Parameters
+
+Parameter |  | Description
+--------- | ------- | -----------
+kode_voucher |  **required** | Kode Voucher tomo.
+id_produk |  **required** | id produk .
+id_outlet |  **required** | Id outlet login tomo
+qty |  **required** | jumlah beli
+paket_ekspedisi |  **required** | jenis paket ekspedisi
+ongkir |  **required** | harga ongkos kirim jenis paket ekspedisi 
+
+## voucher fmcg
+```json
+{
+  "kode_voucher": "FA544",
+  "no_hp_pembeli": "082244409356",
+  "id_outlet": "FA56239",
+  "list_produk": [
+    {
+      "id_produk": "31407",
+      "qty": "1"
+    },
+    {
+      "id_produk": "31408",
+      "qty": "1"
+    }
+  ]
+}
+```
+
+> Sample Response
+
+```json
+
+{
+    "status": "ok",
+    "result": {
+        "nominal_voucher_didapat": 10000,
+        "list_key_voucher": [
+            {
+                "id_produk": "31407",
+                "total_harga": 40000,
+                "voucher_didapat": "10000",
+                "key_voucher": "LR51xIq8f120180802105557"
+            }
+        ]
+    }
+}
+```
+### HTTP Request
+
+`POST http://apiproduk.fastpay.co.id/index.php/v2/cek_voucher_fmcg`
+
+### URL Parameters
+
+Parameter | |Description
+--------- | ----------- |-----------
+kode_voucher | **required** | Kode Voucher
+
+# Get nearest loket
+
+> Sample Request:
+
+```shell
+curl -X GET -H
+"TOMO-API-KEY: 8s4ww0gg8o"
+http://apiproduk.fastpay.co.id/v2/nearest_loket?latitude=-7.3601523&longitude=112.7432411&%20total_belanja=1000
+
+```
+
+> Sample Response
+
+```json
+
+{
+  "status": "ok",
+  "result": [{
+    "id_outlet": "BS0004",
+    "latitude": "-7.3601492",
+    "longitude": "112.7432416",
+    "jarak_meter": "0",
+    "nama_pemilik": "Internal Tester",
+    "alamat_pemilik": "SIDOARJO",
+    "notelp_pemilik": "08563396898",
+    "notelp_outlet": "081310095830",
+    "nomor_whatsapp_outlet": "08224"
+  }, {
+    "id_outlet": "FA32481",
+    "latitude": "-7.360148",
+    "longitude": "112.7432596",
+    "jarak_meter": "2",
+    "nama_pemilik": "OPERATIONAL MARKETING SBF",
+    "alamat_pemilik": "Jl DELTA RAYA UTARA KAV 49 50 DELTASARI BARU WARU  SDA  081234228787",
+    "notelp_pemilik": "082139972979",
+    "notelp_outlet": "03131034354",
+    "nomor_whatsapp_outlet": "083849262697"
+  }, {
+    "id_outlet": "FA47880",
+    "latitude": "-7.3601676",
+    "longitude": "112.7432598",
+    "jarak_meter": "3",
+    "nama_pemilik": "DANTE",
+    "alamat_pemilik": "BOULEVARD OF BROKEN DREAM",
+    "notelp_pemilik": "081235449898",
+    "notelp_outlet": "085720416911",
+    "nomor_whatsapp_outlet": "085731921365"
+  }, {
+    "id_outlet": "FA9919",
+    "latitude": "-7.3601545",
+    "longitude": "112.7432887",
+    "jarak_meter": "5",
+    "nama_pemilik": "Fitra Alfiananto",
+    "alamat_pemilik": "Jalan Made Karyo 31",
+    "notelp_pemilik": "085648889293",
+    "notelp_outlet": "085648889293",
+    "nomor_whatsapp_outlet": "085648889293"
+  }, {
+    "id_outlet": "FA73863",
+    "latitude": "-7.3601062",
+    "longitude": "112.7432261",
+    "jarak_meter": "5",
+    "nama_pemilik": "Zunita Rachmanniar",
+    "alamat_pemilik": "Sidokare Asri SS - 11 Sidoarjo",
+    "notelp_pemilik": "082218706946",
+    "notelp_outlet": "0318532580",
+    "nomor_whatsapp_outlet": "082218706946"
+  }]
+}
+
+```
+
+
+Berikut adalah penjelasan dari value respon yang didapatkan ketika request
+
+Properti | Deskripsi
+-------------- | -------------- 
+id_outlet | Id Outlet terdekat
+latitude | Nilai latitude lokasi outlet
+longitude | Nilai longitude lokasi outlet
+jarak_meter | jarak loket dari lokasi request dalam meter
+nama_pemilik | Nama pemilik loket
+alamat_pemilik | Alamat loket
+notelp_pemilik | No telp pemilik
+notelp_outlet | No telp loket
+nomor_whatsapp_outlet | No whatsapp loket
+
+### HTTP Request
+
+`GET http://apiproduk.fastpay.co.id/v2/nearest_loket`
+
+### Parameters
+
+Parameter |  | Description
+--------- | ------- | -----------
+latitude |  **required** | Nilai latitude pembeli.
+longitude |  **required** | Nilai longitude pembeli.
+total_belanja |  **required** | Total belanja
+
+# Payment Process NON FMCG
+
+## Booking
+
+> Sample Request:
+
+```json
+{
+  "type": "DATA",
+  "data": {
+    "product_id": "hgwr5",
+    "product_qty": "3",
+    "product_variant_id": "",
+    "customer_name": "AGUNG",
+    "customer_address": "",
+    "customer_area_code": "232",
+    "customer_to_area": "6204",
+    "customer_phone": "082244409356",
+    "customer_email": "",
+    "customer_postcode": "61177",
+    "ekspedition_id": "0",
+    "ekspedition_paket_code": "J&T",
+    "ekspedition_paket_name": "J&T REG",
+    "ekspedition_estimate_day": "2-3",
+    "ekspedition_price": 72000,
+    "insurance_cost": 6375,
+    "catatan": "",
+    "key_voucher": ""
+  },
+  "version": "1.0",
+  "mode": "development"
+}
+```
+
+> Sample Response
+
+```json
+
+{
+  "status": "00",
+  "description": "SUCCESSFUL",
+  "type": "DATA",
+  "transaction_datetime": "20170814115221",
+  "outlet_id": "FA92804",
+  "pin": "----",
+  "version": "1.0",
+  "mode": "development",
+  "data": {
+    "product_id": "hgwr5",
+    "product_qty": "3",
+    "product_variant_id": "",
+    "customer_name": "AGUNG",
+    "customer_address": "",
+    "customer_area_code": "232",
+    "customer_to_area": "6204",
+    "customer_phone": "082244409356",
+    "customer_email": "",
+    "customer_postcode": "61177",
+    "ekspedition_id": "0",
+    "ekspedition_paket_code": "J&T",
+    "ekspedition_paket_name": "J&T REG",
+    "ekspedition_estimate_day": "2-3",
+    "ekspedition_price": 72000,
+    "insurance_cost": 6375,
+    "catatan": "",
+    "key_voucher": ""
+  },
+  "result": {
+    "booking_date": "20170814115221",
+    "booking_payment_code": "3567"
+  }
+}
+```
+
+### HTTP Request
+
+`POST http://apiproduk.fastpay.co.id/index.php/transaksi`
+
+### URL Parameters
+
+Parameter | |Description
+--------- | ----------- |-----------
+product_id | **required** | Id Produk
+product_qty | **required** | Jumlah Produk yang dibeli
+product_variant_id | optional | id varian produk
+customer_name  | **required**  |  Nama pembeli
+customer_address | optional | alamat Pembeli
+customer_area_code | **required** | kode kota pembeli
+customer_to_area   | **required**  | kode kecamatan pembeli
+customer_phone | **required** | no hp pembeli
+customer_email | **required** | email pembeli
+customer_postcode | **required** | kode pos
+ekspedition_paket_code | **required** | nama ekspedisi
+ekspedition_paket_name | **required** | nama service ekspedisi
+ekspedition_price | **required** | harga pengiriman
+insurance_cost  |  **required** | Harga asuransi pengiriman (Bukalapak)
+catatan  |  optional  | Catatan pengiriman
+key_voucher  | optional  |  Key voucher yang didapatkan saat cek voucher
+
+
+## Inquiry
+
+> Sample Request:
+
+```json
+{
+    "type":"INQ",
+    "data":{
+        "booking_payment_code":"2082"
+  },
+    "version":"1.0",
+    "mode":"development"
+}
+```
+
+> Sample Response
+
+```json
+
+{
+   "status":"00",
+    "description":"SUCCESSFUL",
+    "type":"INQ",
+    "transaction_datetime":"20170707145836",
+    "outlet_id":"BS0004",
+    "pin":"----",
+    "version":"1.0",
+    "mode":"development",
+    "data":{
+        "booking_payment_code":"2082"
+    },
+    "result":{
+        "booking_payment_code":"2082",
+        "product_id":"433452",
+        "reff_id":"760148636"
+    }
+}
+```
+### HTTP Request
+
+`POST http://apiproduk.fastpay.co.id/index.php/transaksi`
+
+### URL Parameters
+
+Parameter | |Description
+--------- | ----------- |-----------
+booking_payment_code | **required** | kode booking
+
+
+## Payment
+
+> Sample Request:
+
+```json
+{
+    "type":"PAY",
+    "data":{
+        "booking_payment_code":"2082",
+        "reff_id":"760148636"
+  },
+    "version":"1.0",
+    "mode":"development"
+}
+```
+
+> Sample Response
+
+```json
+
+{
+    "status":"00",
+    "description":"SUCCESSFUL",
+    "type":"PAY",
+    "transaction_datetime":"20170710101603",
+    "outlet_id":"BS0004",
+    "pin":"----",
+    "version":"1.0",
+    "mode":"development",
+    "data":{
+        "booking_payment_code":"2082",
+        "reff_id":"760148636"
+    },
+    "result":{
+        "booking_payment_code":"2082",
+        "product_id":"433452",
+        "reff_id":"760149784"
+    }
+}
+```
+### HTTP Request
+
+`POST http://apiproduk.fastpay.co.id/index.php/transaksi`
+
+### URL Parameters
+
+Parameter | |Description
+--------- | ----------- |-----------
+booking_payment_code | **required** | kode booking
+reff_id | **required** | reff_id yang didapat ketika inquiry
