@@ -649,7 +649,7 @@ Parameter |  | Description
 id_supplier |  **required** | Id supplier FMCG.
 id_propinsi |  **required** | id_propinsi didapatkan dari [list propinsi](#get-propinsi-pengiriman)
 
-## Get Kota Pengiriman
+## Get Kecamatan Pengiriman
 > Sample Request:
 
 ```shell
