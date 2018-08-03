@@ -228,16 +228,16 @@
             <a href="#kategori" class="toc-h1 toc-link" data-title="Kategori">Kategori</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#http-request" class="toc-h2 toc-link" data-title="HTTP Request">HTTP Request</a>
-                  </li>
-                  <li>
-                    <a href="#parameters" class="toc-h2 toc-link" data-title="Parameters">Parameters</a>
+                    <a href="#get-kategori" class="toc-h2 toc-link" data-title="get kategori">get kategori</a>
                   </li>
               </ul>
           </li>
           <li>
-            <a href="#produk" class="toc-h1 toc-link" data-title="Produk">Produk</a>
+            <a href="#produk-non-fmcg" class="toc-h1 toc-link" data-title="Produk NON FMCG">Produk NON FMCG</a>
               <ul class="toc-list-h2">
+                  <li>
+                    <a href="#search-engine-produk" class="toc-h2 toc-link" data-title="Search Engine Produk">Search Engine Produk</a>
+                  </li>
                   <li>
                     <a href="#get-list-data-produk" class="toc-h2 toc-link" data-title="Get List Data Produk">Get List Data Produk</a>
                   </li>
@@ -246,6 +246,32 @@
                   </li>
                   <li>
                     <a href="#get-shipping-fee-product" class="toc-h2 toc-link" data-title="Get Shipping Fee Product">Get Shipping Fee Product</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#produk-fmcg" class="toc-h1 toc-link" data-title="Produk FMCG">Produk FMCG</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#search-engine-produk-2" class="toc-h2 toc-link" data-title="Search Engine Produk">Search Engine Produk</a>
+                  </li>
+                  <li>
+                    <a href="#get-list-data-produk-2" class="toc-h2 toc-link" data-title="Get List Data Produk">Get List Data Produk</a>
+                  </li>
+                  <li>
+                    <a href="#insert-cart" class="toc-h2 toc-link" data-title="Insert cart">Insert cart</a>
+                  </li>
+                  <li>
+                    <a href="#cart-list" class="toc-h2 toc-link" data-title="Cart list">Cart list</a>
+                  </li>
+                  <li>
+                    <a href="#get-propinsi-pengiriman" class="toc-h2 toc-link" data-title="Get Propinsi Pengiriman">Get Propinsi Pengiriman</a>
+                  </li>
+                  <li>
+                    <a href="#get-kota-pengiriman" class="toc-h2 toc-link" data-title="Get Kota Pengiriman">Get Kota Pengiriman</a>
+                  </li>
+                  <li>
+                    <a href="#get-kota-pengiriman-2" class="toc-h2 toc-link" data-title="Get Kota Pengiriman">Get Kota Pengiriman</a>
                   </li>
               </ul>
           </li>
@@ -264,15 +290,15 @@
             <a href="#get-nearest-loket" class="toc-h1 toc-link" data-title="Get nearest loket">Get nearest loket</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#http-request-7" class="toc-h2 toc-link" data-title="HTTP Request">HTTP Request</a>
+                    <a href="#http-request-15" class="toc-h2 toc-link" data-title="HTTP Request">HTTP Request</a>
                   </li>
                   <li>
-                    <a href="#parameters-4" class="toc-h2 toc-link" data-title="Parameters">Parameters</a>
+                    <a href="#parameters-9" class="toc-h2 toc-link" data-title="Parameters">Parameters</a>
                   </li>
               </ul>
           </li>
           <li>
-            <a href="#payment-process" class="toc-h1 toc-link" data-title="Payment Process">Payment Process</a>
+            <a href="#payment-process-non-fmcg" class="toc-h1 toc-link" data-title="Payment Process NON FMCG">Payment Process NON FMCG</a>
               <ul class="toc-list-h2">
                   <li>
                     <a href="#booking" class="toc-h2 toc-link" data-title="Booking">Booking</a>
@@ -307,7 +333,7 @@
 <aside class="notice">
 Anda harus mengganti `key` dengan key personal anda. Basic Auth menggunakan `username` dan `pin` yang anda dapatkan.
 </aside>
-<h1 id='kategori'>Kategori</h1>
+<h1 id='kategori'>Kategori</h1><h2 id='get-kategori'>get kategori</h2>
 <blockquote>
 <p>Sample Request:</p>
 </blockquote>
@@ -320,72 +346,109 @@ http://apiproduk.fastpay.co.id/v2/category
 <blockquote>
 <p>Sample Response:</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>
-<span class="o">[</span>
-  <span class="o">{</span>
-  <span class="s2">"id_kategori"</span>: <span class="s2">"2"</span>,
-  <span class="s2">"name"</span>: <span class="s2">"HANDPHONE &amp; TABLET"</span>,
-  <span class="s2">"parent"</span>: <span class="o">[{</span>
-    <span class="s2">"id_kategori"</span>: <span class="s2">"6224"</span>,
-    <span class="s2">"name"</span>: <span class="s2">"Handphone"</span>,
-    <span class="s2">"parent"</span>: <span class="o">[{</span>
-      <span class="s2">"id_kategori"</span>: <span class="s2">"6369"</span>,
-      <span class="s2">"name"</span>: <span class="s2">"Smartphone,BB, dan Iphone"</span>
-    <span class="o">}</span>, <span class="o">{</span>
-      <span class="s2">"id_kategori"</span>: <span class="s2">"6370"</span>,
-      <span class="s2">"name"</span>: <span class="s2">"Handphone Biasa"</span>
-    <span class="o">}</span>, <span class="o">{</span>
-      <span class="s2">"id_kategori"</span>: <span class="s2">"8063"</span>,
-      <span class="s2">"name"</span>: <span class="s2">"Lainnya"</span>
-    <span class="o">}]</span>
-  <span class="o">}</span>, <span class="o">{</span>
-    <span class="s2">"id_kategori"</span>: <span class="s2">"6225"</span>,
-    <span class="s2">"name"</span>: <span class="s2">"Tablet"</span>,
-    <span class="s2">"parent"</span>: <span class="o">[]</span>
-  <span class="o">}</span>, <span class="o">{</span>
-    <span class="s2">"id_kategori"</span>: <span class="s2">"6226"</span>,
-    <span class="s2">"name"</span>: <span class="s2">"Powerbank"</span>,
-    <span class="s2">"parent"</span>: <span class="o">[]</span>
-  <span class="o">}</span>, <span class="o">{</span>
-    <span class="s2">"id_kategori"</span>: <span class="s2">"6227"</span>,
-    <span class="s2">"name"</span>: <span class="s2">"Accessories"</span>,
-    <span class="s2">"parent"</span>: <span class="o">[{</span>
-      <span class="s2">"id_kategori"</span>: <span class="s2">"6371"</span>,
-      <span class="s2">"name"</span>: <span class="s2">"Pelindung layar"</span>
-    <span class="o">}</span>, <span class="o">{</span>
-      <span class="s2">"id_kategori"</span>: <span class="s2">"6372"</span>,
-      <span class="s2">"name"</span>: <span class="s2">"Cassing"</span>
-    <span class="o">}</span>, <span class="o">{</span>
-      <span class="s2">"id_kategori"</span>: <span class="s2">"6373"</span>,
-      <span class="s2">"name"</span>: <span class="s2">"Kabel data"</span>
-    <span class="o">}</span>, <span class="o">{</span>
-      <span class="s2">"id_kategori"</span>: <span class="s2">"6374"</span>,
-      <span class="s2">"name"</span>: <span class="s2">"Charger"</span>
-    <span class="o">}</span>, <span class="o">{</span>
-      <span class="s2">"id_kategori"</span>: <span class="s2">"6375"</span>,
-      <span class="s2">"name"</span>: <span class="s2">"Selengkapnya"</span>
-    <span class="o">}</span>, <span class="o">{</span>
-      <span class="s2">"id_kategori"</span>: <span class="s2">"8084"</span>,
-      <span class="s2">"name"</span>: <span class="s2">"Lainnya"</span>
-    <span class="o">}]</span>
-  <span class="o">}]</span>
-<span class="o">}</span>
-<span class="o">]</span>
-</code></pre>
+<pre class="highlight json tab-json"><code><span class="w">
+</span><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+  </span><span class="s2">"id_kategori"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"HANDPHONE &amp; TABLET"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"parent"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+    </span><span class="s2">"id_kategori"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6224"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Handphone"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"parent"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+      </span><span class="s2">"id_kategori"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6369"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Smartphone,BB, dan Iphone"</span><span class="w">
+    </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id_kategori"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6370"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Handphone Biasa"</span><span class="w">
+    </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id_kategori"</span><span class="p">:</span><span class="w"> </span><span class="s2">"8063"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lainnya"</span><span class="w">
+    </span><span class="p">}]</span><span class="w">
+  </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id_kategori"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6225"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Tablet"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"parent"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
+  </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id_kategori"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6226"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Powerbank"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"parent"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
+  </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id_kategori"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6227"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Accessories"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"parent"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+      </span><span class="s2">"id_kategori"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6371"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Pelindung layar"</span><span class="w">
+    </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id_kategori"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6372"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Cassing"</span><span class="w">
+    </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id_kategori"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6373"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Kabel data"</span><span class="w">
+    </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id_kategori"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6374"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Charger"</span><span class="w">
+    </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id_kategori"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6375"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Selengkapnya"</span><span class="w">
+    </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id_kategori"</span><span class="p">:</span><span class="w"> </span><span class="s2">"8084"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lainnya"</span><span class="w">
+    </span><span class="p">}]</span><span class="w">
+  </span><span class="p">}]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
 <p>Berikut adalah endpoint untuk mengambil list kategori Tomo</p>
 <h3 id='http-request'>HTTP Request</h3>
 <p><code>GET http://apiproduk.fastpay.co.id/v2/category</code></p>
 <h3 id='parameters'>Parameters</h3>
 <p>None</p>
-<h1 id='produk'>Produk</h1><h2 id='get-list-data-produk'>Get List Data Produk</h2>
+<h1 id='produk-non-fmcg'>Produk NON FMCG</h1><h2 id='search-engine-produk'>Search Engine Produk</h2>
 <blockquote>
 <p>Sample Request:</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl -X GET -H
-<span class="s2">"TOMO-API-KEY: 8s4ww0gg8o"</span>
-http://apiproduk.fastpay.co.id/v2/product_list?keyword<span class="o">=</span>tinta
+<pre class="highlight shell tab-shell"><code>curl -X GET  
+http://35.187.249.107/api_produk_elastic/search_elastic.php?query<span class="o">=</span>kopi
 
 </code></pre>
+<p>Berikut adalah cara untuk search produk. </p>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>GET http://35.187.249.107/api_produk_elastic/search_elastic.php?query=:query</code></p>
+<h3 id='url-parameters'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th></th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>query</td>
+<td><strong>required</strong></td>
+<td>Kata Kunci Produk</td>
+</tr>
+</tbody></table>
+<h2 id='get-list-data-produk'>Get List Data Produk</h2>
+<blockquote>
+<p>Sample Request:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"query"</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"category"</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"id_category"</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"price_gte"</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"price_lte"</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"province"</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"area"</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"index_page"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"per_page"</span><span class="p">:</span><span class="mi">30</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"date_sort"</span><span class="p">:</span><span class="s2">"desc"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"price_sort"</span><span class="p">:</span><span class="s2">"desc"</span><span class="p">,</span><span class="w">
+
+
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre>
 <p>Berikut adalah penjelasan dari value respon yang didapatkan ketika request</p>
 
 <table><thead>
@@ -399,8 +462,8 @@ http://apiproduk.fastpay.co.id/v2/product_list?keyword<span class="o">=</span>ti
 <td>Biller produk yang diserap oleh TOMO. Value yang tersedia <code>BUKALAPAK</code> dan <code>SBF</code></td>
 </tr>
 </tbody></table>
-<h3 id='http-request-2'>HTTP Request</h3>
-<p><code>GET http://apiproduk.fastpay.co.id/v2/product_list</code></p>
+<h3 id='http-request-3'>HTTP Request</h3>
+<p><code>POST 35.187.249.107/api_produk_elastic/search_list_product.php</code></p>
 <h3 id='parameters-2'>Parameters</h3>
 <table><thead>
 <tr>
@@ -410,34 +473,54 @@ http://apiproduk.fastpay.co.id/v2/product_list?keyword<span class="o">=</span>ti
 </tr>
 </thead><tbody>
 <tr>
-<td>keywords</td>
+<td>query</td>
 <td>optional</td>
 <td>Keyword yang digunakan untuk pencarian.</td>
 </tr>
 <tr>
-<td>category_id</td>
+<td>kategori</td>
 <td>optional</td>
-<td>Pencarian berdasarkan kategori tertentu.</td>
+<td>Pencarian berdasarkan kategori menggunakan string.</td>
 </tr>
 <tr>
-<td>sort_type</td>
+<td>id_category</td>
 <td>optional</td>
-<td>Nilai yang diperbolehkan <code>nama</code> dan <code>harga</code>.</td>
+<td>Pencarian berdasarkan kategori menggunakan id_kategori.</td>
 </tr>
 <tr>
-<td>sorting_order</td>
+<td>price_gte</td>
 <td>optional</td>
-<td>Nilai yang diperbolehkan <code>desc</code> dan <code>asc</code></td>
+<td>Minimal Harga Produk</td>
+</tr>
+<tr>
+<td>price_lte</td>
+<td>optional</td>
+<td>Maksimal Harga Produk</td>
+</tr>
+<tr>
+<td>province</td>
+<td>optional</td>
+<td>List berdasar <code>Provinsi</code> tertentu. menggunakan string</td>
+</tr>
+<tr>
+<td>area</td>
+<td>optional</td>
+<td>List berdasar <code>Kota</code> tertentu. menggunakan string</td>
 </tr>
 <tr>
 <td>index_page</td>
 <td>optional</td>
-<td>halaman pagination. default=<code>0</code></td>
+<td>Paging</td>
 </tr>
 <tr>
 <td>per_page</td>
 <td>optional</td>
-<td>Jumlah produk yang tampil. default value <code>10</code>. value yang diperbolehkan <code>5</code>, <code>10</code>, <code>20</code>, <code>50</code>, <code>100</code></td>
+<td>Maksimal produk tampil per-page</td>
+</tr>
+<tr>
+<td>date_sort</td>
+<td>optional</td>
+<td>Listing terbaru atau terlama <code>asc</code> atau <code>desc</code></td>
 </tr>
 </tbody></table>
 <h2 id='get-produk-detail'>Get Produk Detail</h2>
@@ -451,65 +534,65 @@ http://apiproduk.fastpay.co.id/v2/detail_product/9a117t
 <blockquote>
 <p>Sample Response</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>
-<span class="o">{</span>
-  <span class="s2">"status"</span>: <span class="s2">"ok"</span>,
-  <span class="s2">"product_list"</span>: <span class="o">[</span>
-    <span class="o">{</span>
-      <span class="s2">"id_produk"</span>: <span class="s2">"9a117t"</span>,
-      <span class="s2">"id_kategori_produk"</span>: <span class="s2">"7749"</span>,
-      <span class="s2">"category"</span>: <span class="s2">"Jaket Motor &amp; ATV </span><span class="se">\/</span><span class="s2"> Aksesoris Motor </span><span class="se">\/</span><span class="s2"> OTOMOTIF | BUKU, GAMES &amp; MUSIK"</span>,
-      <span class="s2">"produk"</span>: <span class="s2">"Sarung Tangan Batok Rockstar Merah Full Finger"</span>,
-      <span class="s2">"product_owner"</span>: <span class="s2">"BUKALAPAK"</span>,
-      <span class="s2">"bobot"</span>: <span class="s2">"100"</span>,
-      <span class="s2">"harga"</span>: <span class="s2">"29900.00"</span>,
-      <span class="s2">"deskripsi"</span>: <span class="o">{</span>
+<pre class="highlight json tab-json"><code><span class="w">
+</span><span class="p">{</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ok"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"product_list"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id_produk"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9a117t"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"id_kategori_produk"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7749"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"category"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Jaket Motor &amp; ATV </span><span class="se">\/</span><span class="s2"> Aksesoris Motor </span><span class="se">\/</span><span class="s2"> OTOMOTIF | BUKU, GAMES &amp; MUSIK"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"produk"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Sarung Tangan Batok Rockstar Merah Full Finger"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"product_owner"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BUKALAPAK"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"bobot"</span><span class="p">:</span><span class="w"> </span><span class="s2">"100"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"harga"</span><span class="p">:</span><span class="w"> </span><span class="s2">"29900.00"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"deskripsi"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
 
-      <span class="o">}</span>,
-      <span class="s2">"is_barang_baru"</span>: <span class="s2">"1"</span>,
-      <span class="s2">"deskripsi_bisnis"</span>: <span class="s2">"Sarung Tangan Batok&lt;br</span><span class="se">\/</span><span class="s2">&gt;&lt;br</span><span class="se">\/</span><span class="s2">&gt;- All size&lt;br</span><span class="se">\/</span><span class="s2">&gt;- Warna hitam&lt;br</span><span class="se">\/</span><span class="s2">&gt;- Melindungi tangan pada saat berkendara&lt;br</span><span class="se">\/</span><span class="s2">&gt;- Membuat tangan tetap halus (tidak kapalan)&lt;br</span><span class="se">\/</span><span class="s2">&gt;- Melindungi dari sinar matahari langsung&lt;br</span><span class="se">\/</span><span class="s2">&gt;- Barang ready stok."</span>,
-      <span class="s2">"created"</span>: <span class="s2">"2017-07-23 14:56:12"</span>,
-      <span class="s2">"qty"</span>: <span class="s2">"12"</span>,
-      <span class="s2">"updated"</span>: <span class="s2">"2017-10-09 05:12:09.853208"</span>,
-      <span class="s2">"diskon_prosentase"</span>: <span class="s2">"0"</span>,
-      <span class="s2">"diskon_flat_nominal"</span>: <span class="s2">"0"</span>,
-      <span class="s2">"jumlah_dilihat"</span>: <span class="s2">"0"</span>,
-      <span class="s2">"jumlah_diminati"</span>: <span class="s2">"0"</span>,
-      <span class="s2">"jumlah_terjual"</span>: <span class="s2">"0"</span>,
-      <span class="s2">"city_origin_supplier"</span>: null,
-      <span class="s2">"id_member"</span>: <span class="s2">"SB999"</span>,
-      <span class="s2">"is_deleted"</span>: <span class="s2">"0"</span>,
-      <span class="s2">"harga_coret"</span>: 35200,
-      <span class="s2">"harga_non_coret"</span>: 32442,
-      <span class="s2">"hpp_core"</span>: 27359,
-      <span class="s2">"service_fee"</span>: 2542,
-      <span class="s2">"diskon"</span>: 0,
-      <span class="s2">"harga_up"</span>: 2758,
-      <span class="s2">"service_fee_persen"</span>: <span class="s2">"8.50"</span>,
-      <span class="s2">"service_fee_fix"</span>: <span class="s2">"0.00"</span>,
-      <span class="s2">"up_harga_fix"</span>: <span class="s2">"0.00"</span>,
-      <span class="s2">"up_harga_persen"</span>: <span class="s2">"0.00"</span>,
-      <span class="s2">"foto"</span>: <span class="o">[</span>
-        <span class="s2">"https:</span><span class="se">\/\/</span><span class="s2">s2.bukalapak.com</span><span class="se">\/</span><span class="s2">img</span><span class="se">\/</span><span class="s2">7569750931</span><span class="se">\/</span><span class="s2">large</span><span class="se">\/</span><span class="s2">Sarung_Tangan_Batok_Rockstar_Merah_Full_Finger.jpg"</span>,
-        <span class="s2">"https:</span><span class="se">\/\/</span><span class="s2">s2.bukalapak.com</span><span class="se">\/</span><span class="s2">img</span><span class="se">\/</span><span class="s2">2569750931</span><span class="se">\/</span><span class="s2">large</span><span class="se">\/</span><span class="s2">Sarung_Tangan_Batok_Rockstar_Merah_Full_Finger.jpg"</span>,
-        <span class="s2">"https:</span><span class="se">\/\/</span><span class="s2">s2.bukalapak.com</span><span class="se">\/</span><span class="s2">img</span><span class="se">\/</span><span class="s2">2469750931</span><span class="se">\/</span><span class="s2">large</span><span class="se">\/</span><span class="s2">Sarung_Tangan_Batok_Rockstar_Merah_Full_Finger.jpg"</span>,
-        <span class="s2">"https:</span><span class="se">\/\/</span><span class="s2">s2.bukalapak.com</span><span class="se">\/</span><span class="s2">img</span><span class="se">\/</span><span class="s2">7369750931</span><span class="se">\/</span><span class="s2">large</span><span class="se">\/</span><span class="s2">Sarung_Tangan_Batok_Rockstar_Merah_Full_Finger.jpg"</span>,
-        <span class="s2">"https:</span><span class="se">\/\/</span><span class="s2">s2.bukalapak.com</span><span class="se">\/</span><span class="s2">img</span><span class="se">\/</span><span class="s2">2769750931</span><span class="se">\/</span><span class="s2">large</span><span class="se">\/</span><span class="s2">Sarung_Tangan_Batok_Rockstar_Merah_Full_Finger.jpg"</span>
-      <span class="o">]</span>,
-      <span class="s2">"courier"</span>: <span class="o">[</span>
-        <span class="s2">"Pos"</span>,
-        <span class="s2">"JNE"</span>,
-        <span class="s2">"J&amp;T"</span>,
-        <span class="s2">"TIKI"</span>
-      <span class="o">]</span>
-    <span class="o">}</span>
-  <span class="o">]</span>
-<span class="o">}</span>
-</code></pre>
+      </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"is_barang_baru"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"deskripsi_bisnis"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Sarung Tangan Batok&lt;br</span><span class="se">\/</span><span class="s2">&gt;&lt;br</span><span class="se">\/</span><span class="s2">&gt;- All size&lt;br</span><span class="se">\/</span><span class="s2">&gt;- Warna hitam&lt;br</span><span class="se">\/</span><span class="s2">&gt;- Melindungi tangan pada saat berkendara&lt;br</span><span class="se">\/</span><span class="s2">&gt;- Membuat tangan tetap halus (tidak kapalan)&lt;br</span><span class="se">\/</span><span class="s2">&gt;- Melindungi dari sinar matahari langsung&lt;br</span><span class="se">\/</span><span class="s2">&gt;- Barang ready stok."</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"created"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-07-23 14:56:12"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"qty"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"updated"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2017-10-09 05:12:09.853208"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"diskon_prosentase"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"diskon_flat_nominal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"jumlah_dilihat"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"jumlah_diminati"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"jumlah_terjual"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"city_origin_supplier"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"id_member"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SB999"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"is_deleted"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"harga_coret"</span><span class="p">:</span><span class="w"> </span><span class="mi">35200</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"harga_non_coret"</span><span class="p">:</span><span class="w"> </span><span class="mi">32442</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"hpp_core"</span><span class="p">:</span><span class="w"> </span><span class="mi">27359</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"service_fee"</span><span class="p">:</span><span class="w"> </span><span class="mi">2542</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"diskon"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"harga_up"</span><span class="p">:</span><span class="w"> </span><span class="mi">2758</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"service_fee_persen"</span><span class="p">:</span><span class="w"> </span><span class="s2">"8.50"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"service_fee_fix"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.00"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"up_harga_fix"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.00"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"up_harga_persen"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.00"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"foto"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="s2">"https:</span><span class="se">\/\/</span><span class="s2">s2.bukalapak.com</span><span class="se">\/</span><span class="s2">img</span><span class="se">\/</span><span class="s2">7569750931</span><span class="se">\/</span><span class="s2">large</span><span class="se">\/</span><span class="s2">Sarung_Tangan_Batok_Rockstar_Merah_Full_Finger.jpg"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"https:</span><span class="se">\/\/</span><span class="s2">s2.bukalapak.com</span><span class="se">\/</span><span class="s2">img</span><span class="se">\/</span><span class="s2">2569750931</span><span class="se">\/</span><span class="s2">large</span><span class="se">\/</span><span class="s2">Sarung_Tangan_Batok_Rockstar_Merah_Full_Finger.jpg"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"https:</span><span class="se">\/\/</span><span class="s2">s2.bukalapak.com</span><span class="se">\/</span><span class="s2">img</span><span class="se">\/</span><span class="s2">2469750931</span><span class="se">\/</span><span class="s2">large</span><span class="se">\/</span><span class="s2">Sarung_Tangan_Batok_Rockstar_Merah_Full_Finger.jpg"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"https:</span><span class="se">\/\/</span><span class="s2">s2.bukalapak.com</span><span class="se">\/</span><span class="s2">img</span><span class="se">\/</span><span class="s2">7369750931</span><span class="se">\/</span><span class="s2">large</span><span class="se">\/</span><span class="s2">Sarung_Tangan_Batok_Rockstar_Merah_Full_Finger.jpg"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"https:</span><span class="se">\/\/</span><span class="s2">s2.bukalapak.com</span><span class="se">\/</span><span class="s2">img</span><span class="se">\/</span><span class="s2">2769750931</span><span class="se">\/</span><span class="s2">large</span><span class="se">\/</span><span class="s2">Sarung_Tangan_Batok_Rockstar_Merah_Full_Finger.jpg"</span><span class="w">
+      </span><span class="p">],</span><span class="w">
+      </span><span class="s2">"courier"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="s2">"Pos"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"JNE"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"J&amp;T"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"TIKI"</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
 <p>Berikut adalah cara untuk mengambil detail dari produk. </p>
-<h3 id='http-request-3'>HTTP Request</h3>
-<p><code>GET http://apiproduk.fastpay.co.id/v2/detail_product/:id</code></p>
-<h3 id='url-parameters'>URL Parameters</h3>
+<h3 id='http-request-4'>HTTP Request</h3>
+<p><code>GET http://apiproduk.fastpay.co.id/v2/detail_product/:id/:id_outlet</code></p>
+<h3 id='url-parameters-2'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -521,6 +604,11 @@ http://apiproduk.fastpay.co.id/v2/detail_product/9a117t
 <td>ID</td>
 <td><strong>required</strong></td>
 <td>id produk yang akan dibaca</td>
+</tr>
+<tr>
+<td>ID</td>
+<td>optional</td>
+<td>isi dengan id outlet jika ingin memunculkan komisi</td>
 </tr>
 </tbody></table>
 <h2 id='get-shipping-fee-product'>Get Shipping Fee Product</h2>
@@ -559,60 +647,60 @@ http://apiproduk.fastpay.co.id/index.php/v2/cek_ongkir_product?
 <blockquote>
 <p>Sample Response</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>
-<span class="o">{</span>
-  <span class="s2">"status"</span>: <span class="s2">"ok"</span>,
-  <span class="s2">"result"</span>: <span class="o">[{</span>
-      <span class="s2">"courier_name"</span>: <span class="s2">"jnt"</span>,
-      <span class="s2">"couriers"</span>: <span class="o">[{</span>
-        <span class="s2">"service"</span>: <span class="s2">"J&amp;T REG"</span>,
-        <span class="s2">"price"</span>: 26000,
-        <span class="s2">"eta"</span>: <span class="s2">"2-3"</span>,
-        <span class="s2">"insurance_cost"</span>: 0
-      <span class="o">}]</span>
-    <span class="o">}</span>,
-    <span class="o">{</span>
-      <span class="s2">"courier_name"</span>: <span class="s2">"poskilat"</span>,
-      <span class="s2">"couriers"</span>: <span class="o">[{</span>
-        <span class="s2">"service"</span>: <span class="s2">"Pos Kilat Khusus"</span>,
-        <span class="s2">"price"</span>: 16665,
-        <span class="s2">"eta"</span>: <span class="s2">"2"</span>,
-        <span class="s2">"insurance_cost"</span>: 0
-      <span class="o">}]</span>
-    <span class="o">}</span>,
-    <span class="o">{</span>
-      <span class="s2">"courier_name"</span>: <span class="s2">"jne"</span>,
-      <span class="s2">"couriers"</span>: <span class="o">[{</span>
-        <span class="s2">"service"</span>: <span class="s2">"JNE REG"</span>,
-        <span class="s2">"price"</span>: 36000,
-        <span class="s2">"eta"</span>: <span class="s2">"3-6"</span>,
-        <span class="s2">"insurance_cost"</span>: 0
-      <span class="o">}]</span>
-    <span class="o">}</span>,
-    <span class="o">{</span>
-      <span class="s2">"courier_name"</span>: <span class="s2">"tiki"</span>,
-      <span class="s2">"couriers"</span>: <span class="o">[{</span>
-          <span class="s2">"service"</span>: <span class="s2">"TIKI Reg"</span>,
-          <span class="s2">"price"</span>: 36500,
-          <span class="s2">"eta"</span>: 3,
-          <span class="s2">"insurance_cost"</span>: 0
-        <span class="o">}</span>,
-        <span class="o">{</span>
-          <span class="s2">"service"</span>: <span class="s2">"TIKI ONS"</span>,
-          <span class="s2">"price"</span>: 29000,
-          <span class="s2">"eta"</span>: 1,
-          <span class="s2">"insurance_cost"</span>: 0
-        <span class="o">}</span>
-      <span class="o">]</span>
-    <span class="o">}</span>
-  <span class="o">]</span>
-<span class="o">}</span>
+<pre class="highlight json tab-json"><code><span class="w">
+</span><span class="p">{</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ok"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"result"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+      </span><span class="s2">"courier_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"jnt"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"couriers"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+        </span><span class="s2">"service"</span><span class="p">:</span><span class="w"> </span><span class="s2">"J&amp;T REG"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mi">26000</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"eta"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2-3"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"insurance_cost"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+      </span><span class="p">}]</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"courier_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"poskilat"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"couriers"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+        </span><span class="s2">"service"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Pos Kilat Khusus"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mi">16665</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"eta"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"insurance_cost"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+      </span><span class="p">}]</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"courier_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"jne"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"couriers"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+        </span><span class="s2">"service"</span><span class="p">:</span><span class="w"> </span><span class="s2">"JNE REG"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mi">36000</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"eta"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3-6"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"insurance_cost"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+      </span><span class="p">}]</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"courier_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tiki"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"couriers"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+          </span><span class="s2">"service"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TIKI Reg"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mi">36500</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"eta"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"insurance_cost"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"service"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TIKI ONS"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"price"</span><span class="p">:</span><span class="w"> </span><span class="mi">29000</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"eta"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"insurance_cost"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
 
-</code></pre>
+</span></code></pre>
 <p>Berikut adalah cara untuk mengambil data ongkos kirim dari produk. </p>
-<h3 id='http-request-4'>HTTP Request</h3>
+<h3 id='http-request-5'>HTTP Request</h3>
 <p><code>GET http://apiproduk.fastpay.co.id/v2/cek_ongkir_product</code></p>
-<h3 id='url-parameters-2'>URL Parameters</h3>
+<h3 id='url-parameters-3'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -685,31 +773,405 @@ http://apiproduk.fastpay.co.id/index.php/v2/cek_ongkir_product?
 <td>all</td>
 </tr>
 </tbody></table>
+<h1 id='produk-fmcg'>Produk FMCG</h1>
+<p>FMCG di Tomo adalah layanan penjualan produk sehari hari yang pengirimannya dilakukan oleh Supplier FMCG. Saat ini Supplier FMCG Tomo ada di tabel bawah ini</p>
+
+<table><thead>
+<tr>
+<th>ID Supplier</th>
+<th>Keterangan</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>SB114759</td>
+<td>Vifa Grosir</td>
+</tr>
+</tbody></table>
+<h2 id='search-engine-produk-2'>Search Engine Produk</h2>
+<blockquote>
+<p>Sample Request:</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl -X GET  
+http://35.187.249.107/api_produk_elastic/search_elastic.php?query<span class="o">=</span>kopi
+&amp;is_direct_expedition<span class="o">=</span><span class="nb">true</span>&amp;id_member<span class="o">=</span>SB114759
+
+</code></pre>
+<p>Berikut adalah cara untuk search produk. </p>
+<h3 id='http-request-6'>HTTP Request</h3>
+<p><code>GET http://35.187.249.107/api_produk_elastic/search_elastic.php?query=:query&amp;is_direct_expedition=:is_direct_expedition&amp;id_member=:id_member</code></p>
+<h3 id='url-parameters-4'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th></th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>query</td>
+<td><strong>required</strong></td>
+<td>Kata Kunci Produk</td>
+</tr>
+<tr>
+<td>is_direct_expedition</td>
+<td>optional</td>
+<td>Isi dengan <code>&#39;true&#39;</code> jika barang FMCG dan <code>&#39;false&#39;</code> jika barang <code>non fmcg</code>. Default barang non fmcg</td>
+</tr>
+<tr>
+<td>id_member</td>
+<td><strong>required</strong></td>
+<td>Produk oleh supplier tertentu</td>
+</tr>
+</tbody></table>
+<h2 id='get-list-data-produk-2'>Get List Data Produk</h2>
+<blockquote>
+<p>Sample Request:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"query"</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"category"</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"id_category"</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"price_gte"</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"price_lte"</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"province"</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"area"</span><span class="p">:</span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"index_page"</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"per_page"</span><span class="p">:</span><span class="mi">30</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"date_sort"</span><span class="p">:</span><span class="s2">"desc"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"price_sort"</span><span class="p">:</span><span class="s2">"desc"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"is_direct_expedition"</span><span class="p">:</span><span class="s2">"true"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"id_member"</span><span class="p">:</span><span class="s2">"SB114759"</span><span class="w">
+
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre>
+<p>Berikut adalah penjelasan dari value respon yang didapatkan ketika request</p>
+
+<table><thead>
+<tr>
+<th>Properti</th>
+<th>Deskripsi</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Product_owner</td>
+<td>Biller produk yang diserap oleh TOMO. Value yang tersedia <code>BUKALAPAK</code> dan <code>SBF</code></td>
+</tr>
+</tbody></table>
+<h3 id='http-request-7'>HTTP Request</h3>
+<p><code>POST 35.187.249.107/api_produk_elastic/search_list_product.php</code></p>
+<h3 id='parameters-3'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th></th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>query</td>
+<td>optional</td>
+<td>Keyword yang digunakan untuk pencarian.</td>
+</tr>
+<tr>
+<td>kategori</td>
+<td>optional</td>
+<td>Pencarian berdasarkan kategori menggunakan string.</td>
+</tr>
+<tr>
+<td>id_category</td>
+<td>optional</td>
+<td>Pencarian berdasarkan kategori menggunakan id_kategori.</td>
+</tr>
+<tr>
+<td>price_gte</td>
+<td>optional</td>
+<td>Minimal Harga Produk</td>
+</tr>
+<tr>
+<td>price_lte</td>
+<td>optional</td>
+<td>Maksimal Harga Produk</td>
+</tr>
+<tr>
+<td>province</td>
+<td>optional</td>
+<td>List berdasar <code>Provinsi</code> tertentu. menggunakan string</td>
+</tr>
+<tr>
+<td>area</td>
+<td>optional</td>
+<td>List berdasar <code>Kota</code> tertentu. menggunakan string</td>
+</tr>
+<tr>
+<td>index_page</td>
+<td>optional</td>
+<td>Paging</td>
+</tr>
+<tr>
+<td>per_page</td>
+<td>optional</td>
+<td>Maksimal produk tampil per-page</td>
+</tr>
+<tr>
+<td>date_sort</td>
+<td>optional</td>
+<td>Listing terbaru atau terlama <code>asc</code> atau <code>desc</code></td>
+</tr>
+<tr>
+<td>is_direct_expedition</td>
+<td><strong>required</strong></td>
+<td><code>&#39;true&#39;</code> untuk filter barang fmcg</td>
+</tr>
+<tr>
+<td>id_member</td>
+<td><strong>required</strong></td>
+<td>id supplier fmcg</td>
+</tr>
+</tbody></table>
+<h2 id='insert-cart'>Insert cart</h2><pre class="highlight json tab-json"><code><span class="p">[{</span><span class="w">
+    </span><span class="s2">"id_produk"</span><span class="p">:</span><span class="w"> </span><span class="mi">31407</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"qty"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id_produk"</span><span class="p">:</span><span class="w"> </span><span class="mi">31408</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"qty"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+</span><span class="p">}]</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>Sample Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ok"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"id_cart"</span><span class="p">:</span><span class="w"> </span><span class="s2">"23"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-8'>HTTP Request</h3>
+<p><code>POST http://apiproduk.fastpay.co.id/index.php/v2/insert_cart</code></p>
+<h3 id='url-parameters-5'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th></th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id_produk</td>
+<td><strong>required</strong></td>
+<td>id produk fmcg</td>
+</tr>
+<tr>
+<td>qty</td>
+<td><strong>required</strong></td>
+<td>jumlah beli produk</td>
+</tr>
+</tbody></table>
+<h2 id='cart-list'>Cart list</h2>
+<blockquote>
+<p>Sample Request:</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl -X GET 
+http://apiproduk.fastpay.co.id/v2/cart_list?id_cart<span class="o">=</span>23
+
+</code></pre>
+<blockquote>
+<p>Sample Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">
+</span><span class="p">{</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ok"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"supplier_info"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"nama_pemilik"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Internal Tester"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"jumlah_barang"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"id_supplier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BS0004"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"logo_supplier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://static.scash.bz/supplier_sbf/image_supplier/BS0004_07052018_81484c89213141c8bc269498c02af177.jpeg"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"catatan_pengiriman"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;p&gt;dfdsfsdf&lt;/p&gt;"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"minimum_belanja"</span><span class="p">:</span><span class="w"> </span><span class="s2">"100000"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"result"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id_cart"</span><span class="p">:</span><span class="w"> </span><span class="s2">"23"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"list_produk"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"id_produk"</span><span class="p">:</span><span class="w"> </span><span class="s2">"31407"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"id_member"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BS0004"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"produk"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Abon sapi"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"qty"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"harga"</span><span class="p">:</span><span class="w"> </span><span class="mi">40000</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"diskon"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"url_image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://static.scash.bz/tomo/image_produk/image_produk/BS0004_02082018_caddfb48f5fb0f8bcf8e428805296396.compressed.jpeg"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"id_produk"</span><span class="p">:</span><span class="w"> </span><span class="s2">"31408"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"id_member"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BS0004"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"produk"</span><span class="p">:</span><span class="w"> </span><span class="s2">"kornet sapi"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"qty"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"harga"</span><span class="p">:</span><span class="w"> </span><span class="mi">25000</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"diskon"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"url_image"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://static.scash.bz/tomo/image_produk/image_produk/BS0004_02082018_6a738e2c09acbe02d6a2202af12f01be.compressed.jpeg"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre>
+<p>API untuk mengambil cart list yang dimasukkan dari API <a href="#insert-cart">insert cart</a></p>
+<h3 id='http-request-9'>HTTP Request</h3>
+<p><code>GET http://apiproduk.fastpay.co.id/v2/cart_list?id_cart=:id_cart</code></p>
+<h3 id='parameters-4'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th></th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id_cart</td>
+<td><strong>required</strong></td>
+<td>ID yang didapatkan dari API <a href="#insert-cart">insert cart</a>.</td>
+</tr>
+</tbody></table>
+<h2 id='get-propinsi-pengiriman'>Get Propinsi Pengiriman</h2>
+<blockquote>
+<p>Sample Request:</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl -X GET 
+http://apiproduk.fastpay.co.id/v2/list_propinsi_fmcg?id_supplier<span class="o">=</span>SB114759
+
+</code></pre>
+<blockquote>
+<p>Sample Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ok"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"result"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+        </span><span class="s2">"id_propinsi"</span><span class="p">:</span><span class="w"> </span><span class="s2">"28"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"nama_propinsi"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Jawa Timur"</span><span class="w">
+    </span><span class="p">}]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Api ini untuk mengambil propinsi mana yang disupport pengiriman oleh supplier FMCG</p>
+<h3 id='http-request-10'>HTTP Request</h3>
+<p><code>GET http://apiproduk.fastpay.co.id/v2/list_propinsi_fmcg?id_supplier=:id_supplier</code></p>
+<h3 id='parameters-5'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th></th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id_supplier</td>
+<td><strong>required</strong></td>
+<td>Id supplier FMCG.</td>
+</tr>
+</tbody></table>
+<h2 id='get-kota-pengiriman'>Get Kota Pengiriman</h2>
+<blockquote>
+<p>Sample Request:</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl -X GET 
+http://apiproduk.fastpay.co.id/v2/list_kota_fmcg?id_supplier<span class="o">=</span>SB114759&amp;id_propinsi<span class="o">=</span>28
+
+</code></pre>
+<blockquote>
+<p>Sample Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ok"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"result"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+        </span><span class="s2">"id_kota"</span><span class="p">:</span><span class="w"> </span><span class="s2">"264"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"nama_kota"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Kota Surabaya"</span><span class="w">
+    </span><span class="p">}]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Api ini untuk mengambil propinsi mana yang disupport pengiriman oleh supplier FMCG</p>
+<h3 id='http-request-11'>HTTP Request</h3>
+<p><code>GET http://apiproduk.fastpay.co.id/v2/list_kota_fmcg?id_supplier=:id_supplier&amp;id_propinsi=:id_propinsi</code></p>
+<h3 id='parameters-6'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th></th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id_supplier</td>
+<td><strong>required</strong></td>
+<td>Id supplier FMCG.</td>
+</tr>
+<tr>
+<td>id_propinsi</td>
+<td><strong>required</strong></td>
+<td>id_propinsi didapatkan dari <a href="#get-propinsi-pengiriman">list propinsi</a></td>
+</tr>
+</tbody></table>
+<h2 id='get-kota-pengiriman-2'>Get Kota Pengiriman</h2>
+<blockquote>
+<p>Sample Request:</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>curl -X GET 
+http://apiproduk.fastpay.co.id/v2/list_kecamatan_fmcg?id_supplier<span class="o">=</span>SB114759&amp;id_kota<span class="o">=</span>264
+
+</code></pre>
+<blockquote>
+<p>Sample Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ok"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"result"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+        </span><span class="s2">"id_kecamatan"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3893"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"nama_kecamatan"</span><span class="p">:</span><span class="w"> </span><span class="s2">"GAYUNGAN"</span><span class="w">
+    </span><span class="p">}]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Api ini untuk mengambil propinsi mana yang disupport pengiriman oleh supplier FMCG</p>
+<h3 id='http-request-12'>HTTP Request</h3>
+<p><code>GET http://apiproduk.fastpay.co.id/v2/list_kecamatan_fmcg?id_supplier=:id_supplier&amp;id_kota=:id_kota</code></p>
+<h3 id='parameters-7'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th></th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id_supplier</td>
+<td><strong>required</strong></td>
+<td>Id supplier FMCG.</td>
+</tr>
+<tr>
+<td>id_kota</td>
+<td><strong>required</strong></td>
+<td>id_propinsi didapatkan dari <a href="#get-kota-pengiriman">list kota</a></td>
+</tr>
+</tbody></table>
 <h1 id='voucher'>Voucher</h1><h2 id='voucher-non-fmcg'>voucher non fmcg</h2>
 <blockquote>
 <p>Sample Request:</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>curl -X GET -H
-<span class="s2">"TOMO-API-KEY: 8s4ww0gg8o"</span>
+<pre class="highlight shell tab-shell"><code>curl -X GET 
 http://apiproduk.fastpay.co.id/v2/cek_voucher?kode_voucher<span class="o">=</span>GR64645&amp;no_hp_pembeli<span class="o">=</span>082244409356&amp;id_produk<span class="o">=</span>afg07j&amp;id_outlet<span class="o">=</span>FA92804&amp;qty<span class="o">=</span>1&amp;paket_ekspedisi<span class="o">=</span>JNE%20REG&amp;ongkir<span class="o">=</span>120000
 
 </code></pre>
 <blockquote>
 <p>Sample Response</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>
-<span class="o">{</span>
-  <span class="s2">"status"</span>: <span class="s2">"ok"</span>,
-  <span class="s2">"result"</span>: <span class="o">{</span>
-    <span class="s2">"nominal_voucher"</span>: <span class="s2">"1000"</span>,
-    <span class="s2">"rule_unique_nomor_hp"</span>: <span class="s2">"t"</span>,
-    <span class="s2">"rule_potong_ongkir"</span>: <span class="s2">"t"</span>,
-    <span class="s2">"resp_type"</span>: <span class="s2">"0"</span>,
-    <span class="s2">"key_voucher"</span>: <span class="s2">"ZM94yq8IfC20171013142444"</span>
-  <span class="o">}</span>
-<span class="o">}</span>
+<pre class="highlight json tab-json"><code><span class="w">
+</span><span class="p">{</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ok"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"result"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"nominal_voucher"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1000"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"rule_unique_nomor_hp"</span><span class="p">:</span><span class="w"> </span><span class="s2">"t"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"rule_potong_ongkir"</span><span class="p">:</span><span class="w"> </span><span class="s2">"t"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"resp_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"key_voucher"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ZM94yq8IfC20171013142444"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
 
-</code></pre>
+</span></code></pre>
 <p>Berikut adalah penjelasan dari value respon yang didapatkan ketika request</p>
 
 <table><thead>
@@ -735,9 +1197,9 @@ http://apiproduk.fastpay.co.id/v2/cek_voucher?kode_voucher<span class="o">=</spa
 <td>key voucher untuk inputan booking</td>
 </tr>
 </tbody></table>
-<h3 id='http-request-5'>HTTP Request</h3>
+<h3 id='http-request-13'>HTTP Request</h3>
 <p><code>GET http://apiproduk.fastpay.co.id/v2/cek_voucher</code></p>
-<h3 id='parameters-3'>Parameters</h3>
+<h3 id='parameters-8'>Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -776,43 +1238,43 @@ http://apiproduk.fastpay.co.id/v2/cek_voucher?kode_voucher<span class="o">=</spa
 <td>harga ongkos kirim jenis paket ekspedisi</td>
 </tr>
 </tbody></table>
-<h2 id='voucher-fmcg'>voucher fmcg</h2><pre class="highlight shell tab-shell"><code><span class="o">{</span>
-  <span class="s2">"kode_voucher"</span>: <span class="s2">"FA544"</span>,
-  <span class="s2">"no_hp_pembeli"</span>: <span class="s2">"082244409356"</span>,
-  <span class="s2">"id_outlet"</span>: <span class="s2">"FA56239"</span>,
-  <span class="s2">"list_produk"</span>: <span class="o">[</span>
-    <span class="o">{</span>
-      <span class="s2">"id_produk"</span>: <span class="s2">"31407"</span>,
-      <span class="s2">"qty"</span>: <span class="s2">"1"</span>
-    <span class="o">}</span>,
-    <span class="o">{</span>
-      <span class="s2">"id_produk"</span>: <span class="s2">"31408"</span>,
-      <span class="s2">"qty"</span>: <span class="s2">"1"</span>
-    <span class="o">}</span>
-  <span class="o">]</span>
-<span class="o">}</span>
-</code></pre>
+<h2 id='voucher-fmcg'>voucher fmcg</h2><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"kode_voucher"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FA544"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"no_hp_pembeli"</span><span class="p">:</span><span class="w"> </span><span class="s2">"082244409356"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"id_outlet"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FA56239"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"list_produk"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id_produk"</span><span class="p">:</span><span class="w"> </span><span class="s2">"31407"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"qty"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"id_produk"</span><span class="p">:</span><span class="w"> </span><span class="s2">"31408"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"qty"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
 <blockquote>
 <p>Sample Response</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>
-<span class="o">{</span>
-    <span class="s2">"status"</span>: <span class="s2">"ok"</span>,
-    <span class="s2">"result"</span>: <span class="o">{</span>
-        <span class="s2">"nominal_voucher_didapat"</span>: 10000,
-        <span class="s2">"list_key_voucher"</span>: <span class="o">[</span>
-            <span class="o">{</span>
-                <span class="s2">"id_produk"</span>: <span class="s2">"31407"</span>,
-                <span class="s2">"total_harga"</span>: 40000,
-                <span class="s2">"voucher_didapat"</span>: <span class="s2">"10000"</span>,
-                <span class="s2">"key_voucher"</span>: <span class="s2">"LR51xIq8f120180802105557"</span>
-            <span class="o">}</span>
-        <span class="o">]</span>
-    <span class="o">}</span>
-<span class="o">}</span>
-</code></pre><h3 id='http-request-6'>HTTP Request</h3>
+<pre class="highlight json tab-json"><code><span class="w">
+</span><span class="p">{</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ok"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"result"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"nominal_voucher_didapat"</span><span class="p">:</span><span class="w"> </span><span class="mi">10000</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"list_key_voucher"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"id_produk"</span><span class="p">:</span><span class="w"> </span><span class="s2">"31407"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"total_harga"</span><span class="p">:</span><span class="w"> </span><span class="mi">40000</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"voucher_didapat"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10000"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"key_voucher"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LR51xIq8f120180802105557"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-14'>HTTP Request</h3>
 <p><code>POST http://apiproduk.fastpay.co.id/index.php/v2/cek_voucher_fmcg</code></p>
-<h3 id='url-parameters-3'>URL Parameters</h3>
+<h3 id='url-parameters-6'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -838,63 +1300,63 @@ http://apiproduk.fastpay.co.id/v2/nearest_loket?latitude<span class="o">=</span>
 <blockquote>
 <p>Sample Response</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>
-<span class="o">{</span>
-  <span class="s2">"status"</span>: <span class="s2">"ok"</span>,
-  <span class="s2">"result"</span>: <span class="o">[{</span>
-    <span class="s2">"id_outlet"</span>: <span class="s2">"BS0004"</span>,
-    <span class="s2">"latitude"</span>: <span class="s2">"-7.3601492"</span>,
-    <span class="s2">"longitude"</span>: <span class="s2">"112.7432416"</span>,
-    <span class="s2">"jarak_meter"</span>: <span class="s2">"0"</span>,
-    <span class="s2">"nama_pemilik"</span>: <span class="s2">"Internal Tester"</span>,
-    <span class="s2">"alamat_pemilik"</span>: <span class="s2">"SIDOARJO"</span>,
-    <span class="s2">"notelp_pemilik"</span>: <span class="s2">"08563396898"</span>,
-    <span class="s2">"notelp_outlet"</span>: <span class="s2">"081310095830"</span>,
-    <span class="s2">"nomor_whatsapp_outlet"</span>: <span class="s2">"08224"</span>
-  <span class="o">}</span>, <span class="o">{</span>
-    <span class="s2">"id_outlet"</span>: <span class="s2">"FA32481"</span>,
-    <span class="s2">"latitude"</span>: <span class="s2">"-7.360148"</span>,
-    <span class="s2">"longitude"</span>: <span class="s2">"112.7432596"</span>,
-    <span class="s2">"jarak_meter"</span>: <span class="s2">"2"</span>,
-    <span class="s2">"nama_pemilik"</span>: <span class="s2">"OPERATIONAL MARKETING SBF"</span>,
-    <span class="s2">"alamat_pemilik"</span>: <span class="s2">"Jl DELTA RAYA UTARA KAV 49 50 DELTASARI BARU WARU  SDA  081234228787"</span>,
-    <span class="s2">"notelp_pemilik"</span>: <span class="s2">"082139972979"</span>,
-    <span class="s2">"notelp_outlet"</span>: <span class="s2">"03131034354"</span>,
-    <span class="s2">"nomor_whatsapp_outlet"</span>: <span class="s2">"083849262697"</span>
-  <span class="o">}</span>, <span class="o">{</span>
-    <span class="s2">"id_outlet"</span>: <span class="s2">"FA47880"</span>,
-    <span class="s2">"latitude"</span>: <span class="s2">"-7.3601676"</span>,
-    <span class="s2">"longitude"</span>: <span class="s2">"112.7432598"</span>,
-    <span class="s2">"jarak_meter"</span>: <span class="s2">"3"</span>,
-    <span class="s2">"nama_pemilik"</span>: <span class="s2">"DANTE"</span>,
-    <span class="s2">"alamat_pemilik"</span>: <span class="s2">"BOULEVARD OF BROKEN DREAM"</span>,
-    <span class="s2">"notelp_pemilik"</span>: <span class="s2">"081235449898"</span>,
-    <span class="s2">"notelp_outlet"</span>: <span class="s2">"085720416911"</span>,
-    <span class="s2">"nomor_whatsapp_outlet"</span>: <span class="s2">"085731921365"</span>
-  <span class="o">}</span>, <span class="o">{</span>
-    <span class="s2">"id_outlet"</span>: <span class="s2">"FA9919"</span>,
-    <span class="s2">"latitude"</span>: <span class="s2">"-7.3601545"</span>,
-    <span class="s2">"longitude"</span>: <span class="s2">"112.7432887"</span>,
-    <span class="s2">"jarak_meter"</span>: <span class="s2">"5"</span>,
-    <span class="s2">"nama_pemilik"</span>: <span class="s2">"Fitra Alfiananto"</span>,
-    <span class="s2">"alamat_pemilik"</span>: <span class="s2">"Jalan Made Karyo 31"</span>,
-    <span class="s2">"notelp_pemilik"</span>: <span class="s2">"085648889293"</span>,
-    <span class="s2">"notelp_outlet"</span>: <span class="s2">"085648889293"</span>,
-    <span class="s2">"nomor_whatsapp_outlet"</span>: <span class="s2">"085648889293"</span>
-  <span class="o">}</span>, <span class="o">{</span>
-    <span class="s2">"id_outlet"</span>: <span class="s2">"FA73863"</span>,
-    <span class="s2">"latitude"</span>: <span class="s2">"-7.3601062"</span>,
-    <span class="s2">"longitude"</span>: <span class="s2">"112.7432261"</span>,
-    <span class="s2">"jarak_meter"</span>: <span class="s2">"5"</span>,
-    <span class="s2">"nama_pemilik"</span>: <span class="s2">"Zunita Rachmanniar"</span>,
-    <span class="s2">"alamat_pemilik"</span>: <span class="s2">"Sidokare Asri SS - 11 Sidoarjo"</span>,
-    <span class="s2">"notelp_pemilik"</span>: <span class="s2">"082218706946"</span>,
-    <span class="s2">"notelp_outlet"</span>: <span class="s2">"0318532580"</span>,
-    <span class="s2">"nomor_whatsapp_outlet"</span>: <span class="s2">"082218706946"</span>
-  <span class="o">}]</span>
-<span class="o">}</span>
+<pre class="highlight json tab-json"><code><span class="w">
+</span><span class="p">{</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ok"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"result"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+    </span><span class="s2">"id_outlet"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BS0004"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"latitude"</span><span class="p">:</span><span class="w"> </span><span class="s2">"-7.3601492"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"longitude"</span><span class="p">:</span><span class="w"> </span><span class="s2">"112.7432416"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"jarak_meter"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"nama_pemilik"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Internal Tester"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"alamat_pemilik"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SIDOARJO"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"notelp_pemilik"</span><span class="p">:</span><span class="w"> </span><span class="s2">"08563396898"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"notelp_outlet"</span><span class="p">:</span><span class="w"> </span><span class="s2">"081310095830"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"nomor_whatsapp_outlet"</span><span class="p">:</span><span class="w"> </span><span class="s2">"08224"</span><span class="w">
+  </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id_outlet"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FA32481"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"latitude"</span><span class="p">:</span><span class="w"> </span><span class="s2">"-7.360148"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"longitude"</span><span class="p">:</span><span class="w"> </span><span class="s2">"112.7432596"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"jarak_meter"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"nama_pemilik"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OPERATIONAL MARKETING SBF"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"alamat_pemilik"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Jl DELTA RAYA UTARA KAV 49 50 DELTASARI BARU WARU  SDA  081234228787"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"notelp_pemilik"</span><span class="p">:</span><span class="w"> </span><span class="s2">"082139972979"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"notelp_outlet"</span><span class="p">:</span><span class="w"> </span><span class="s2">"03131034354"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"nomor_whatsapp_outlet"</span><span class="p">:</span><span class="w"> </span><span class="s2">"083849262697"</span><span class="w">
+  </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id_outlet"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FA47880"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"latitude"</span><span class="p">:</span><span class="w"> </span><span class="s2">"-7.3601676"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"longitude"</span><span class="p">:</span><span class="w"> </span><span class="s2">"112.7432598"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"jarak_meter"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"nama_pemilik"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DANTE"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"alamat_pemilik"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BOULEVARD OF BROKEN DREAM"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"notelp_pemilik"</span><span class="p">:</span><span class="w"> </span><span class="s2">"081235449898"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"notelp_outlet"</span><span class="p">:</span><span class="w"> </span><span class="s2">"085720416911"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"nomor_whatsapp_outlet"</span><span class="p">:</span><span class="w"> </span><span class="s2">"085731921365"</span><span class="w">
+  </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id_outlet"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FA9919"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"latitude"</span><span class="p">:</span><span class="w"> </span><span class="s2">"-7.3601545"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"longitude"</span><span class="p">:</span><span class="w"> </span><span class="s2">"112.7432887"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"jarak_meter"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"nama_pemilik"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fitra Alfiananto"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"alamat_pemilik"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Jalan Made Karyo 31"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"notelp_pemilik"</span><span class="p">:</span><span class="w"> </span><span class="s2">"085648889293"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"notelp_outlet"</span><span class="p">:</span><span class="w"> </span><span class="s2">"085648889293"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"nomor_whatsapp_outlet"</span><span class="p">:</span><span class="w"> </span><span class="s2">"085648889293"</span><span class="w">
+  </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id_outlet"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FA73863"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"latitude"</span><span class="p">:</span><span class="w"> </span><span class="s2">"-7.3601062"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"longitude"</span><span class="p">:</span><span class="w"> </span><span class="s2">"112.7432261"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"jarak_meter"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"nama_pemilik"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Zunita Rachmanniar"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"alamat_pemilik"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Sidokare Asri SS - 11 Sidoarjo"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"notelp_pemilik"</span><span class="p">:</span><span class="w"> </span><span class="s2">"082218706946"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"notelp_outlet"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0318532580"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"nomor_whatsapp_outlet"</span><span class="p">:</span><span class="w"> </span><span class="s2">"082218706946"</span><span class="w">
+  </span><span class="p">}]</span><span class="w">
+</span><span class="p">}</span><span class="w">
 
-</code></pre>
+</span></code></pre>
 <p>Berikut adalah penjelasan dari value respon yang didapatkan ketika request</p>
 
 <table><thead>
@@ -940,9 +1402,9 @@ http://apiproduk.fastpay.co.id/v2/nearest_loket?latitude<span class="o">=</span>
 <td>No whatsapp loket</td>
 </tr>
 </tbody></table>
-<h3 id='http-request-7'>HTTP Request</h3>
+<h3 id='http-request-15'>HTTP Request</h3>
 <p><code>GET http://apiproduk.fastpay.co.id/v2/nearest_loket</code></p>
-<h3 id='parameters-4'>Parameters</h3>
+<h3 id='parameters-9'>Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -966,77 +1428,77 @@ http://apiproduk.fastpay.co.id/v2/nearest_loket?latitude<span class="o">=</span>
 <td>Total belanja</td>
 </tr>
 </tbody></table>
-<h1 id='payment-process'>Payment Process</h1><h2 id='booking'>Booking</h2>
+<h1 id='payment-process-non-fmcg'>Payment Process NON FMCG</h1><h2 id='booking'>Booking</h2>
 <blockquote>
 <p>Sample Request:</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="o">{</span>
-  <span class="s2">"type"</span>: <span class="s2">"DATA"</span>,
-  <span class="s2">"data"</span>: <span class="o">{</span>
-    <span class="s2">"product_id"</span>: <span class="s2">"hgwr5"</span>,
-    <span class="s2">"product_qty"</span>: <span class="s2">"3"</span>,
-    <span class="s2">"product_variant_id"</span>: <span class="s2">""</span>,
-    <span class="s2">"customer_name"</span>: <span class="s2">"AGUNG"</span>,
-    <span class="s2">"customer_address"</span>: <span class="s2">""</span>,
-    <span class="s2">"customer_area_code"</span>: <span class="s2">"232"</span>,
-    <span class="s2">"customer_to_area"</span>: <span class="s2">"6204"</span>,
-    <span class="s2">"customer_phone"</span>: <span class="s2">"082244409356"</span>,
-    <span class="s2">"customer_email"</span>: <span class="s2">""</span>,
-    <span class="s2">"customer_postcode"</span>: <span class="s2">"61177"</span>,
-    <span class="s2">"ekspedition_id"</span>: <span class="s2">"0"</span>,
-    <span class="s2">"ekspedition_paket_code"</span>: <span class="s2">"J&amp;T"</span>,
-    <span class="s2">"ekspedition_paket_name"</span>: <span class="s2">"J&amp;T REG"</span>,
-    <span class="s2">"ekspedition_estimate_day"</span>: <span class="s2">"2-3"</span>,
-    <span class="s2">"ekspedition_price"</span>: 72000,
-    <span class="s2">"insurance_cost"</span>: 6375,
-    <span class="s2">"catatan"</span>: <span class="s2">""</span>,
-    <span class="s2">"key_voucher"</span>: <span class="s2">""</span>
-  <span class="o">}</span>,
-  <span class="s2">"version"</span>: <span class="s2">"1.0"</span>,
-  <span class="s2">"mode"</span>: <span class="s2">"development"</span>
-<span class="o">}</span>
-</code></pre>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DATA"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"product_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hgwr5"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"product_qty"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"product_variant_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"customer_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AGUNG"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"customer_address"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"customer_area_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"232"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"customer_to_area"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6204"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"customer_phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"082244409356"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"customer_email"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"customer_postcode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"61177"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ekspedition_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ekspedition_paket_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"J&amp;T"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ekspedition_paket_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"J&amp;T REG"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ekspedition_estimate_day"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2-3"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ekspedition_price"</span><span class="p">:</span><span class="w"> </span><span class="mi">72000</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"insurance_cost"</span><span class="p">:</span><span class="w"> </span><span class="mi">6375</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"catatan"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"key_voucher"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.0"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"mode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"development"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
 <blockquote>
 <p>Sample Response</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>
-<span class="o">{</span>
-  <span class="s2">"status"</span>: <span class="s2">"00"</span>,
-  <span class="s2">"description"</span>: <span class="s2">"SUCCESSFUL"</span>,
-  <span class="s2">"type"</span>: <span class="s2">"DATA"</span>,
-  <span class="s2">"transaction_datetime"</span>: <span class="s2">"20170814115221"</span>,
-  <span class="s2">"outlet_id"</span>: <span class="s2">"FA92804"</span>,
-  <span class="s2">"pin"</span>: <span class="s2">"----"</span>,
-  <span class="s2">"version"</span>: <span class="s2">"1.0"</span>,
-  <span class="s2">"mode"</span>: <span class="s2">"development"</span>,
-  <span class="s2">"data"</span>: <span class="o">{</span>
-    <span class="s2">"product_id"</span>: <span class="s2">"hgwr5"</span>,
-    <span class="s2">"product_qty"</span>: <span class="s2">"3"</span>,
-    <span class="s2">"product_variant_id"</span>: <span class="s2">""</span>,
-    <span class="s2">"customer_name"</span>: <span class="s2">"AGUNG"</span>,
-    <span class="s2">"customer_address"</span>: <span class="s2">""</span>,
-    <span class="s2">"customer_area_code"</span>: <span class="s2">"232"</span>,
-    <span class="s2">"customer_to_area"</span>: <span class="s2">"6204"</span>,
-    <span class="s2">"customer_phone"</span>: <span class="s2">"082244409356"</span>,
-    <span class="s2">"customer_email"</span>: <span class="s2">""</span>,
-    <span class="s2">"customer_postcode"</span>: <span class="s2">"61177"</span>,
-    <span class="s2">"ekspedition_id"</span>: <span class="s2">"0"</span>,
-    <span class="s2">"ekspedition_paket_code"</span>: <span class="s2">"J&amp;T"</span>,
-    <span class="s2">"ekspedition_paket_name"</span>: <span class="s2">"J&amp;T REG"</span>,
-    <span class="s2">"ekspedition_estimate_day"</span>: <span class="s2">"2-3"</span>,
-    <span class="s2">"ekspedition_price"</span>: 72000,
-    <span class="s2">"insurance_cost"</span>: 6375,
-    <span class="s2">"catatan"</span>: <span class="s2">""</span>,
-    <span class="s2">"key_voucher"</span>: <span class="s2">""</span>
-  <span class="o">}</span>,
-  <span class="s2">"result"</span>: <span class="o">{</span>
-    <span class="s2">"booking_date"</span>: <span class="s2">"20170814115221"</span>,
-    <span class="s2">"booking_payment_code"</span>: <span class="s2">"3567"</span>
-  <span class="o">}</span>
-<span class="o">}</span>
-</code></pre><h3 id='http-request-8'>HTTP Request</h3>
+<pre class="highlight json tab-json"><code><span class="w">
+</span><span class="p">{</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"00"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SUCCESSFUL"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DATA"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"transaction_datetime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"20170814115221"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"outlet_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FA92804"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"pin"</span><span class="p">:</span><span class="w"> </span><span class="s2">"----"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.0"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"mode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"development"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"product_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hgwr5"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"product_qty"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"product_variant_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"customer_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AGUNG"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"customer_address"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"customer_area_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"232"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"customer_to_area"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6204"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"customer_phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"082244409356"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"customer_email"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"customer_postcode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"61177"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ekspedition_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ekspedition_paket_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"J&amp;T"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ekspedition_paket_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"J&amp;T REG"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ekspedition_estimate_day"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2-3"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"ekspedition_price"</span><span class="p">:</span><span class="w"> </span><span class="mi">72000</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"insurance_cost"</span><span class="p">:</span><span class="w"> </span><span class="mi">6375</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"catatan"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"key_voucher"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"result"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"booking_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"20170814115221"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"booking_payment_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3567"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-16'>HTTP Request</h3>
 <p><code>POST http://apiproduk.fastpay.co.id/index.php/transaksi</code></p>
-<h3 id='url-parameters-4'>URL Parameters</h3>
+<h3 id='url-parameters-7'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -1129,40 +1591,40 @@ http://apiproduk.fastpay.co.id/v2/nearest_loket?latitude<span class="o">=</span>
 <blockquote>
 <p>Sample Request:</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="o">{</span>
-    <span class="s2">"type"</span>:<span class="s2">"INQ"</span>,
-    <span class="s2">"data"</span>:<span class="o">{</span>
-        <span class="s2">"booking_payment_code"</span>:<span class="s2">"2082"</span>
-  <span class="o">}</span>,
-    <span class="s2">"version"</span>:<span class="s2">"1.0"</span>,
-    <span class="s2">"mode"</span>:<span class="s2">"development"</span>
-<span class="o">}</span>
-</code></pre>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="s2">"INQ"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:{</span><span class="w">
+        </span><span class="s2">"booking_payment_code"</span><span class="p">:</span><span class="s2">"2082"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"version"</span><span class="p">:</span><span class="s2">"1.0"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"mode"</span><span class="p">:</span><span class="s2">"development"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
 <blockquote>
 <p>Sample Response</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>
-<span class="o">{</span>
-   <span class="s2">"status"</span>:<span class="s2">"00"</span>,
-    <span class="s2">"description"</span>:<span class="s2">"SUCCESSFUL"</span>,
-    <span class="s2">"type"</span>:<span class="s2">"INQ"</span>,
-    <span class="s2">"transaction_datetime"</span>:<span class="s2">"20170707145836"</span>,
-    <span class="s2">"outlet_id"</span>:<span class="s2">"BS0004"</span>,
-    <span class="s2">"pin"</span>:<span class="s2">"----"</span>,
-    <span class="s2">"version"</span>:<span class="s2">"1.0"</span>,
-    <span class="s2">"mode"</span>:<span class="s2">"development"</span>,
-    <span class="s2">"data"</span>:<span class="o">{</span>
-        <span class="s2">"booking_payment_code"</span>:<span class="s2">"2082"</span>
-    <span class="o">}</span>,
-    <span class="s2">"result"</span>:<span class="o">{</span>
-        <span class="s2">"booking_payment_code"</span>:<span class="s2">"2082"</span>,
-        <span class="s2">"product_id"</span>:<span class="s2">"433452"</span>,
-        <span class="s2">"reff_id"</span>:<span class="s2">"760148636"</span>
-    <span class="o">}</span>
-<span class="o">}</span>
-</code></pre><h3 id='http-request-9'>HTTP Request</h3>
+<pre class="highlight json tab-json"><code><span class="w">
+</span><span class="p">{</span><span class="w">
+   </span><span class="s2">"status"</span><span class="p">:</span><span class="s2">"00"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"description"</span><span class="p">:</span><span class="s2">"SUCCESSFUL"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="s2">"INQ"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"transaction_datetime"</span><span class="p">:</span><span class="s2">"20170707145836"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"outlet_id"</span><span class="p">:</span><span class="s2">"BS0004"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"pin"</span><span class="p">:</span><span class="s2">"----"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"version"</span><span class="p">:</span><span class="s2">"1.0"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"mode"</span><span class="p">:</span><span class="s2">"development"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:{</span><span class="w">
+        </span><span class="s2">"booking_payment_code"</span><span class="p">:</span><span class="s2">"2082"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"result"</span><span class="p">:{</span><span class="w">
+        </span><span class="s2">"booking_payment_code"</span><span class="p">:</span><span class="s2">"2082"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"product_id"</span><span class="p">:</span><span class="s2">"433452"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"reff_id"</span><span class="p">:</span><span class="s2">"760148636"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-17'>HTTP Request</h3>
 <p><code>POST http://apiproduk.fastpay.co.id/index.php/transaksi</code></p>
-<h3 id='url-parameters-5'>URL Parameters</h3>
+<h3 id='url-parameters-8'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -1180,42 +1642,42 @@ http://apiproduk.fastpay.co.id/v2/nearest_loket?latitude<span class="o">=</span>
 <blockquote>
 <p>Sample Request:</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="o">{</span>
-    <span class="s2">"type"</span>:<span class="s2">"PAY"</span>,
-    <span class="s2">"data"</span>:<span class="o">{</span>
-        <span class="s2">"booking_payment_code"</span>:<span class="s2">"2082"</span>,
-        <span class="s2">"reff_id"</span>:<span class="s2">"760148636"</span>
-  <span class="o">}</span>,
-    <span class="s2">"version"</span>:<span class="s2">"1.0"</span>,
-    <span class="s2">"mode"</span>:<span class="s2">"development"</span>
-<span class="o">}</span>
-</code></pre>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="s2">"PAY"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:{</span><span class="w">
+        </span><span class="s2">"booking_payment_code"</span><span class="p">:</span><span class="s2">"2082"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"reff_id"</span><span class="p">:</span><span class="s2">"760148636"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"version"</span><span class="p">:</span><span class="s2">"1.0"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"mode"</span><span class="p">:</span><span class="s2">"development"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
 <blockquote>
 <p>Sample Response</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code>
-<span class="o">{</span>
-    <span class="s2">"status"</span>:<span class="s2">"00"</span>,
-    <span class="s2">"description"</span>:<span class="s2">"SUCCESSFUL"</span>,
-    <span class="s2">"type"</span>:<span class="s2">"PAY"</span>,
-    <span class="s2">"transaction_datetime"</span>:<span class="s2">"20170710101603"</span>,
-    <span class="s2">"outlet_id"</span>:<span class="s2">"BS0004"</span>,
-    <span class="s2">"pin"</span>:<span class="s2">"----"</span>,
-    <span class="s2">"version"</span>:<span class="s2">"1.0"</span>,
-    <span class="s2">"mode"</span>:<span class="s2">"development"</span>,
-    <span class="s2">"data"</span>:<span class="o">{</span>
-        <span class="s2">"booking_payment_code"</span>:<span class="s2">"2082"</span>,
-        <span class="s2">"reff_id"</span>:<span class="s2">"760148636"</span>
-    <span class="o">}</span>,
-    <span class="s2">"result"</span>:<span class="o">{</span>
-        <span class="s2">"booking_payment_code"</span>:<span class="s2">"2082"</span>,
-        <span class="s2">"product_id"</span>:<span class="s2">"433452"</span>,
-        <span class="s2">"reff_id"</span>:<span class="s2">"760149784"</span>
-    <span class="o">}</span>
-<span class="o">}</span>
-</code></pre><h3 id='http-request-10'>HTTP Request</h3>
+<pre class="highlight json tab-json"><code><span class="w">
+</span><span class="p">{</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="s2">"00"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"description"</span><span class="p">:</span><span class="s2">"SUCCESSFUL"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="s2">"PAY"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"transaction_datetime"</span><span class="p">:</span><span class="s2">"20170710101603"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"outlet_id"</span><span class="p">:</span><span class="s2">"BS0004"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"pin"</span><span class="p">:</span><span class="s2">"----"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"version"</span><span class="p">:</span><span class="s2">"1.0"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"mode"</span><span class="p">:</span><span class="s2">"development"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:{</span><span class="w">
+        </span><span class="s2">"booking_payment_code"</span><span class="p">:</span><span class="s2">"2082"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"reff_id"</span><span class="p">:</span><span class="s2">"760148636"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"result"</span><span class="p">:{</span><span class="w">
+        </span><span class="s2">"booking_payment_code"</span><span class="p">:</span><span class="s2">"2082"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"product_id"</span><span class="p">:</span><span class="s2">"433452"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"reff_id"</span><span class="p">:</span><span class="s2">"760149784"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-18'>HTTP Request</h3>
 <p><code>POST http://apiproduk.fastpay.co.id/index.php/transaksi</code></p>
-<h3 id='url-parameters-6'>URL Parameters</h3>
+<h3 id='url-parameters-9'>URL Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
