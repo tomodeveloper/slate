@@ -352,7 +352,7 @@ Anda harus mengganti `key` dengan key personal anda. Basic Auth menggunakan `use
 <pre class="highlight shell tab-shell"><code>
 curl -X GET -H
 <span class="s2">"TOMO-API-KEY: 8s4ww0gg8o"</span>
-http://devapiproduk.fastpay.co.id/v2/category
+http://apiproduk.fastpay.co.id/v2/category
 
 </code></pre>
 <blockquote>
@@ -412,7 +412,7 @@ http://devapiproduk.fastpay.co.id/v2/category
 </span></code></pre>
 <p>Berikut adalah endpoint untuk mengambil list kategori Tomo</p>
 <h3 id='http-request'>HTTP Request</h3>
-<p><code>GET http://devapiproduk.fastpay.co.id/v2/category</code></p>
+<p><code>GET http://apiproduk.fastpay.co.id/v2/category</code></p>
 <h3 id='parameters'>Parameters</h3>
 <p>None</p>
 <h1 id='produk-non-fmcg'>Produk NON FMCG</h1><h2 id='search-engine-produk'>Search Engine Produk</h2>
@@ -541,7 +541,7 @@ http://35.187.249.107/api_produk_elastic/search_elastic.php?query<span class="o"
 </blockquote>
 <pre class="highlight shell tab-shell"><code>curl -X GET -H
 <span class="s2">"TOMO-API-KEY: 8s4ww0gg8o"</span>
-http://devapiproduk.fastpay.co.id/v2/detail_product/9a117t
+http://apiproduk.fastpay.co.id/v2/detail_product/9a117t
 </code></pre>
 <blockquote>
 <p>Sample Response</p>
@@ -603,7 +603,7 @@ http://devapiproduk.fastpay.co.id/v2/detail_product/9a117t
 </span></code></pre>
 <p>Berikut adalah cara untuk mengambil detail dari produk. </p>
 <h3 id='http-request-4'>HTTP Request</h3>
-<p><code>GET http://devapiproduk.fastpay.co.id/v2/detail_product/:id/:id_outlet</code></p>
+<p><code>GET http://apiproduk.fastpay.co.id/v2/detail_product/:id/:id_outlet</code></p>
 <h3 id='url-parameters-2'>URL Parameters</h3>
 <table><thead>
 <tr>
@@ -629,7 +629,7 @@ http://devapiproduk.fastpay.co.id/v2/detail_product/9a117t
 </blockquote>
 <pre class="highlight shell tab-shell"><code>curl -X GET -H
 <span class="s2">"TOMO-API-KEY: 8s4ww0gg8o"</span>
-http://devapiproduk.fastpay.co.id/index.php/v2/cek_ongkir_product?
+http://apiproduk.fastpay.co.id/index.php/v2/cek_ongkir_product?
 <span class="nv">id_produk</span><span class="o">=</span>7j0ezz&amp;city_destination<span class="o">=</span>250
 &amp;to_area<span class="o">=</span>10150&amp;kode_pos<span class="o">=</span>61256&amp;courier<span class="o">=</span>JNE&amp;quantity<span class="o">=</span>1
 </code></pre>
@@ -652,7 +652,7 @@ http://devapiproduk.fastpay.co.id/index.php/v2/cek_ongkir_product?
 </blockquote>
 <pre class="highlight shell tab-shell"><code>curl -X GET -H
 <span class="s2">"TOMO-API-KEY: 8s4ww0gg8o"</span>
-http://devapiproduk.fastpay.co.id/index.php/v2/cek_ongkir_product?
+http://apiproduk.fastpay.co.id/index.php/v2/cek_ongkir_product?
 <span class="nv">id_produk</span><span class="o">=</span>7j0ezz&amp;city_destination<span class="o">=</span>250
 &amp;to_area<span class="o">=</span>10150&amp;kode_pos<span class="o">=</span>61256&amp;courier<span class="o">=</span>all&amp;quantity<span class="o">=</span>1
 </code></pre>
@@ -711,7 +711,7 @@ http://devapiproduk.fastpay.co.id/index.php/v2/cek_ongkir_product?
 </span></code></pre>
 <p>Berikut adalah cara untuk mengambil data ongkos kirim dari produk. </p>
 <h3 id='http-request-5'>HTTP Request</h3>
-<p><code>GET http://devapiproduk.fastpay.co.id/v2/cek_ongkir_product</code></p>
+<p><code>GET http://apiproduk.fastpay.co.id/v2/cek_ongkir_product</code></p>
 <h3 id='url-parameters-3'>URL Parameters</h3>
 <table><thead>
 <tr>
@@ -790,12 +790,12 @@ http://devapiproduk.fastpay.co.id/index.php/v2/cek_ongkir_product?
 <p>Sample Request:</p>
 </blockquote>
 <pre class="highlight shell tab-shell"><code>curl -X GET  
-http://devapiproduk.fastpay.co.id/v2/list_propinsi
+http://apiproduk.fastpay.co.id/v2/list_propinsi
 
 </code></pre>
 <p>Berikut adalah cara untuk search produk. </p>
 <h3 id='http-request-6'>HTTP Request</h3>
-<p><code>GET http://devapiproduk.fastpay.co.id/v2/list_propinsi</code></p>
+<p><code>GET http://apiproduk.fastpay.co.id/v2/list_propinsi</code></p>
 <h3 id='url-parameters-4'>URL Parameters</h3>
 <p>none</p>
 <h2 id='kota-pengiriman'>Kota Pengiriman</h2>
@@ -803,12 +803,12 @@ http://devapiproduk.fastpay.co.id/v2/list_propinsi
 <p>Sample Request:</p>
 </blockquote>
 <pre class="highlight shell tab-shell"><code>curl -X GET  
-http://devapiproduk.fastpay.co.id/v2/list_kota?id<span class="o">=</span>10
+http://apiproduk.fastpay.co.id/v2/list_kota?id<span class="o">=</span>10
 
 </code></pre>
 <p>Berikut adalah cara untuk search produk. </p>
 <h3 id='http-request-7'>HTTP Request</h3>
-<p><code>GET http://devapiproduk.fastpay.co.id/v2/list_kota?id=:id</code></p>
+<p><code>GET http://apiproduk.fastpay.co.id/v2/list_kota?id=:id</code></p>
 <h3 id='url-parameters-5'>URL Parameters</h3>
 <table><thead>
 <tr>
@@ -828,12 +828,12 @@ http://devapiproduk.fastpay.co.id/v2/list_kota?id<span class="o">=</span>10
 <p>Sample Request:</p>
 </blockquote>
 <pre class="highlight shell tab-shell"><code>curl -X GET  
-http://devapiproduk.fastpay.co.id/v2/list_kecamatan?id<span class="o">=</span>157
+http://apiproduk.fastpay.co.id/v2/list_kecamatan?id<span class="o">=</span>157
 
 </code></pre>
 <p>Berikut adalah cara untuk search produk. </p>
 <h3 id='http-request-8'>HTTP Request</h3>
-<p><code>GET http://devapiproduk.fastpay.co.id/v2/list_kecamatan?id=:id</code></p>
+<p><code>GET http://apiproduk.fastpay.co.id/v2/list_kecamatan?id=:id</code></p>
 <h3 id='url-parameters-6'>URL Parameters</h3>
 <table><thead>
 <tr>
@@ -1020,7 +1020,7 @@ http://35.187.249.107/api_produk_elastic/search_elastic.php?query<span class="o"
     </span><span class="s2">"id_cart"</span><span class="p">:</span><span class="w"> </span><span class="s2">"23"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http-request-11'>HTTP Request</h3>
-<p><code>POST http://devapiproduk.fastpay.co.id/index.php/v2/insert_cart</code></p>
+<p><code>POST http://apiproduk.fastpay.co.id/index.php/v2/insert_cart</code></p>
 <h3 id='url-parameters-8'>URL Parameters</h3>
 <table><thead>
 <tr>
@@ -1045,7 +1045,7 @@ http://35.187.249.107/api_produk_elastic/search_elastic.php?query<span class="o"
 <p>Sample Request:</p>
 </blockquote>
 <pre class="highlight shell tab-shell"><code>curl -X GET 
-http://devapiproduk.fastpay.co.id/v2/cart_list?id_cart<span class="o">=</span>23
+http://apiproduk.fastpay.co.id/v2/cart_list?id_cart<span class="o">=</span>23
 
 </code></pre>
 <blockquote>
@@ -1090,7 +1090,7 @@ http://devapiproduk.fastpay.co.id/v2/cart_list?id_cart<span class="o">=</span>23
 </span></code></pre>
 <p>API untuk mengambil cart list yang dimasukkan dari API <a href="#insert-cart">insert cart</a></p>
 <h3 id='http-request-12'>HTTP Request</h3>
-<p><code>GET http://devapiproduk.fastpay.co.id/v2/cart_list?id_cart=:id_cart</code></p>
+<p><code>GET http://apiproduk.fastpay.co.id/v2/cart_list?id_cart=:id_cart</code></p>
 <h3 id='parameters-4'>Parameters</h3>
 <table><thead>
 <tr>
@@ -1110,7 +1110,7 @@ http://devapiproduk.fastpay.co.id/v2/cart_list?id_cart<span class="o">=</span>23
 <p>Sample Request:</p>
 </blockquote>
 <pre class="highlight shell tab-shell"><code>curl -X GET 
-http://devapiproduk.fastpay.co.id/v2/list_propinsi_fmcg?id_supplier<span class="o">=</span>SB114759
+http://apiproduk.fastpay.co.id/v2/list_propinsi_fmcg?id_supplier<span class="o">=</span>SB114759
 
 </code></pre>
 <blockquote>
@@ -1126,7 +1126,7 @@ http://devapiproduk.fastpay.co.id/v2/list_propinsi_fmcg?id_supplier<span class="
 </span></code></pre>
 <p>Api ini untuk mengambil propinsi mana yang disupport pengiriman oleh supplier FMCG</p>
 <h3 id='http-request-13'>HTTP Request</h3>
-<p><code>GET http://devapiproduk.fastpay.co.id/v2/list_propinsi_fmcg?id_supplier=:id_supplier</code></p>
+<p><code>GET http://apiproduk.fastpay.co.id/v2/list_propinsi_fmcg?id_supplier=:id_supplier</code></p>
 <h3 id='parameters-5'>Parameters</h3>
 <table><thead>
 <tr>
@@ -1146,7 +1146,7 @@ http://devapiproduk.fastpay.co.id/v2/list_propinsi_fmcg?id_supplier<span class="
 <p>Sample Request:</p>
 </blockquote>
 <pre class="highlight shell tab-shell"><code>curl -X GET 
-http://devapiproduk.fastpay.co.id/v2/list_kota_fmcg?id_supplier<span class="o">=</span>SB114759&amp;id_propinsi<span class="o">=</span>28
+http://apiproduk.fastpay.co.id/v2/list_kota_fmcg?id_supplier<span class="o">=</span>SB114759&amp;id_propinsi<span class="o">=</span>28
 
 </code></pre>
 <blockquote>
@@ -1162,7 +1162,7 @@ http://devapiproduk.fastpay.co.id/v2/list_kota_fmcg?id_supplier<span class="o">=
 </span></code></pre>
 <p>Api ini untuk mengambil kota mana yang disupport pengiriman oleh supplier FMCG</p>
 <h3 id='http-request-14'>HTTP Request</h3>
-<p><code>GET http://devapiproduk.fastpay.co.id/v2/list_kota_fmcg?id_supplier=:id_supplier&amp;id_propinsi=:id_propinsi</code></p>
+<p><code>GET http://apiproduk.fastpay.co.id/v2/list_kota_fmcg?id_supplier=:id_supplier&amp;id_propinsi=:id_propinsi</code></p>
 <h3 id='parameters-6'>Parameters</h3>
 <table><thead>
 <tr>
@@ -1187,7 +1187,7 @@ http://devapiproduk.fastpay.co.id/v2/list_kota_fmcg?id_supplier<span class="o">=
 <p>Sample Request:</p>
 </blockquote>
 <pre class="highlight shell tab-shell"><code>curl -X GET 
-http://devapiproduk.fastpay.co.id/v2/list_kecamatan_fmcg?id_supplier<span class="o">=</span>SB114759&amp;id_kota<span class="o">=</span>264
+http://apiproduk.fastpay.co.id/v2/list_kecamatan_fmcg?id_supplier<span class="o">=</span>SB114759&amp;id_kota<span class="o">=</span>264
 
 </code></pre>
 <blockquote>
@@ -1203,7 +1203,7 @@ http://devapiproduk.fastpay.co.id/v2/list_kecamatan_fmcg?id_supplier<span class=
 </span></code></pre>
 <p>Api ini untuk mengambil kecamatan mana yang disupport pengiriman oleh supplier FMCG</p>
 <h3 id='http-request-15'>HTTP Request</h3>
-<p><code>GET http://devapiproduk.fastpay.co.id/v2/list_kecamatan_fmcg?id_supplier=:id_supplier&amp;id_kota=:id_kota</code></p>
+<p><code>GET http://apiproduk.fastpay.co.id/v2/list_kecamatan_fmcg?id_supplier=:id_supplier&amp;id_kota=:id_kota</code></p>
 <h3 id='parameters-7'>Parameters</h3>
 <table><thead>
 <tr>
@@ -1228,7 +1228,7 @@ http://devapiproduk.fastpay.co.id/v2/list_kecamatan_fmcg?id_supplier<span class=
 <p>Sample Request:</p>
 </blockquote>
 <pre class="highlight shell tab-shell"><code>curl -X GET 
-http://devapiproduk.fastpay.co.id/v2/list_kodepos?id<span class="o">=</span>264
+http://apiproduk.fastpay.co.id/v2/list_kodepos?id<span class="o">=</span>264
 
 </code></pre>
 <blockquote>
@@ -1244,7 +1244,7 @@ http://devapiproduk.fastpay.co.id/v2/list_kodepos?id<span class="o">=</span>264
 </span></code></pre>
 <p>Api ini untuk mengambil list kodepos dari kota tertentu</p>
 <h3 id='http-request-16'>HTTP Request</h3>
-<p><code>GET http://devapiproduk.fastpay.co.id/v2/list_kodepos?id:id</code></p>
+<p><code>GET http://apiproduk.fastpay.co.id/v2/list_kodepos?id:id</code></p>
 <h3 id='parameters-8'>Parameters</h3>
 <table><thead>
 <tr>
@@ -1264,7 +1264,7 @@ http://devapiproduk.fastpay.co.id/v2/list_kodepos?id<span class="o">=</span>264
 <p>Sample Request:</p>
 </blockquote>
 <pre class="highlight shell tab-shell"><code>curl -X GET 
-http://devapiproduk.fastpay.co.id/v2/cek_voucher?kode_voucher<span class="o">=</span>GR64645&amp;no_hp_pembeli<span class="o">=</span>082244409356&amp;id_produk<span class="o">=</span>afg07j&amp;id_outlet<span class="o">=</span>FA92804&amp;qty<span class="o">=</span>1&amp;paket_ekspedisi<span class="o">=</span>JNE%20REG&amp;ongkir<span class="o">=</span>120000
+http://apiproduk.fastpay.co.id/v2/cek_voucher?kode_voucher<span class="o">=</span>GR64645&amp;no_hp_pembeli<span class="o">=</span>082244409356&amp;id_produk<span class="o">=</span>afg07j&amp;id_outlet<span class="o">=</span>FA92804&amp;qty<span class="o">=</span>1&amp;paket_ekspedisi<span class="o">=</span>JNE%20REG&amp;ongkir<span class="o">=</span>120000
 
 </code></pre>
 <blockquote>
@@ -1309,7 +1309,7 @@ http://devapiproduk.fastpay.co.id/v2/cek_voucher?kode_voucher<span class="o">=</
 </tr>
 </tbody></table>
 <h3 id='http-request-17'>HTTP Request</h3>
-<p><code>GET http://devapiproduk.fastpay.co.id/v2/cek_voucher</code></p>
+<p><code>GET http://apiproduk.fastpay.co.id/v2/cek_voucher</code></p>
 <h3 id='parameters-9'>Parameters</h3>
 <table><thead>
 <tr>
@@ -1384,7 +1384,7 @@ http://devapiproduk.fastpay.co.id/v2/cek_voucher?kode_voucher<span class="o">=</
     </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http-request-18'>HTTP Request</h3>
-<p><code>POST http://devapiproduk.fastpay.co.id/index.php/v2/cek_voucher_fmcg</code></p>
+<p><code>POST http://apiproduk.fastpay.co.id/index.php/v2/cek_voucher_fmcg</code></p>
 <h3 id='url-parameters-9'>URL Parameters</h3>
 <table><thead>
 <tr>
@@ -1405,7 +1405,7 @@ http://devapiproduk.fastpay.co.id/v2/cek_voucher?kode_voucher<span class="o">=</
 </blockquote>
 <pre class="highlight shell tab-shell"><code>curl -X GET -H
 <span class="s2">"TOMO-API-KEY: 8s4ww0gg8o"</span>
-http://devapiproduk.fastpay.co.id/v2/nearest_loket?latitude<span class="o">=</span>-7.3601523&amp;longitude<span class="o">=</span>112.7432411&amp;%20total_belanja<span class="o">=</span>1000
+http://apiproduk.fastpay.co.id/v2/nearest_loket?latitude<span class="o">=</span>-7.3601523&amp;longitude<span class="o">=</span>112.7432411&amp;%20total_belanja<span class="o">=</span>1000
 
 </code></pre>
 <blockquote>
@@ -1514,7 +1514,7 @@ http://devapiproduk.fastpay.co.id/v2/nearest_loket?latitude<span class="o">=</sp
 </tr>
 </tbody></table>
 <h3 id='http-request-19'>HTTP Request</h3>
-<p><code>GET http://devapiproduk.fastpay.co.id/v2/nearest_loket</code></p>
+<p><code>GET http://apiproduk.fastpay.co.id/v2/nearest_loket</code></p>
 <h3 id='parameters-10'>Parameters</h3>
 <table><thead>
 <tr>
@@ -1608,7 +1608,7 @@ http://devapiproduk.fastpay.co.id/v2/nearest_loket?latitude<span class="o">=</sp
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http-request-20'>HTTP Request</h3>
-<p><code>POST http://devapiproduk.fastpay.co.id/index.php/transaksi</code></p>
+<p><code>POST http://apiproduk.fastpay.co.id/index.php/transaksi</code></p>
 <h3 id='url-parameters-10'>URL Parameters</h3>
 <table><thead>
 <tr>
@@ -1734,7 +1734,7 @@ http://devapiproduk.fastpay.co.id/v2/nearest_loket?latitude<span class="o">=</sp
     </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http-request-21'>HTTP Request</h3>
-<p><code>POST http://devapiproduk.fastpay.co.id/index.php/transaksi</code></p>
+<p><code>POST http://apiproduk.fastpay.co.id/index.php/transaksi</code></p>
 <h3 id='url-parameters-11'>URL Parameters</h3>
 <table><thead>
 <tr>
@@ -1787,7 +1787,7 @@ http://devapiproduk.fastpay.co.id/v2/nearest_loket?latitude<span class="o">=</sp
     </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http-request-22'>HTTP Request</h3>
-<p><code>POST http://devapiproduk.fastpay.co.id/index.php/transaksi</code></p>
+<p><code>POST http://apiproduk.fastpay.co.id/index.php/transaksi</code></p>
 <h3 id='url-parameters-12'>URL Parameters</h3>
 <table><thead>
 <tr>
