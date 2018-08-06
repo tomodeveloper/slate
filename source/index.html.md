@@ -38,7 +38,7 @@ Anda harus mengganti `key` dengan key personal anda. Basic Auth menggunakan `use
 
 curl -X GET -H
 "TOMO-API-KEY: 8s4ww0gg8o"
-http://apiproduk.fastpay.co.id/v2/category
+http://devapiproduk.fastpay.co.id/v2/category
 
 ```
 > Sample Response:
@@ -102,7 +102,7 @@ Berikut adalah endpoint untuk mengambil list kategori Tomo
 
 ### HTTP Request
 
-`GET http://apiproduk.fastpay.co.id/v2/category`
+`GET http://devapiproduk.fastpay.co.id/v2/category`
 
 ### Parameters
 None
@@ -196,7 +196,7 @@ date_sort | optional | Listing terbaru atau terlama `asc` atau `desc`
 ```shell
 curl -X GET -H
 "TOMO-API-KEY: 8s4ww0gg8o"
-http://apiproduk.fastpay.co.id/v2/detail_product/9a117t
+http://devapiproduk.fastpay.co.id/v2/detail_product/9a117t
 ```
 
 > Sample Response
@@ -263,7 +263,7 @@ Berikut adalah cara untuk mengambil detail dari produk.
 
 ### HTTP Request
 
-`GET http://apiproduk.fastpay.co.id/v2/detail_product/:id/:id_outlet`
+`GET http://devapiproduk.fastpay.co.id/v2/detail_product/:id/:id_outlet`
 
 ### URL Parameters
 
@@ -280,7 +280,7 @@ ID | optional | isi dengan id outlet jika ingin memunculkan komisi
 ```shell
 curl -X GET -H
 "TOMO-API-KEY: 8s4ww0gg8o"
-http://apiproduk.fastpay.co.id/index.php/v2/cek_ongkir_product?
+http://devapiproduk.fastpay.co.id/index.php/v2/cek_ongkir_product?
 id_produk=7j0ezz&city_destination=250
 &to_area=10150&kode_pos=61256&courier=JNE&quantity=1
 ```
@@ -305,7 +305,7 @@ id_produk=7j0ezz&city_destination=250
 ```shell
 curl -X GET -H
 "TOMO-API-KEY: 8s4ww0gg8o"
-http://apiproduk.fastpay.co.id/index.php/v2/cek_ongkir_product?
+http://devapiproduk.fastpay.co.id/index.php/v2/cek_ongkir_product?
 id_produk=7j0ezz&city_destination=250
 &to_area=10150&kode_pos=61256&courier=all&quantity=1
 ```
@@ -369,7 +369,7 @@ Berikut adalah cara untuk mengambil data ongkos kirim dari produk.
 
 ### HTTP Request
 
-`GET http://apiproduk.fastpay.co.id/v2/cek_ongkir_product`
+`GET http://devapiproduk.fastpay.co.id/v2/cek_ongkir_product`
 
 ### URL Parameters
 
@@ -402,7 +402,7 @@ all|
 
 ```shell
 curl -X GET  
-http://apiproduk.fastpay.co.id/v2/list_propinsi
+http://devapiproduk.fastpay.co.id/v2/list_propinsi
 
 ```
 
@@ -412,7 +412,7 @@ Berikut adalah cara untuk search produk.
 
 ### HTTP Request
 
-`GET http://apiproduk.fastpay.co.id/v2/list_propinsi`
+`GET http://devapiproduk.fastpay.co.id/v2/list_propinsi`
 
 ### URL Parameters
 none
@@ -424,7 +424,7 @@ none
 
 ```shell
 curl -X GET  
-http://apiproduk.fastpay.co.id/v2/list_kota?id=10
+http://devapiproduk.fastpay.co.id/v2/list_kota?id=10
 
 ```
 
@@ -434,7 +434,7 @@ Berikut adalah cara untuk search produk.
 
 ### HTTP Request
 
-`GET http://apiproduk.fastpay.co.id/v2/list_kota?id=:id`
+`GET http://devapiproduk.fastpay.co.id/v2/list_kota?id=:id`
 
 ### URL Parameters
 
@@ -448,7 +448,7 @@ id | **required** | id propinsi yang didapatkan dari [propinsi pengiriman](#prop
 
 ```shell
 curl -X GET  
-http://apiproduk.fastpay.co.id/v2/list_kecamatan?id=157
+http://devapiproduk.fastpay.co.id/v2/list_kecamatan?id=157
 
 ```
 
@@ -458,7 +458,7 @@ Berikut adalah cara untuk search produk.
 
 ### HTTP Request
 
-`GET http://apiproduk.fastpay.co.id/v2/list_kecamatan?id=:id`
+`GET http://devapiproduk.fastpay.co.id/v2/list_kecamatan?id=:id`
 
 ### URL Parameters
 
@@ -579,7 +579,7 @@ id_member | **required** | id supplier fmcg
 ```
 ### HTTP Request
 
-`POST http://apiproduk.fastpay.co.id/index.php/v2/insert_cart`
+`POST http://devapiproduk.fastpay.co.id/index.php/v2/insert_cart`
 
 ### URL Parameters
 
@@ -593,7 +593,7 @@ qty | **required** | jumlah beli produk
 
 ```shell
 curl -X GET 
-http://apiproduk.fastpay.co.id/v2/cart_list?id_cart=23
+http://devapiproduk.fastpay.co.id/v2/cart_list?id_cart=23
 
 ```
 
@@ -642,7 +642,7 @@ API untuk mengambil cart list yang dimasukkan dari API [insert cart](#insert-car
 
 ### HTTP Request
 
-`GET http://apiproduk.fastpay.co.id/v2/cart_list?id_cart=:id_cart`
+`GET http://devapiproduk.fastpay.co.id/v2/cart_list?id_cart=:id_cart`
 
 ### Parameters
 
@@ -655,7 +655,7 @@ id_cart |  **required** | ID yang didapatkan dari API [insert cart](#insert-cart
 
 ```shell
 curl -X GET 
-http://apiproduk.fastpay.co.id/v2/list_propinsi_fmcg?id_supplier=SB114759
+http://devapiproduk.fastpay.co.id/v2/list_propinsi_fmcg?id_supplier=SB114759
 
 ```
 
@@ -675,7 +675,7 @@ Api ini untuk mengambil propinsi mana yang disupport pengiriman oleh supplier FM
 
 ### HTTP Request
 
-`GET http://apiproduk.fastpay.co.id/v2/list_propinsi_fmcg?id_supplier=:id_supplier`
+`GET http://devapiproduk.fastpay.co.id/v2/list_propinsi_fmcg?id_supplier=:id_supplier`
 
 ### Parameters
 
@@ -690,7 +690,7 @@ id_supplier |  **required** | Id supplier FMCG.
 
 ```shell
 curl -X GET 
-http://apiproduk.fastpay.co.id/v2/list_kota_fmcg?id_supplier=SB114759&id_propinsi=28
+http://devapiproduk.fastpay.co.id/v2/list_kota_fmcg?id_supplier=SB114759&id_propinsi=28
 
 ```
 
@@ -710,7 +710,7 @@ Api ini untuk mengambil kota mana yang disupport pengiriman oleh supplier FMCG
 
 ### HTTP Request
 
-`GET http://apiproduk.fastpay.co.id/v2/list_kota_fmcg?id_supplier=:id_supplier&id_propinsi=:id_propinsi`
+`GET http://devapiproduk.fastpay.co.id/v2/list_kota_fmcg?id_supplier=:id_supplier&id_propinsi=:id_propinsi`
 
 ### Parameters
 
@@ -724,7 +724,7 @@ id_propinsi |  **required** | id_propinsi didapatkan dari [list propinsi](#propi
 
 ```shell
 curl -X GET 
-http://apiproduk.fastpay.co.id/v2/list_kecamatan_fmcg?id_supplier=SB114759&id_kota=264
+http://devapiproduk.fastpay.co.id/v2/list_kecamatan_fmcg?id_supplier=SB114759&id_kota=264
 
 ```
 
@@ -744,7 +744,7 @@ Api ini untuk mengambil kecamatan mana yang disupport pengiriman oleh supplier F
 
 ### HTTP Request
 
-`GET http://apiproduk.fastpay.co.id/v2/list_kecamatan_fmcg?id_supplier=:id_supplier&id_kota=:id_kota`
+`GET http://devapiproduk.fastpay.co.id/v2/list_kecamatan_fmcg?id_supplier=:id_supplier&id_kota=:id_kota`
 
 ### Parameters
 
@@ -759,7 +759,7 @@ id_kota |  **required** | id_propinsi didapatkan dari [list kota](#kota-pengirim
 
 ```shell
 curl -X GET 
-http://apiproduk.fastpay.co.id/v2/list_kodepos?id=264
+http://devapiproduk.fastpay.co.id/v2/list_kodepos?id=264
 
 ```
 
@@ -779,7 +779,7 @@ Api ini untuk mengambil list kodepos dari kota tertentu
 
 ### HTTP Request
 
-`GET http://apiproduk.fastpay.co.id/v2/list_kodepos?id:id`
+`GET http://devapiproduk.fastpay.co.id/v2/list_kodepos?id:id`
 
 ### Parameters
 
@@ -793,7 +793,7 @@ id |  **required** | Id kota.
 
 ```shell
 curl -X GET 
-http://apiproduk.fastpay.co.id/v2/cek_voucher?kode_voucher=GR64645&no_hp_pembeli=082244409356&id_produk=afg07j&id_outlet=FA92804&qty=1&paket_ekspedisi=JNE%20REG&ongkir=120000
+http://devapiproduk.fastpay.co.id/v2/cek_voucher?kode_voucher=GR64645&no_hp_pembeli=082244409356&id_produk=afg07j&id_outlet=FA92804&qty=1&paket_ekspedisi=JNE%20REG&ongkir=120000
 
 ```
 
@@ -826,7 +826,7 @@ key_voucher | key voucher untuk inputan booking
 
 ### HTTP Request
 
-`GET http://apiproduk.fastpay.co.id/v2/cek_voucher`
+`GET http://devapiproduk.fastpay.co.id/v2/cek_voucher`
 
 ### Parameters
 
@@ -879,7 +879,7 @@ ongkir |  **required** | harga ongkos kirim jenis paket ekspedisi
 ```
 ### HTTP Request
 
-`POST http://apiproduk.fastpay.co.id/index.php/v2/cek_voucher_fmcg`
+`POST http://devapiproduk.fastpay.co.id/index.php/v2/cek_voucher_fmcg`
 
 ### URL Parameters
 
@@ -894,7 +894,7 @@ kode_voucher | **required** | Kode Voucher
 ```shell
 curl -X GET -H
 "TOMO-API-KEY: 8s4ww0gg8o"
-http://apiproduk.fastpay.co.id/v2/nearest_loket?latitude=-7.3601523&longitude=112.7432411&%20total_belanja=1000
+http://devapiproduk.fastpay.co.id/v2/nearest_loket?latitude=-7.3601523&longitude=112.7432411&%20total_belanja=1000
 
 ```
 
@@ -976,7 +976,7 @@ nomor_whatsapp_outlet | No whatsapp loket
 
 ### HTTP Request
 
-`GET http://apiproduk.fastpay.co.id/v2/nearest_loket`
+`GET http://devapiproduk.fastpay.co.id/v2/nearest_loket`
 
 ### Parameters
 
@@ -1062,7 +1062,7 @@ total_belanja |  **required** | Total belanja
 
 ### HTTP Request
 
-`POST http://apiproduk.fastpay.co.id/index.php/transaksi`
+`POST http://devapiproduk.fastpay.co.id/index.php/transaksi`
 
 ### URL Parameters
 
@@ -1126,7 +1126,7 @@ key_voucher  | optional  |  Key voucher yang didapatkan saat cek voucher
 ```
 ### HTTP Request
 
-`POST http://apiproduk.fastpay.co.id/index.php/transaksi`
+`POST http://devapiproduk.fastpay.co.id/index.php/transaksi`
 
 ### URL Parameters
 
@@ -1177,7 +1177,7 @@ booking_payment_code | **required** | kode booking
 ```
 ### HTTP Request
 
-`POST http://apiproduk.fastpay.co.id/index.php/transaksi`
+`POST http://devapiproduk.fastpay.co.id/index.php/transaksi`
 
 ### URL Parameters
 
