@@ -30,8 +30,8 @@ API Tomo menggunakan Basic Auth dan key untuk akses. Berikut contoh format key:
 Anda harus mengganti `key` dengan key personal anda. Basic Auth menggunakan `username` dan `pin` yang anda dapatkan.
 </aside>
 
-# Kategori
-## get kategori
+# Category
+## get Category
 > Sample Request:
 
 ```shell
@@ -109,7 +109,7 @@ None
 
 
 
-# Produk NON FMCG
+# Product NON FMCG
 ## Search Engine Produk
 
 > Sample Request:
@@ -467,7 +467,7 @@ Parameter | |Description
 id | **required** | id Kota yang didapatkan dari [kota pengiriman](#kota-pengiriman)
 
 
-# Produk FMCG
+# product FMCG
 
 FMCG di Tomo adalah layanan penjualan produk sehari hari yang pengirimannya dilakukan oleh Supplier FMCG. Saat ini Supplier FMCG Tomo ada di tabel bawah ini
 
@@ -476,7 +476,7 @@ ID Supplier | Keterangan
 SB114759 | Vifa Grosir
 
 
-## Search Engine Produk
+## Search Engine product
 
 > Sample Request:
 
@@ -1064,6 +1064,11 @@ total_belanja |  **required** | Total belanja
 
 `POST http://devapiproduk.fastpay.co.id/index.php/transaksi`
 
+
+<aside class="notice">
+Untuk booking menggunakan basic auth dan header `TOMO-API-KEY`. Basic Auth menggunakan `username` dan `pin` yang anda dapatkan. Untuk mendapatkan `TOMO-API-KEY`, hubungi Tim Tomo.
+</aside>
+
 ### URL Parameters
 
 Parameter | |Description
@@ -1185,3 +1190,174 @@ Parameter | |Description
 --------- | ----------- |-----------
 booking_payment_code | **required** | kode booking
 reff_id | **required** | reff_id yang didapat ketika inquiry
+
+# See Transaction
+## Transaction Status
+> Sample Request:
+
+```shell
+
+curl -X GET -H
+"TOMO-API-KEY: 8s4ww0gg8o"
+http://devapiproduk.fastpay.co.id/v2/get_transaction_status?id_transaksi=1112691550&kode_pembayaran=27971
+
+```
+> Sample Response:
+
+```json
+
+{
+  "status": "error",
+  "result": {
+    "step": "4",
+    "keterangan": "Pesanan telah sampai tujuan",
+    "detail_pembayaran": {
+      "payment_code": "27971",
+      "kode_pembayaran": "1112691550",
+      "id_produk": "94vcla",
+      "produk": "U9 Smartwatch - Smartwatch DZ09 - Jam Tangan Pintar Support SIM card bisa nelp sms browsing",
+      "harga_jual_produk": "146250",
+      "jumlah_beli": "1",
+      "ongkos_kirim": "57000",
+      "kode_voucher": null,
+      "nominal_voucher": "0",
+      "diskon": null,
+      "biaya_asuransi": "0",
+      "total_belanja": "203250",
+      "id_outlet": "FA56024"
+    },
+    "detail_ekspedisi": {
+      "ekspedisi": "jne",
+      "paket_name": "JNE REG",
+      "est_day": null,
+      "ongkos_kirim": "57000",
+      "no_resi": "011330124767718"
+    },
+    "detail_pemesan": {
+      "nama": "Arjuni",
+      "kecamatan": "LAUNG TUHUP",
+      "kota": "Kabupaten Murung Raya",
+      "propinsi": "Kalimantan Tengah",
+      "kodepos": "73991",
+      "alamat": "Jl veteran rt 9 no 94",
+      "telepon": "085251182633",
+      "email": "Arjunizaky@gmail.com ",
+      "catatan": null
+    }
+  }
+}
+
+```
+## Transaction Status
+> Sample Request:
+
+```shell
+
+curl -X GET -H
+"TOMO-API-KEY: 8s4ww0gg8o"
+http://devapiproduk.fastpay.co.id/v2/get_transaction_status?id_transaksi=1112691550&kode_pembayaran=27971
+
+```
+> Sample Response:
+
+```json
+
+{
+  "status": "error",
+  "result": {
+    "step": "4",
+    "keterangan": "Pesanan telah sampai tujuan",
+    "detail_pembayaran": {
+      "payment_code": "27971",
+      "kode_pembayaran": "1112691550",
+      "id_produk": "94vcla",
+      "produk": "U9 Smartwatch - Smartwatch DZ09 - Jam Tangan Pintar Support SIM card bisa nelp sms browsing",
+      "harga_jual_produk": "146250",
+      "jumlah_beli": "1",
+      "ongkos_kirim": "57000",
+      "kode_voucher": null,
+      "nominal_voucher": "0",
+      "diskon": null,
+      "biaya_asuransi": "0",
+      "total_belanja": "203250",
+      "id_outlet": "FA56024"
+    },
+    "detail_ekspedisi": {
+      "ekspedisi": "jne",
+      "paket_name": "JNE REG",
+      "est_day": null,
+      "ongkos_kirim": "57000",
+      "no_resi": "011330124767718"
+    },
+    "detail_pemesan": {
+      "nama": "Arjuni",
+      "kecamatan": "LAUNG TUHUP",
+      "kota": "Kabupaten Murung Raya",
+      "propinsi": "Kalimantan Tengah",
+      "kodepos": "73991",
+      "alamat": "Jl veteran rt 9 no 94",
+      "telepon": "085251182633",
+      "email": "Arjunizaky@gmail.com ",
+      "catatan": null
+    }
+  }
+}
+
+```
+
+
+Berikut adalah endpoint untuk mengambil list kategori Tomo
+
+### HTTP Request
+
+`GET http://devapiproduk.fastpay.co.id/v2/get_transaction_status?id_transaksi=:id_transaksi&kode_pembayaran=:kode_pembayaran`
+
+### Parameters
+Parameter | |Description
+--------- | ----------- |-----------
+id_transaksi | **required** | id_transaksi di dapat di [Payment](#payment) di bagian reff_id pada field result.
+kode_pembayaran | **required** | Kode pembayaran adalah booking payment code.
+
+### Step list
+Step | Description
+--------- | ----------- |-----------
+1  | Menunggu Pesanan diterima Supplier.
+2  | Pesanan diterima supplier dan menunggu dikirim oleh supplier.
+3  | Pesanan telah dikirim.
+4  | Pesanan telah sampai tujuan.
+-1  | Pesanan Dibatalkan Supplier.
+
+## Set received status
+> Sample Request:
+
+```shell
+
+curl -X POST 
+-F "id_transaksi=1112691550" -F "kode_pembayaran=2522797198" -F "confirm_received_by=user" 
+http://devapiproduk.fastpay.co.id/v2/set_received_transaction
+
+```
+> Sample Response:
+
+```json
+
+{
+    "status": "ok",
+    "result": "Pesanan anda berhasil di konfirmasi sampai pada tujuan"
+}
+
+```
+
+
+Berikut adalah endpoint untuk mengambil list kategori Tomo
+
+### HTTP Request
+
+`POST http://devapiproduk.fastpay.co.id/v2/get_transaction_status?id_transaksi=:id_transaksi&kode_pembayaran=:kode_pembayaran`
+
+### Parameters
+Parameter | |Description
+--------- | ----------- |-----------
+id_transaksi | **required** | id_transaksi di dapat di [Payment](#payment) di bagian reff_id pada field result.
+kode_pembayaran | **required** | Kode pembayaran adalah booking payment code.
+
