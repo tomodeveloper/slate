@@ -1248,63 +1248,6 @@ http://devapiproduk.fastpay.co.id/v2/get_transaction_status?id_transaksi=1112691
 }
 
 ```
-## Transaction Status
-> Sample Request:
-
-```shell
-
-curl -X GET -H
-"TOMO-API-KEY: 8s4ww0gg8o"
-http://devapiproduk.fastpay.co.id/v2/get_transaction_status?id_transaksi=1112691550&kode_pembayaran=27971
-
-```
-> Sample Response:
-
-```json
-
-{
-  "status": "error",
-  "result": {
-    "step": "4",
-    "keterangan": "Pesanan telah sampai tujuan",
-    "detail_pembayaran": {
-      "payment_code": "27971",
-      "kode_pembayaran": "1112691550",
-      "id_produk": "94vcla",
-      "produk": "U9 Smartwatch - Smartwatch DZ09 - Jam Tangan Pintar Support SIM card bisa nelp sms browsing",
-      "harga_jual_produk": "146250",
-      "jumlah_beli": "1",
-      "ongkos_kirim": "57000",
-      "kode_voucher": null,
-      "nominal_voucher": "0",
-      "diskon": null,
-      "biaya_asuransi": "0",
-      "total_belanja": "203250",
-      "id_outlet": "FA56024"
-    },
-    "detail_ekspedisi": {
-      "ekspedisi": "jne",
-      "paket_name": "JNE REG",
-      "est_day": null,
-      "ongkos_kirim": "57000",
-      "no_resi": "011330124767718"
-    },
-    "detail_pemesan": {
-      "nama": "Arjuni",
-      "kecamatan": "LAUNG TUHUP",
-      "kota": "Kabupaten Murung Raya",
-      "propinsi": "Kalimantan Tengah",
-      "kodepos": "73991",
-      "alamat": "Jl veteran rt 9 no 94",
-      "telepon": "085251182633",
-      "email": "Arjunizaky@gmail.com ",
-      "catatan": null
-    }
-  }
-}
-
-```
-
 
 Berikut adalah endpoint untuk mengambil list kategori Tomo
 
@@ -1360,4 +1303,103 @@ Parameter | |Description
 --------- | ----------- |-----------
 id_transaksi | **required** | id_transaksi di dapat di [Payment](#payment) di bagian reff_id pada field result.
 kode_pembayaran | **required** | Kode pembayaran adalah booking payment code.
+
+## Tracking Resi
+> Sample Request:
+
+```shell
+
+curl -X GET -H
+http://dev2apiproduk.fastpay.co.id/index.php/v2/tracking_resi?reff_id=1113870141
+
+```
+> Sample Response:
+
+```json
+{
+  "status": "00",
+  "keterangan": "sukses",
+  "result": {
+    "tujuan_pengiriman": "IDN",
+    "detail": [
+      {
+        "waktu": "2018-09-11 18:30:00",
+        "posisi": "Indonesia",
+        "pesan": "SHIPMENT RECEIVED BY JNE COUNTER OFFICER AT [YOGYAKARTA]",
+        "status": "InTransit"
+      },
+      {
+        "waktu": "2018-09-11 20:30:00",
+        "posisi": "Indonesia",
+        "pesan": "SHIPMENT PICKED UP BY JNE COURIER [YOGYAKARTA]",
+        "status": "InTransit"
+      },
+      {
+        "waktu": "2018-09-11 21:48:00",
+        "posisi": "Indonesia",
+        "pesan": "RECEIVED AT SORTING CENTER [YOGYAKARTA]",
+        "status": "InTransit"
+      },
+      {
+        "waktu": "2018-09-11 23:28:00",
+        "posisi": "Indonesia",
+        "pesan": "PROCESSED AT SORTING CENTER [YOGYAKARTA]",
+        "status": "InTransit"
+      },
+      {
+        "waktu": "2018-09-12 15:29:00",
+        "posisi": "Indonesia",
+        "pesan": "DEPARTED FROM TRANSIT [GATEWAY JAKARTA]",
+        "status": "InTransit"
+      },
+      {
+        "waktu": "2018-09-12 15:54:00",
+        "posisi": "Indonesia",
+        "pesan": "RECEIVED AT WAREHOUSE [TANGERANG]",
+        "status": "InTransit"
+      },
+      {
+        "waktu": "2018-09-12 16:00:00",
+        "posisi": "Indonesia",
+        "pesan": "SHIPMENT FORWARDED TO DESTINATION [TANGERANG, HUB GAPLEK]",
+        "status": "InTransit"
+      },
+      {
+        "waktu": "2018-09-13 05:00:00",
+        "posisi": "Indonesia",
+        "pesan": "WITH DELIVERY COURIER [TANGERANG]",
+        "status": "InTransit"
+      },
+      {
+        "waktu": "2018-09-13 11:44:00",
+        "posisi": "Indonesia",
+        "pesan": "DELIVERED TO [ PIPIH | 13-09-2018 11:44 ]",
+        "status": "Delivered"
+      }
+    ],
+    "nama_penerima": "PIPIH FEBRI YANTI",
+    "tipe_pengiriman": "REG15",
+    "no_resi_pengiriman": "140160034976718",
+    "status": "received",
+    "nama_pengirim": null,
+    "tanggal_pengiriman": "2018-09-20T02:49:46+00:00",
+    "asal_pengiriman": null,
+    "tanggal_diterima_pembeli": "2018-09-20 02:49:46",
+    "courier": "JNE"
+  }
+}
+
+```
+
+
+Berikut adalah endpoint untuk mengambil list kategori Tomo
+
+### HTTP Request
+
+`GET http://dev2apiproduk.fastpay.co.id/index.php/v2/tracking_resi?reff_id=:reff_id`
+
+### Parameters
+Parameter | |Description
+--------- | ----------- |-----------
+reff_id | **required** | reff_id di dapat di [Payment](#payment) di bagian reff_id pada field result.
 
