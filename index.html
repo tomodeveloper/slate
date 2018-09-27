@@ -225,15 +225,15 @@
             <a href="#signon" class="toc-h1 toc-link" data-title="SignOn">SignOn</a>
           </li>
           <li>
-            <a href="#kategori" class="toc-h1 toc-link" data-title="Kategori">Kategori</a>
+            <a href="#category" class="toc-h1 toc-link" data-title="Category">Category</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#get-kategori" class="toc-h2 toc-link" data-title="get kategori">get kategori</a>
+                    <a href="#get-category" class="toc-h2 toc-link" data-title="get Category">get Category</a>
                   </li>
               </ul>
           </li>
           <li>
-            <a href="#produk-non-fmcg" class="toc-h1 toc-link" data-title="Produk NON FMCG">Produk NON FMCG</a>
+            <a href="#product-non-fmcg" class="toc-h1 toc-link" data-title="Product NON FMCG">Product NON FMCG</a>
               <ul class="toc-list-h2">
                   <li>
                     <a href="#search-engine-produk" class="toc-h2 toc-link" data-title="Search Engine Produk">Search Engine Produk</a>
@@ -259,10 +259,10 @@
               </ul>
           </li>
           <li>
-            <a href="#produk-fmcg" class="toc-h1 toc-link" data-title="Produk FMCG">Produk FMCG</a>
+            <a href="#product-fmcg" class="toc-h1 toc-link" data-title="product FMCG">product FMCG</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#search-engine-produk-2" class="toc-h2 toc-link" data-title="Search Engine Produk">Search Engine Produk</a>
+                    <a href="#search-engine-product" class="toc-h2 toc-link" data-title="Search Engine product">Search Engine product</a>
                   </li>
                   <li>
                     <a href="#list-data-produk-2" class="toc-h2 toc-link" data-title="List Data Produk">List Data Produk</a>
@@ -324,6 +324,20 @@
               </ul>
           </li>
           <li>
+            <a href="#see-transaction" class="toc-h1 toc-link" data-title="See Transaction">See Transaction</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#transaction-status" class="toc-h2 toc-link" data-title="Transaction Status">Transaction Status</a>
+                  </li>
+                  <li>
+                    <a href="#transaction-status-2" class="toc-h2 toc-link" data-title="Transaction Status">Transaction Status</a>
+                  </li>
+                  <li>
+                    <a href="#set-received-status" class="toc-h2 toc-link" data-title="Set received status">Set received status</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
             <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
           </li>
       </ul>
@@ -345,7 +359,7 @@
 <aside class="notice">
 Anda harus mengganti `key` dengan key personal anda. Basic Auth menggunakan `username` dan `pin` yang anda dapatkan.
 </aside>
-<h1 id='kategori'>Kategori</h1><h2 id='get-kategori'>get kategori</h2>
+<h1 id='category'>Category</h1><h2 id='get-category'>get Category</h2>
 <blockquote>
 <p>Sample Request:</p>
 </blockquote>
@@ -415,7 +429,7 @@ http://devapiproduk.fastpay.co.id/v2/category
 <p><code>GET http://devapiproduk.fastpay.co.id/v2/category</code></p>
 <h3 id='parameters'>Parameters</h3>
 <p>None</p>
-<h1 id='produk-non-fmcg'>Produk NON FMCG</h1><h2 id='search-engine-produk'>Search Engine Produk</h2>
+<h1 id='product-non-fmcg'>Product NON FMCG</h1><h2 id='search-engine-produk'>Search Engine Produk</h2>
 <blockquote>
 <p>Sample Request:</p>
 </blockquote>
@@ -848,7 +862,7 @@ http://devapiproduk.fastpay.co.id/v2/list_kecamatan?id<span class="o">=</span>15
 <td>id Kota yang didapatkan dari <a href="#kota-pengiriman">kota pengiriman</a></td>
 </tr>
 </tbody></table>
-<h1 id='produk-fmcg'>Produk FMCG</h1>
+<h1 id='product-fmcg'>product FMCG</h1>
 <p>FMCG di Tomo adalah layanan penjualan produk sehari hari yang pengirimannya dilakukan oleh Supplier FMCG. Saat ini Supplier FMCG Tomo ada di tabel bawah ini</p>
 
 <table><thead>
@@ -862,7 +876,7 @@ http://devapiproduk.fastpay.co.id/v2/list_kecamatan?id<span class="o">=</span>15
 <td>Vifa Grosir</td>
 </tr>
 </tbody></table>
-<h2 id='search-engine-produk-2'>Search Engine Produk</h2>
+<h2 id='search-engine-product'>Search Engine product</h2>
 <blockquote>
 <p>Sample Request:</p>
 </blockquote>
@@ -1609,6 +1623,10 @@ http://devapiproduk.fastpay.co.id/v2/nearest_loket?latitude<span class="o">=</sp
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h3 id='http-request-20'>HTTP Request</h3>
 <p><code>POST http://devapiproduk.fastpay.co.id/index.php/transaksi</code></p>
+
+<aside class="notice">
+Untuk booking menggunakan basic auth dan header `TOMO-API-KEY`. Basic Auth menggunakan `username` dan `pin` yang anda dapatkan. Untuk mendapatkan `TOMO-API-KEY`, hubungi Tim Tomo.
+</aside>
 <h3 id='url-parameters-10'>URL Parameters</h3>
 <table><thead>
 <tr>
@@ -1805,6 +1823,209 @@ http://devapiproduk.fastpay.co.id/v2/nearest_loket?latitude<span class="o">=</sp
 <td>reff_id</td>
 <td><strong>required</strong></td>
 <td>reff_id yang didapat ketika inquiry</td>
+</tr>
+</tbody></table>
+<h1 id='see-transaction'>See Transaction</h1><h2 id='transaction-status'>Transaction Status</h2>
+<blockquote>
+<p>Sample Request:</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>
+curl -X GET -H
+<span class="s2">"TOMO-API-KEY: 8s4ww0gg8o"</span>
+http://devapiproduk.fastpay.co.id/v2/get_transaction_status?id_transaksi<span class="o">=</span>1112691550&amp;kode_pembayaran<span class="o">=</span>27971
+
+</code></pre>
+<blockquote>
+<p>Sample Response:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">
+</span><span class="p">{</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"error"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"result"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"step"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"keterangan"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Pesanan telah sampai tujuan"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"detail_pembayaran"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"payment_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"27971"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"kode_pembayaran"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1112691550"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"id_produk"</span><span class="p">:</span><span class="w"> </span><span class="s2">"94vcla"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"produk"</span><span class="p">:</span><span class="w"> </span><span class="s2">"U9 Smartwatch - Smartwatch DZ09 - Jam Tangan Pintar Support SIM card bisa nelp sms browsing"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"harga_jual_produk"</span><span class="p">:</span><span class="w"> </span><span class="s2">"146250"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"jumlah_beli"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"ongkos_kirim"</span><span class="p">:</span><span class="w"> </span><span class="s2">"57000"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"kode_voucher"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"nominal_voucher"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"diskon"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"biaya_asuransi"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"total_belanja"</span><span class="p">:</span><span class="w"> </span><span class="s2">"203250"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"id_outlet"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FA56024"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"detail_ekspedisi"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"ekspedisi"</span><span class="p">:</span><span class="w"> </span><span class="s2">"jne"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"paket_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"JNE REG"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"est_day"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"ongkos_kirim"</span><span class="p">:</span><span class="w"> </span><span class="s2">"57000"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"no_resi"</span><span class="p">:</span><span class="w"> </span><span class="s2">"011330124767718"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"detail_pemesan"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"nama"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Arjuni"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"kecamatan"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LAUNG TUHUP"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"kota"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Kabupaten Murung Raya"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"propinsi"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Kalimantan Tengah"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"kodepos"</span><span class="p">:</span><span class="w"> </span><span class="s2">"73991"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"alamat"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Jl veteran rt 9 no 94"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"telepon"</span><span class="p">:</span><span class="w"> </span><span class="s2">"085251182633"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Arjunizaky@gmail.com "</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"catatan"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre><h2 id='transaction-status-2'>Transaction Status</h2>
+<blockquote>
+<p>Sample Request:</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>
+curl -X GET -H
+<span class="s2">"TOMO-API-KEY: 8s4ww0gg8o"</span>
+http://devapiproduk.fastpay.co.id/v2/get_transaction_status?id_transaksi<span class="o">=</span>1112691550&amp;kode_pembayaran<span class="o">=</span>27971
+
+</code></pre>
+<blockquote>
+<p>Sample Response:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">
+</span><span class="p">{</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"error"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"result"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"step"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"keterangan"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Pesanan telah sampai tujuan"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"detail_pembayaran"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"payment_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"27971"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"kode_pembayaran"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1112691550"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"id_produk"</span><span class="p">:</span><span class="w"> </span><span class="s2">"94vcla"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"produk"</span><span class="p">:</span><span class="w"> </span><span class="s2">"U9 Smartwatch - Smartwatch DZ09 - Jam Tangan Pintar Support SIM card bisa nelp sms browsing"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"harga_jual_produk"</span><span class="p">:</span><span class="w"> </span><span class="s2">"146250"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"jumlah_beli"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"ongkos_kirim"</span><span class="p">:</span><span class="w"> </span><span class="s2">"57000"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"kode_voucher"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"nominal_voucher"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"diskon"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"biaya_asuransi"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"total_belanja"</span><span class="p">:</span><span class="w"> </span><span class="s2">"203250"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"id_outlet"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FA56024"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"detail_ekspedisi"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"ekspedisi"</span><span class="p">:</span><span class="w"> </span><span class="s2">"jne"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"paket_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"JNE REG"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"est_day"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"ongkos_kirim"</span><span class="p">:</span><span class="w"> </span><span class="s2">"57000"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"no_resi"</span><span class="p">:</span><span class="w"> </span><span class="s2">"011330124767718"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"detail_pemesan"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"nama"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Arjuni"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"kecamatan"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LAUNG TUHUP"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"kota"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Kabupaten Murung Raya"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"propinsi"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Kalimantan Tengah"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"kodepos"</span><span class="p">:</span><span class="w"> </span><span class="s2">"73991"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"alamat"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Jl veteran rt 9 no 94"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"telepon"</span><span class="p">:</span><span class="w"> </span><span class="s2">"085251182633"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Arjunizaky@gmail.com "</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"catatan"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre>
+<p>Berikut adalah endpoint untuk mengambil list kategori Tomo</p>
+<h3 id='http-request-23'>HTTP Request</h3>
+<p><code>GET http://devapiproduk.fastpay.co.id/v2/get_transaction_status?id_transaksi=:id_transaksi&amp;kode_pembayaran=:kode_pembayaran</code></p>
+<h3 id='parameters-11'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th></th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id_transaksi</td>
+<td><strong>required</strong></td>
+<td>id_transaksi di dapat di <a href="#payment">Payment</a> di bagian reff_id pada field result.</td>
+</tr>
+<tr>
+<td>kode_pembayaran</td>
+<td><strong>required</strong></td>
+<td>Kode pembayaran adalah booking payment code.</td>
+</tr>
+</tbody></table>
+<h3 id='step-list'>Step list</h3>
+<table><thead>
+<tr>
+<th>Step</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>1</td>
+<td>Menunggu Pesanan diterima Supplier.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Pesanan diterima supplier dan menunggu dikirim oleh supplier.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Pesanan telah dikirim.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Pesanan telah sampai tujuan.</td>
+</tr>
+<tr>
+<td>-1</td>
+<td>Pesanan Dibatalkan Supplier.</td>
+</tr>
+</tbody></table>
+<h2 id='set-received-status'>Set received status</h2>
+<blockquote>
+<p>Sample Request:</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>
+curl -X POST 
+-F <span class="s2">"id_transaksi=1112691550"</span> -F <span class="s2">"kode_pembayaran=2522797198"</span> -F <span class="s2">"confirm_received_by=user"</span> 
+http://devapiproduk.fastpay.co.id/v2/set_received_transaction
+
+</code></pre>
+<blockquote>
+<p>Sample Response:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">
+</span><span class="p">{</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ok"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"result"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Pesanan anda berhasil di konfirmasi sampai pada tujuan"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre>
+<p>Berikut adalah endpoint untuk mengambil list kategori Tomo</p>
+<h3 id='http-request-24'>HTTP Request</h3>
+<p><code>POST http://devapiproduk.fastpay.co.id/v2/get_transaction_status?id_transaksi=:id_transaksi&amp;kode_pembayaran=:kode_pembayaran</code></p>
+<h3 id='parameters-12'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th></th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id_transaksi</td>
+<td><strong>required</strong></td>
+<td>id_transaksi di dapat di <a href="#payment">Payment</a> di bagian reff_id pada field result.</td>
+</tr>
+<tr>
+<td>kode_pembayaran</td>
+<td><strong>required</strong></td>
+<td>Kode pembayaran adalah booking payment code.</td>
 </tr>
 </tbody></table>
 <h1 id='errors'>Errors</h1>
