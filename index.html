@@ -330,10 +330,10 @@
                     <a href="#transaction-status" class="toc-h2 toc-link" data-title="Transaction Status">Transaction Status</a>
                   </li>
                   <li>
-                    <a href="#transaction-status-2" class="toc-h2 toc-link" data-title="Transaction Status">Transaction Status</a>
+                    <a href="#set-received-status" class="toc-h2 toc-link" data-title="Set received status">Set received status</a>
                   </li>
                   <li>
-                    <a href="#set-received-status" class="toc-h2 toc-link" data-title="Set received status">Set received status</a>
+                    <a href="#tracking-resi" class="toc-h2 toc-link" data-title="Tracking Resi">Tracking Resi</a>
                   </li>
               </ul>
           </li>
@@ -1880,61 +1880,6 @@ http://devapiproduk.fastpay.co.id/v2/get_transaction_status?id_transaksi<span cl
   </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span><span class="w">
 
-</span></code></pre><h2 id='transaction-status-2'>Transaction Status</h2>
-<blockquote>
-<p>Sample Request:</p>
-</blockquote>
-<pre class="highlight shell tab-shell"><code>
-curl -X GET -H
-<span class="s2">"TOMO-API-KEY: 8s4ww0gg8o"</span>
-http://devapiproduk.fastpay.co.id/v2/get_transaction_status?id_transaksi<span class="o">=</span>1112691550&amp;kode_pembayaran<span class="o">=</span>27971
-
-</code></pre>
-<blockquote>
-<p>Sample Response:</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="w">
-</span><span class="p">{</span><span class="w">
-  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"error"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"result"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"step"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"keterangan"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Pesanan telah sampai tujuan"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"detail_pembayaran"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"payment_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"27971"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"kode_pembayaran"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1112691550"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"id_produk"</span><span class="p">:</span><span class="w"> </span><span class="s2">"94vcla"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"produk"</span><span class="p">:</span><span class="w"> </span><span class="s2">"U9 Smartwatch - Smartwatch DZ09 - Jam Tangan Pintar Support SIM card bisa nelp sms browsing"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"harga_jual_produk"</span><span class="p">:</span><span class="w"> </span><span class="s2">"146250"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"jumlah_beli"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"ongkos_kirim"</span><span class="p">:</span><span class="w"> </span><span class="s2">"57000"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"kode_voucher"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"nominal_voucher"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"diskon"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"biaya_asuransi"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"total_belanja"</span><span class="p">:</span><span class="w"> </span><span class="s2">"203250"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"id_outlet"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FA56024"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"detail_ekspedisi"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"ekspedisi"</span><span class="p">:</span><span class="w"> </span><span class="s2">"jne"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"paket_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"JNE REG"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"est_day"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"ongkos_kirim"</span><span class="p">:</span><span class="w"> </span><span class="s2">"57000"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"no_resi"</span><span class="p">:</span><span class="w"> </span><span class="s2">"011330124767718"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"detail_pemesan"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"nama"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Arjuni"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"kecamatan"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LAUNG TUHUP"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"kota"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Kabupaten Murung Raya"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"propinsi"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Kalimantan Tengah"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"kodepos"</span><span class="p">:</span><span class="w"> </span><span class="s2">"73991"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"alamat"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Jl veteran rt 9 no 94"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"telepon"</span><span class="p">:</span><span class="w"> </span><span class="s2">"085251182633"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Arjunizaky@gmail.com "</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"catatan"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-
 </span></code></pre>
 <p>Berikut adalah endpoint untuk mengambil list kategori Tomo</p>
 <h3 id='http-request-23'>HTTP Request</h3>
@@ -2026,6 +1971,109 @@ http://devapiproduk.fastpay.co.id/v2/set_received_transaction
 <td>kode_pembayaran</td>
 <td><strong>required</strong></td>
 <td>Kode pembayaran adalah booking payment code.</td>
+</tr>
+</tbody></table>
+<h2 id='tracking-resi'>Tracking Resi</h2>
+<blockquote>
+<p>Sample Request:</p>
+</blockquote>
+<pre class="highlight shell tab-shell"><code>
+curl -X GET -H
+http://dev2apiproduk.fastpay.co.id/index.php/v2/tracking_resi?reff_id<span class="o">=</span>1113870141
+
+</code></pre>
+<blockquote>
+<p>Sample Response:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"00"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"keterangan"</span><span class="p">:</span><span class="w"> </span><span class="s2">"sukses"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"result"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"tujuan_pengiriman"</span><span class="p">:</span><span class="w"> </span><span class="s2">"IDN"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"detail"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"waktu"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-09-11 18:30:00"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"posisi"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Indonesia"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"pesan"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SHIPMENT RECEIVED BY JNE COUNTER OFFICER AT [YOGYAKARTA]"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"InTransit"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"waktu"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-09-11 20:30:00"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"posisi"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Indonesia"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"pesan"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SHIPMENT PICKED UP BY JNE COURIER [YOGYAKARTA]"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"InTransit"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"waktu"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-09-11 21:48:00"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"posisi"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Indonesia"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"pesan"</span><span class="p">:</span><span class="w"> </span><span class="s2">"RECEIVED AT SORTING CENTER [YOGYAKARTA]"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"InTransit"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"waktu"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-09-11 23:28:00"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"posisi"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Indonesia"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"pesan"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PROCESSED AT SORTING CENTER [YOGYAKARTA]"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"InTransit"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"waktu"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-09-12 15:29:00"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"posisi"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Indonesia"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"pesan"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DEPARTED FROM TRANSIT [GATEWAY JAKARTA]"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"InTransit"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"waktu"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-09-12 15:54:00"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"posisi"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Indonesia"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"pesan"</span><span class="p">:</span><span class="w"> </span><span class="s2">"RECEIVED AT WAREHOUSE [TANGERANG]"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"InTransit"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"waktu"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-09-12 16:00:00"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"posisi"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Indonesia"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"pesan"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SHIPMENT FORWARDED TO DESTINATION [TANGERANG, HUB GAPLEK]"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"InTransit"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"waktu"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-09-13 05:00:00"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"posisi"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Indonesia"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"pesan"</span><span class="p">:</span><span class="w"> </span><span class="s2">"WITH DELIVERY COURIER [TANGERANG]"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"InTransit"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"waktu"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-09-13 11:44:00"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"posisi"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Indonesia"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"pesan"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DELIVERED TO [ PIPIH | 13-09-2018 11:44 ]"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Delivered"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"nama_penerima"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PIPIH FEBRI YANTI"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"tipe_pengiriman"</span><span class="p">:</span><span class="w"> </span><span class="s2">"REG15"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"no_resi_pengiriman"</span><span class="p">:</span><span class="w"> </span><span class="s2">"140160034976718"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"received"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"nama_pengirim"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"tanggal_pengiriman"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-09-20T02:49:46+00:00"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"asal_pengiriman"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"tanggal_diterima_pembeli"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-09-20 02:49:46"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"courier"</span><span class="p">:</span><span class="w"> </span><span class="s2">"JNE"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre>
+<p>Berikut adalah endpoint untuk mengambil list kategori Tomo</p>
+<h3 id='http-request-25'>HTTP Request</h3>
+<p><code>GET http://dev2apiproduk.fastpay.co.id/index.php/v2/tracking_resi?reff_id=:reff_id</code></p>
+<h3 id='parameters-13'>Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th></th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>reff_id</td>
+<td><strong>required</strong></td>
+<td>reff_id di dapat di <a href="#payment">Payment</a> di bagian reff_id pada field result.</td>
 </tr>
 </tbody></table>
 <h1 id='errors'>Errors</h1>
