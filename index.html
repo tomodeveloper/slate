@@ -324,6 +324,14 @@
               </ul>
           </li>
           <li>
+            <a href="#payment-process-fmcg" class="toc-h1 toc-link" data-title="Payment Process FMCG">Payment Process FMCG</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#booking-2" class="toc-h2 toc-link" data-title="Booking">Booking</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
             <a href="#see-transaction" class="toc-h1 toc-link" data-title="See Transaction">See Transaction</a>
               <ul class="toc-list-h2">
                   <li>
@@ -1825,6 +1833,151 @@ Untuk booking menggunakan basic auth dan header `TOMO-API-KEY`. Basic Auth mengg
 <td>reff_id yang didapat ketika inquiry</td>
 </tr>
 </tbody></table>
+<h1 id='payment-process-fmcg'>Payment Process FMCG</h1><h2 id='booking-2'>Booking</h2>
+<blockquote>
+<p>Sample Request:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DATA"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id_outlet"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BS0004"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"customer_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"robby adnan fanani"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"customer_address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tanggulangin"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"customer_phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"082244409356"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"customer_email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"robby.adnan@corp.bm.co.id"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"catatan"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"via"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TOMOFASTPAY"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"list_product"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+                </span><span class="s2">"product_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"31407"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"product_qty"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"key_voucher"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0b1gjnCDF320181017113052"</span><span class="w">
+
+            </span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"product_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"31408"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"product_qty"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"key_voucher"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0b1gjnCDF320181017113052"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.0"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"mode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"development"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>Sample Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">
+</span><span class="p">{</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"00"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SUCCESSFUL"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DATA"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"outlet_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BS0004"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"pin"</span><span class="p">:</span><span class="w"> </span><span class="s2">"----"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.0"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"mode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"development"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id_outlet"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BS0004"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"id_outlet_afiliasi"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"customer_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"robby adnan fanani"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"customer_address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tanggulangin"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"customer_phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"082244409356"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"customer_email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"robby.adnan@corp.bm.co.id"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"customer_district"</span><span class="p">:</span><span class="w"> </span><span class="s2">"61272"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"insurance_cost"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"catatan"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"via"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TOMOFASTPAY"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"list_product"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+            </span><span class="s2">"product_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"31407"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"product_qty"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="w">
+        </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"product_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"31408"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"product_qty"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1"</span><span class="w">
+        </span><span class="p">}]</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"result"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id_order_fmcg"</span><span class="p">:</span><span class="w"> </span><span class="s2">"69"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"result_book"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+            </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"00"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SUCCESSFUL"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"transaction_datetime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"20181017163733"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"result"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"booking_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"20181017163733"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"booking_payment_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"30315"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"id_produk"</span><span class="p">:</span><span class="w"> </span><span class="s2">"31407"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"00"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SUCCESSFUL"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"transaction_datetime"</span><span class="p">:</span><span class="w"> </span><span class="s2">"20181017163733"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"result"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"booking_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"20181017163733"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"booking_payment_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"30316"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"id_produk"</span><span class="p">:</span><span class="w"> </span><span class="s2">"31408"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">}]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='http-request-23'>HTTP Request</h3>
+<p><code>POST http://devapiproduk.fastpay.co.id/index.php/transaksi/fmcg</code></p>
+
+<aside class="notice">
+Untuk booking menggunakan basic auth dan header `TOMO-API-KEY`. Basic Auth menggunakan `username` dan `pin` yang anda dapatkan. Untuk mendapatkan `TOMO-API-KEY`, hubungi Tim Tomo.
+</aside>
+<h3 id='url-parameters-13'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th></th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id_outlet</td>
+<td><strong>required</strong></td>
+<td>Id Outlet yang melakukan transaksi</td>
+</tr>
+<tr>
+<td>customer_name</td>
+<td><strong>required</strong></td>
+<td>Nama pembeli</td>
+</tr>
+<tr>
+<td>customer_address</td>
+<td>optional</td>
+<td>alamat Pembeli</td>
+</tr>
+<tr>
+<td>customer_phone</td>
+<td><strong>required</strong></td>
+<td>no hp pembeli</td>
+</tr>
+<tr>
+<td>customer_email</td>
+<td><strong>required</strong></td>
+<td>email pembeli</td>
+</tr>
+<tr>
+<td>catatan</td>
+<td>optional</td>
+<td>Catatan pengiriman</td>
+</tr>
+<tr>
+<td>product_id</td>
+<td><strong>required</strong></td>
+<td>Id Produk</td>
+</tr>
+<tr>
+<td>product_qty</td>
+<td><strong>required</strong></td>
+<td>Jumlah Produk yang dibeli</td>
+</tr>
+<tr>
+<td>key_voucher</td>
+<td>optional</td>
+<td>Key voucher yang didapatkan saat cek voucher</td>
+</tr>
+</tbody></table>
 <h1 id='see-transaction'>See Transaction</h1><h2 id='transaction-status'>Transaction Status</h2>
 <blockquote>
 <p>Sample Request:</p>
@@ -1882,7 +2035,7 @@ http://devapiproduk.fastpay.co.id/v2/get_transaction_status?id_transaksi<span cl
 
 </span></code></pre>
 <p>Berikut adalah endpoint untuk mengambil list kategori Tomo</p>
-<h3 id='http-request-23'>HTTP Request</h3>
+<h3 id='http-request-24'>HTTP Request</h3>
 <p><code>GET http://devapiproduk.fastpay.co.id/v2/get_transaction_status?id_transaksi=:id_transaksi&amp;kode_pembayaran=:kode_pembayaran</code></p>
 <h3 id='parameters-11'>Parameters</h3>
 <table><thead>
@@ -1952,7 +2105,7 @@ http://devapiproduk.fastpay.co.id/v2/set_received_transaction
 
 </span></code></pre>
 <p>Berikut adalah endpoint untuk mengambil list kategori Tomo</p>
-<h3 id='http-request-24'>HTTP Request</h3>
+<h3 id='http-request-25'>HTTP Request</h3>
 <p><code>POST http://devapiproduk.fastpay.co.id/v2/get_transaction_status?id_transaksi=:id_transaksi&amp;kode_pembayaran=:kode_pembayaran</code></p>
 <h3 id='parameters-12'>Parameters</h3>
 <table><thead>
@@ -2060,7 +2213,7 @@ http://dev2apiproduk.fastpay.co.id/index.php/v2/tracking_resi?reff_id<span class
 
 </span></code></pre>
 <p>Berikut adalah endpoint untuk mengambil list kategori Tomo</p>
-<h3 id='http-request-25'>HTTP Request</h3>
+<h3 id='http-request-26'>HTTP Request</h3>
 <p><code>GET http://dev2apiproduk.fastpay.co.id/index.php/v2/tracking_resi?reff_id=:reff_id</code></p>
 <h3 id='parameters-13'>Parameters</h3>
 <table><thead>
