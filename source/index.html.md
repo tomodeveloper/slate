@@ -1191,6 +1191,121 @@ Parameter | |Description
 booking_payment_code | **required** | kode booking
 reff_id | **required** | reff_id yang didapat ketika inquiry
 
+# Payment Process FMCG
+
+## Booking
+
+> Sample Request:
+
+```json
+{
+	"type": "DATA",
+	"data": {
+		"id_outlet": "BS0004",
+		"customer_name": "robby adnan fanani",
+		"customer_address": "tanggulangin",
+		"customer_phone": "082244409356",
+		"customer_email": "robby.adnan@corp.bm.co.id",
+		"catatan": "",
+		"via": "TOMOFASTPAY",
+		"list_product": [{
+				"product_id": "31407",
+				"product_qty": "1",
+        "key_voucher": "0b1gjnCDF320181017113052"
+
+			},
+			{
+				"product_id": "31408",
+				"product_qty": "1",
+        "key_voucher": "0b1gjnCDF320181017113052"
+			}
+		]
+	},
+	"version": "1.0",
+	"mode": "development"
+}
+```
+
+> Sample Response
+
+```json
+
+{
+	"status": "00",
+	"description": "SUCCESSFUL",
+	"type": "DATA",
+	"outlet_id": "BS0004",
+	"pin": "----",
+	"version": "1.0",
+	"mode": "development",
+	"data": {
+		"id_outlet": "BS0004",
+		"id_outlet_afiliasi": "",
+		"customer_name": "robby adnan fanani",
+		"customer_address": "tanggulangin",
+		"customer_phone": "082244409356",
+		"customer_email": "robby.adnan@corp.bm.co.id",
+		"customer_district": "61272",
+		"insurance_cost": 0,
+		"catatan": "",
+		"via": "TOMOFASTPAY",
+		"list_product": [{
+			"product_id": "31407",
+			"product_qty": "1"
+		}, {
+			"product_id": "31408",
+			"product_qty": "1"
+		}]
+	},
+	"result": {
+		"id_order_fmcg": "69",
+		"result_book": [{
+			"status": "00",
+			"description": "SUCCESSFUL",
+			"transaction_datetime": "20181017163733",
+			"result": {
+				"booking_date": "20181017163733",
+				"booking_payment_code": "30315",
+				"id_produk": "31407"
+			}
+		}, {
+			"status": "00",
+			"description": "SUCCESSFUL",
+			"transaction_datetime": "20181017163733",
+			"result": {
+				"booking_date": "20181017163733",
+				"booking_payment_code": "30316",
+				"id_produk": "31408"
+			}
+		}]
+	}
+}
+```
+
+### HTTP Request
+
+`POST http://devapiproduk.fastpay.co.id/index.php/transaksi/fmcg`
+
+
+<aside class="notice">
+Untuk booking menggunakan basic auth dan header `TOMO-API-KEY`. Basic Auth menggunakan `username` dan `pin` yang anda dapatkan. Untuk mendapatkan `TOMO-API-KEY`, hubungi Tim Tomo.
+</aside>
+
+### URL Parameters
+
+Parameter | |Description
+--------- | ----------- |-----------
+id_outlet | **required** | Id Outlet yang melakukan transaksi
+customer_name  | **required**  |  Nama pembeli
+customer_address | optional | alamat Pembeli
+customer_phone | **required** | no hp pembeli
+customer_email | **required** | email pembeli
+catatan  |  optional  | Catatan pengiriman
+product_id | **required** | Id Produk
+product_qty | **required** | Jumlah Produk yang dibeli
+key_voucher  | optional  |  Key voucher yang didapatkan saat cek voucher
+
+
 # See Transaction
 ## Transaction Status
 > Sample Request:
